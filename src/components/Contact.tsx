@@ -69,7 +69,7 @@ export default function Contact() {
             </div>
             <div className="mb-8">
               <h3 className="mb-4 text-2xl font-semibold">Seguinos</h3>
-              <div className="flex md:space-x-4 flex-col md:flex-row justify-center md:justify-start items-center gap-3">
+              <div className="flex md:space-x-4 flex-col md:flex-row justify-start items-center gap-3">
                 <Link href="https://www.facebook.com/cursosactualmente" className="flex items-center justify-center font-thin text-[14px] hover:underline">
                   <Facebook className="mr-2 h-5 w-5" />
                   @cursosactualmente
