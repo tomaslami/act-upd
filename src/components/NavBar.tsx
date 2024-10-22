@@ -12,11 +12,11 @@ const NavBar = () => {
   const navItems = [
     { name: 'INICIO', path: '/' },
     { name: 'NOSOTROS', path: '/nosotros' },
-    { name: 'SOCIAL THINKING', path: '/' },
+    //    { name: 'SOCIAL THINKING', path: '/' },
     { name: 'CURSOS', path: '/cursos' },
-    { name: 'PRESTACIONES', path: '/' },
-    { name: 'LIBROS', path: '/' },
-    { name: 'AGENDA', path: '/' },
+    //    { name: 'PRESTACIONES', path: '/' },
+    //    { name: 'LIBROS', path: '/' },
+    //    { name: 'AGENDA', path: '/' },
     { name: 'INSCRIPCIONES', path: '#contact' },
   ];
 
