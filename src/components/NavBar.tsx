@@ -36,7 +36,7 @@ const NavBar = () => {
       <Link href="/" className="w-[30%] h-full flex justify-start items-center">
         <Image src={logo} alt="Logo - Actualmente" width={190} height={52} />
       </Link>
-      <nav className="w-[50%] h-full flex justify-end lg:justify-center items-center flex-row">
+      <nav className="w-[70%] h-full flex justify-end lg:justify-center items-center flex-row">
         <button
           className="lg:hidden text-black focus:outline-none"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
