@@ -4,6 +4,7 @@ import "./globals.css";
 import NavBar from "@/components/NavBar";
 import Contact from "@/components/Contact";
 import CertificationsFooter from "@/components/CertificationsFooter";
+import FloatingButton from "@/components/FloatingButton";
 
 const gothamRoundedBold = localFont({
   src: "/fonts/gothamrnd_bold.otf",
@@ -55,6 +56,7 @@ export default function RootLayout({
         {children}
         <Contact />
         <CertificationsFooter />
+        <FloatingButton phoneNumber="5491140336320" />
       </body>
     </html>
   );
