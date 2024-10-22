@@ -1,6 +1,5 @@
 import Image from 'next/image'
-import { Quote, Camera, MessageCircle } from 'lucide-react'
-import fotoNino from '/public/icons/fotoNino.jpg'
+import fotoNino from '/public/icons/fotoNino.png'
 import quote from '/public/icons/quote.png'
 
 export default function QuoteSection() {

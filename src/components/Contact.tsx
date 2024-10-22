@@ -1,4 +1,4 @@
-import { Camera, Facebook, Instagram } from 'lucide-react'
+import { Facebook, Instagram } from 'lucide-react'
 import Link from 'next/link'
 
 export default function Contact() {

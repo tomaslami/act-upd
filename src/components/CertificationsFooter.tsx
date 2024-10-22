@@ -1,7 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
 
-import backgroundImage from '/public/icons/backgroundHome.jpg'
+import backgroundImage from '/public/icons/backgroundHome.png'
 
 import eteaLogo from '/public/icons/e-tea.png'
 import hanenLogo from '/public/icons/the-hanen.png'

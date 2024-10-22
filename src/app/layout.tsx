@@ -19,13 +19,6 @@ const gothamRoundedMedium = localFont({
   style: "normal",
 });
 
-const gothamRoundedMediumItalic = localFont({
-  src: "/fonts/gothamrnd_mediumitalic.otf",
-  variable: "--font-gotham-rounded-medium-italic",
-  weight: "500",
-  style: "italic",
-});
-
 const gothamRoundedLight = localFont({
   src: "/fonts/gothamrnd_light.otf",
   variable: "--font-gotham-rounded-light",

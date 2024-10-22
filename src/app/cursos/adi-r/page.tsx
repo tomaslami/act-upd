@@ -1,5 +1,4 @@
 import React from 'react'
-import Image from 'next/image'
 import Link from 'next/link'
 
 const CourseSection = ({ title, children }: { title: string, children: React.ReactNode }) => (
@@ -46,7 +45,7 @@ export default function ADIRCourseInfo() {
           La Dra. Rhiannon Luyster es psicóloga del desarrollo cuyo programa de investigación se centra en el trastorno del espectro autista (TEA). Tiene un interés de larga data en la comunicación social y en lenguaje temprano en autismo, y es autora del Módulo para niños pequeños del Programa de Observación de Diagnóstico del Autismo - 2a edición (ADOS-2).
         </p>
         <p className="mt-4">
-          Su trabajo ha sido apoyado por los Institutos Nacionales de Salud, la Fundación Nacional de Ciencias, la Asociación Americana de Habla, Lenguaje y la Organización para la Investigación del Autismo en la Universidad "Emerson College" donde en la actualidad trabaja e investiga.
+          Su trabajo ha sido apoyado por los Institutos Nacionales de Salud, la Fundación Nacional de Ciencias, la Asociación Americana de Habla, Lenguaje y la Organización para la Investigación del Autismo en la Universidad `&quot;`Emerson College`&quot;` donde en la actualidad trabaja e investiga.
         </p>
       </CourseSection>
 

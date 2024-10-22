@@ -1,5 +1,4 @@
 import React from 'react'
-import Image from 'next/image'
 import Link from 'next/link'
 
 const CourseSection = ({ title, children }: { title: string, children: React.ReactNode }) => (
