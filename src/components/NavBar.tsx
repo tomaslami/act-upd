@@ -32,11 +32,15 @@ const NavBar = () => {
   }, []);
 
   return (
-    <header className="w-full md:h-[75px] h-[50px] flex flex-row px-4 lg:px-20 fixed z-20 bg-white transition-all">
-      <Link href="/" className="w-[30%] h-full flex justify-start items-center">
-        <Image src={logo} alt="Logo - Actualmente" width={190} height={52} />
-      </Link>
-      <nav className="w-[70%] h-full flex justify-end lg:justify-center items-center flex-row">
+    <header className="w-full md:h-[75px] h-[75px] flex flex-row px-4 lg:px-20 fixed z-20 bg-white transition-all">
+
+
+      <div className='w-[40%] h-full flex justify-start items-center'>
+        <Link href="/" className="">
+          <Image src={logo} alt="Logo - Actualmente" width={190} height={72} />
+        </Link>
+      </div>
+      <nav className="w-[60%] h-full flex justify-end lg:justify-center items-center flex-row">
         <button
           className="lg:hidden text-black focus:outline-none"
           onClick={() => setIsMenuOpen(!isMenuOpen)}

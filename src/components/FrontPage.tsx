@@ -18,8 +18,8 @@ export default function HeroSection() {
             Capacitando vidas, construyendo un futuro mejor para el autismo.
           </h1>
           <div className="mt-8 flex flex-wrap gap-4">
-            <Link href={"/"} className="w-max h-[50px] bg-[#1b4da1] text-white px-4 py-2 flex justify-center items-center rounded-3xl text-sm">Cursos destacados</Link >
-            <Link href={"/"} className="md:w-[184px] w-[163.5px] h-[50px] bg-transparent text-white border-2 px-4 py-2 flex justify-center items-center rounded-3xl hover:bg-white hover:text-black transition-colors text-sm">Contáctanos</Link >
+            <Link href={"/cursos"} className="w-max h-[50px] bg-[#1b4da1] text-white px-4 py-2 flex justify-center items-center rounded-3xl text-sm">Cursos destacados</Link >
+            <Link href={"/#contact"} className="md:w-[184px] w-[163.5px] h-[50px] bg-transparent text-white border-2 px-4 py-2 flex justify-center items-center rounded-3xl hover:bg-white hover:text-black transition-colors text-sm">Contáctanos</Link >
           </div>
         </div>
       </div>
