@@ -1,18 +1,16 @@
 "use client"
-import React, { useState, useCallback, useMemo } from 'react'
+import React, { useCallback, useMemo } from 'react'
 import Image from 'next/image'
-import Link from 'next/link'
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
 import { Calendar, Clock, Users, Book, DollarSign, CreditCard } from 'lucide-react'
 
 // Reusable components
-const SectionHeader = React.memo(({ title, className }: { title: string; className?: string }) => (
+const SectionHeader = (({ title, className }: { title: string; className?: string }) => (
   <h2 className={`text-3xl font-bold mb-8 text-center ${className}`}>{title}</h2>
 ))
 
-const CourseCard = React.memo(({ title, icon, children }: { title: string; icon: React.ReactNode; children: React.ReactNode }) => (
+const CourseCard = (({ title, icon, children }: { title: string; icon: React.ReactNode; children: React.ReactNode }) => (
   <Card className="bg-white">
     <CardHeader>
       <CardTitle className="text-2xl font-bold flex items-center">
@@ -25,7 +23,7 @@ const CourseCard = React.memo(({ title, icon, children }: { title: string; icon:
 ))
 
 // Main component
-export default function TEACCHCourseLandingPage() {
+export default function Home() {
 
   // Course data
   const courseData = useMemo(() => ({
