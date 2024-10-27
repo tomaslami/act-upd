@@ -32,7 +32,7 @@ const NavBar = () => {
   }, []);
 
   return (
-    <header className="w-full md:h-[75px] h-[75px] flex flex-row px-4 lg:px-20 fixed z-20 bg-white transition-all">
+    <header className="w-full md:h-[75px] h-[75px] flex flex-row px-4 lg:px-20 fixed z-50 bg-white transition-all">
 
 
       <div className='w-[40%] h-full flex justify-start items-center'>
