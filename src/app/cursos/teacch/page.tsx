@@ -157,15 +157,15 @@ export default function Home() {
           <div className="flex flex-col items-center space-y-8 md:space-y-0 md:space-x-8">
             <CourseCard title="Formas de Pago" icon={<CreditCard className="w-6 h-6 text-black " />}>
               <div className="flex space-x-4 flex-col md:flex-row">
-                <div className="bg-gray-100 p-4 rounded text-center w-1/3">
+                <div className="bg-gray-100 p-4 rounded text-center md:w-1/3 w-full">
                   <Image src="/icons/paypal.png" alt="PayPal" width={100} height={40} />
                   <p className="text-sm mt-2">Más la comisión del 6%</p>
                 </div>
-                <div className="bg-gray-100 p-4 rounded text-center w-1/3">
+                <div className="bg-gray-100 p-4 rounded text-center md:w-1/3 w-full">
                   <Image src="/icons/mercadopago.png" alt="Mercado Pago" width={100} height={40} />
                   <p className="text-sm mt-2">Más comisión</p>
                 </div>
-                <div className="bg-gray-100 p-4 rounded text-center w-1/3">
+                <div className="bg-gray-100 p-4 rounded text-center md:w-1/3 w-full">
                   <Image src="/icons/bank-transfer.png" alt="Transferencia bancaria" width={100} height={40} />
                   <p className="text-sm mt-2">Transferencia bancaria</p>
                 </div>
