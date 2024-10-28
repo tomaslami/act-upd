@@ -129,15 +129,15 @@ export default function Home() {
       </section>
 
       {/* Timeline */}
-      <section className="py-16">
+      <section className="py-16 flex ">
         <div className="container mx-auto px-4">
           <SectionHeader title="Cronograma del Curso" className="text-blue" />
           <div className="relative">
-            <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-blue"></div>
+            <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-blue hidden md:flex "></div>
             <div className="space-y-8">
               {[1, 2, 3, 4].map((day) => (
                 <div key={day} className="relative">
-                  <div className="absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-4 h-4 bg-blue rounded-full"></div>
+                  <div className=" hidden md:flex absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-4 h-4 bg-blue rounded-full"></div>
                   <div className="ml-8">
                     <h3 className="text-xl font-bold text-blue">Día {day}</h3>
                     <p>10:00 am - 12:15 pm: Sesión de mañana</p>
@@ -156,7 +156,7 @@ export default function Home() {
           <SectionHeader title="Coordinación e Inscripción" className="text-blue" />
           <div className="flex flex-col items-center space-y-8 md:space-y-0 md:space-x-8">
             <CourseCard title="Formas de Pago" icon={<CreditCard className="w-6 h-6 text-black " />}>
-              <div className="flex space-x-4">
+              <div className="flex space-x-4 flex-col md:flex-row">
                 <div className="bg-gray-100 p-4 rounded text-center w-1/3">
                   <Image src="/icons/paypal.png" alt="PayPal" width={100} height={40} />
                   <p className="text-sm mt-2">Más la comisión del 6%</p>
