@@ -48,7 +48,7 @@ const NavBar = () => {
         >
           {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
-        <ul className={`flex flex-col lg:flex-row w-full justify-between items-center absolute lg:relative top-[50px] lg:top-0 left-0 bg-white lg:bg-transparent transition-all duration-300 ease-in-out ${isMenuOpen
+        <ul className={`flex flex-col lg:flex-row w-full justify-between items-center absolute lg:relative top-[75px] lg:top-0 left-0 bg-white lg:bg-transparent transition-all duration-300 ease-in-out ${isMenuOpen
           ? 'opacity-100 translate-y-0'
           : 'opacity-0 -translate-y-2 pointer-events-none'
           } lg:flex lg:opacity-100 lg:translate-y-0 lg:pointer-events-auto`}>
