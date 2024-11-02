@@ -1,40 +1,46 @@
-"use client"
-import { handleSubmit } from '@/actions/contact-actions'
-import { toast, Toaster } from "sonner"
+import { Toaster } from "sonner"
 import { Facebook, Instagram } from 'lucide-react'
 import Link from 'next/link'
-import { useEffect, useState } from 'react'
-import Loader from "./loader/Loader"
+// import { ContactSchema } from '@/lib/validations/Schema'
+// import axios from 'axios'
+// import { z } from 'zod'
 
 
-export default function Contact() {
-  const inputs = [
-    { type: "text", placeholder: "Nombre completo...", name: "name" },
-    { type: "email", placeholder: "Correo electrónico...", name: "email" },
-    { type: "tel", placeholder: "Teléfono...", name: "phone" },
-  ]
+const Contact = () => {
 
+  // const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+  //   e.preventDefault()
+  //   const formData = new FormData(e.currentTarget)
+  //   const values = Object.fromEntries(formData.entries())
 
+  //   if (Object.values(values).some((value) => value === "")) {
+  //     toast.error("Please fill in all fields")
+  //     return
+  //   }
 
+  //   try {
+  //     const result = ContactSchema.parse(values)
 
-  const FormAction = async (formData: any) => {
-    const res = await handleSubmit(formData)
-    switch (res.status) {
-      case 200:
-        toast.success(res.message)
-        break
-      case 500:
-        if (Array.isArray(res.message)) {
-          res.message.map((msg: string) => toast.error(msg));
-        } else {
-          toast.error(res.message);
-        }
-        break;
-      default:
-        toast.info("Error al enviar el mensaje")
-        break
-    }
-  }
+  //     await axios
+  //       .post("/api/emails", result)
+  //       .then(() => {
+  //         toast.success("Message sent successfully")
+  //       })
+  //       .catch((error) => {
+  //         toast.error("An error occurred, please try again later")
+  //         console.log(error)
+  //       })
+  //   } catch (error) {
+  //     if (error instanceof z.ZodError) {
+  //       const errors = error.errors.map((err) => err.message)
+  //       errors.forEach((err) => toast.error(err))
+  //       return
+  //     } else {
+  //       toast.error("An error occurred, please try again later")
+  //       console.log(error)
+  //     }
+  //   }
+  // }
 
   return (
     <section id='contact' className="relative bg-blue py-16 text-white scroll-m-10">
@@ -47,7 +53,10 @@ export default function Contact() {
             <p className="mb-8">
               Contactate con nosotros si querés información sobre nuestras formaciones y novedades.
             </p>
-            <form action={FormAction} className="space-y-4">
+            <form
+              action="https://formspree.io/f/xvgokwdv"
+              method="POST"
+              className="space-y-4">
               <div className="grid gap-4 sm:grid-cols-2">
                 <input
                   type="text"
@@ -83,6 +92,7 @@ export default function Contact() {
                   type="submit"
                   className="w-2/3 h-12 flex items-center justify-center bg-red text-white text-base font-normal hover:opacity-95 outline-none transition-colors duration-200 mb-12 sm:w-1/3 rounded-2xl"
                 >
+                  Enviar
                 </button>
               </div>
             </form>
@@ -122,3 +132,5 @@ export default function Contact() {
     </section>
   )
 }
+
+export default Contact

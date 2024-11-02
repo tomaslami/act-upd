@@ -1,4 +1,3 @@
-import { Facebook, Instagram } from 'lucide-react'
 import React from 'react'
 import Image from 'next/image'
 import backgroundImage from '/public/icons/backgroundHome.png'
