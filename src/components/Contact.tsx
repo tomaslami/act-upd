@@ -1,9 +1,44 @@
+"use client"
+import { handleSubmit } from '@/actions/contact-actions'
+import { toast, Toaster } from "sonner"
 import { Facebook, Instagram } from 'lucide-react'
 import Link from 'next/link'
+import { useEffect, useState } from 'react'
+import Loader from "./loader/Loader"
+
 
 export default function Contact() {
+  const inputs = [
+    { type: "text", placeholder: "Nombre completo...", name: "name" },
+    { type: "email", placeholder: "Correo electrónico...", name: "email" },
+    { type: "tel", placeholder: "Teléfono...", name: "phone" },
+  ]
+
+
+
+
+  const FormAction = async (formData: any) => {
+    const res = await handleSubmit(formData)
+    switch (res.status) {
+      case 200:
+        toast.success(res.message)
+        break
+      case 500:
+        if (Array.isArray(res.message)) {
+          res.message.map((msg: string) => toast.error(msg));
+        } else {
+          toast.error(res.message);
+        }
+        break;
+      default:
+        toast.info("Error al enviar el mensaje")
+        break
+    }
+  }
+
   return (
     <section id='contact' className="relative bg-blue py-16 text-white scroll-m-10">
+      <Toaster position="top-center" duration={3000} richColors />
       <div className="md:px-20 px-5">
         <div className="flex flex-col items-stretch justify-between gap-12 lg:flex-row">
           {/* Left column: Form */}
@@ -12,30 +47,29 @@ export default function Contact() {
             <p className="mb-8">
               Contactate con nosotros si querés información sobre nuestras formaciones y novedades.
             </p>
-            <form className="space-y-4">
+            <form action={FormAction} className="space-y-4">
               <div className="grid gap-4 sm:grid-cols-2">
                 <input
                   type="text"
                   placeholder="Nombre"
+                  name='name'
                   className="w-full rounded-full bg-white px-4 py-2 font-semibold text-blue placeholder:text-blue placeholder:font-semibold focus:outline-none"
                 />
                 <input
                   type="email"
                   placeholder="Email"
+                  name='email'
                   className="w-full rounded-full bg-white px-4 py-2 font-semibold text-blue placeholder:text-blue placeholder:font-semibold focus:outline-none"
                 />
                 <input
                   type="tel"
                   placeholder="Teléfono"
-                  className="w-full rounded-full bg-white px-4 py-2 font-semibold text-blue placeholder:text-blue placeholder:font-semibold focus:outline-none"
-                />
-                <input
-                  type="text"
-                  placeholder="Asunto"
+                  name='phone'
                   className="w-full rounded-full bg-white px-4 py-2 font-semibold text-blue placeholder:text-blue placeholder:font-semibold focus:outline-none"
                 />
               </div>
               <textarea
+                name='message'
                 placeholder="Mensaje"
                 rows={4}
                 className="w-full rounded-3xl bg-white px-4 py-2 font-semibold text-blue placeholder:text-blue placeholder:font-semibold focus:outline-none"
@@ -47,9 +81,8 @@ export default function Contact() {
               <div className="flex justify-end">
                 <button
                   type="submit"
-                  className="rounded-full bg-red px-14 py-2 font-semibold text-white transition-colors hover:bg-red-600"
+                  className="w-2/3 h-12 flex items-center justify-center bg-red text-white text-base font-normal hover:opacity-95 outline-none transition-colors duration-200 mb-12 sm:w-1/3 rounded-2xl"
                 >
-                  Enviar
                 </button>
               </div>
             </form>
@@ -65,7 +98,7 @@ export default function Contact() {
               <h3 className="mb-4 text-2xl font-semibold">Contacto</h3>
               <p className='text-[14px]'>Juramento 1475, Bs As.</p>
               <p className='text-[14px]'>info@actualmente.com.ar</p>
-              <p className='text-[14px]'>11 4033.6320</p>
+              <p className='text-[14px]'>11 4033-6320</p>
             </div>
             <div className="mb-8">
               <h3 className="mb-4 text-2xl font-semibold">Seguinos</h3>
