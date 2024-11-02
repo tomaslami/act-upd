@@ -1,61 +1,50 @@
-import { mailOptions, transporter } from "@/lib/config/nodemailer"
+import { Resend } from "resend"
 import { NextResponse } from "next/server"
+import { EmailTemplate } from "@/components/email-template"
 
 export async function POST(req: Request) {
-  if (req.method !== "POST")
-    return NextResponse.json({ error: "Method not allowed" }, { status: 405 })
+  if (req.method !== "POST") {
+    return NextResponse.json({ message: "Method not allowed", status: 405 })
+  }
 
   try {
-    const response = await req.json()
+    const resend = new Resend(process.env.RESEND_API_KEY)
 
-    if (Object.values(response).some((value) => value === "")) {
-      return NextResponse.json(
-        { error: "Please fill in all fields" },
-        { status: 400 }
-      )
+    const data = await req.json()
+
+    if (!data) {
+      return NextResponse.json({
+        message: "No data provided",
+        status: 400,
+      })
     }
 
-    const { name, email, phone, message } = response
+    const { name, email, phone, message } = data
 
-    //nodemailer
-    await transporter
-      .sendMail({
-        ...mailOptions(email),
-        subject: "New message from Synera website",
-        from: email,
-        sender: email,
-        html: `
-      <main>
-        <h1>Hola Synera team, soy ${name}</h1>
-        <h3>${message}</h3>
-        <div><h4>Este es mi email: ${email}</h4></div>
-        <div><h4>Este es mi telefono: ${phone}</h4></div>
-      </main>`,
-      })
-      .then((response) => {
-        console.log(response)
-        return NextResponse.json(
-          { message: "Message sent successfully" },
-          { status: 200 }
-        )
-      })
-      .catch((error) => {
-        console.log(error)
-        return NextResponse.json(
-          { message: "An error occurred, please try again later" },
-          { status: 500 }
-        )
-      })
+    await resend.emails.send({
+      from: "info@actualmente.com.ar",
+      to: [
+        "guralniktomas@gmail.com "
+      ],
+      subject: "Nuevo mensaje de contacto desde Actualmente",
+      react: EmailTemplate({
+        name: name,
+        message: message,
+        phone: phone,
+        email: email,
+      }),
+      text: "",
+    })
 
-    return NextResponse.json(
-      { message: "Message sent successfully" },
-      { status: 200 }
-    )
+    return NextResponse.json({
+      message: "The email was sent successfully.",
+      status: 200,
+    })
   } catch (error) {
-    console.log(error)
-    return NextResponse.json(
-      { error: "An error occurred, please try again later" },
-      { status: 500 }
-    )
+    console.error(error)
+    return NextResponse.json({
+      message: "The email could not be sent. Please try again later.",
+      status: 500,
+    })
   }
 }

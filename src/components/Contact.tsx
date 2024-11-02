@@ -54,7 +54,7 @@ const Contact = () => {
               Contactate con nosotros si querés información sobre nuestras formaciones y novedades.
             </p>
             <form
-              action="https://formspree.io/f/xvgokwdv"
+              action="https://formspree.io/f/mvgokwlb"
               method="POST"
               className="space-y-4">
               <div className="grid gap-4 sm:grid-cols-2">
