@@ -5,6 +5,7 @@ import NavBar from "@/components/NavBar";
 import Contact from "@/components/Contact";
 import CertificationsFooter from "@/components/CertificationsFooter";
 import FloatingButton from "@/components/FloatingButton";
+import { TagManagerProvider } from "@/context/TagManager";
 
 const gothamRoundedBold = localFont({
   src: "/fonts/gothamrnd_bold.otf",
@@ -52,11 +53,15 @@ export default function RootLayout({
       <body
         className={`${gothamRoundedBold.className} ${gothamRoundedMedium.className} ${gothamRoundedLight.className} ${gothamRoundedBook.className} `}
       >
-        <NavBar />
-        {children}
-        <Contact />
-        <CertificationsFooter />
-        <FloatingButton phoneNumber="5491140336320" />
+        <TagManagerProvider>
+          <main>
+            <NavBar />
+            {children}
+            <Contact />
+            <CertificationsFooter />
+          </main>
+          <FloatingButton phoneNumber="5491140336320" />
+        </TagManagerProvider>
       </body>
     </html>
   );
