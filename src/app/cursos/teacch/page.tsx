@@ -158,7 +158,7 @@ export default function Home() {
               <p className="font-bold mb-2">cursosactualmente@gmail.com</p>
               <p className="mb-4">o contactar al WhatsApp +549114033632</p>
             </div>
-            <Link href="#contact" className="bg-blue text-white hover:bg-blue2">
+            <Link href="#contact" className=" bg-blue text-white hover:bg-blue2 py-3 px-10 rounded-3xl flex justify-center items-center flex-row">
               Contactar Ahora
             </Link>
           </div>
