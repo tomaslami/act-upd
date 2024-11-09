@@ -66,7 +66,7 @@ export default function ADIRCourseInfo() {
         <p className="mt-2 mb-2">Si tienen preguntas o alguna dificultad, pueden enviar un correo a:</p>
         <p className="font-semibold">cursosactualmente@gmail.com</p>
         <p className="mb-8 font-semibold">o contactar al WhatsApp +549114033632</p>
-        <Link href="https://api.whatsapp.com/send/?phone=5491140336320&text&type=phone_number&app_absent=0" className="bg-green text-white hover:bg-green-700 py-3 px-8 rounded-3xl ">
+        <Link href="#contact" className="bg-green text-white hover:bg-green-700 py-3 px-8 rounded-3xl ">
           Inscribirse Ahora
         </Link>
       </CourseSection>

@@ -96,7 +96,7 @@ export default function ADOS2CourseInfo() {
         <p className="mt-2">Si tienen preguntas o alguna dificultad, pueden enviar un correo a:</p>
         <p className="font-semibold">cursosactualmente@gmail.com</p>
         <p className="mb-4">o contactar al WhatsApp +549114033632</p>
-        <Link href="https://api.whatsapp.com/send/?phone=5491140336320&text&type=phone_number&app_absent=0" className="bg-blue text-white hover:bg-blue2 py-3 px-8 rounded-3xl">
+        <Link href="#contact" className="bg-blue text-white hover:bg-blue2 py-3 px-8 rounded-3xl">
           Inscribirse Ahora
         </Link>
       </CourseSection>
