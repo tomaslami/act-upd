@@ -65,7 +65,27 @@ export default function ADOS2CourseInfo() {
           Los participantes recibirán una invitación de ZOOM por correo electrónico un día antes del inicio del curso.
         </p>
       </CourseSection>
+      <CourseSection title="Instructora: Dra. Rhiannon Luyster">
+        <div className='mb-20 scroll-m-36' id='info'>
+          <h3 className="text-xl font-bold text-black mb-2">-Acerca de Rhiannon Luyster-</h3>
+          <p className="mb-4">
+            La Dra. Luyster es una psicóloga del desarrollo cuyo programa de investigación se centra en el autismo. Desde hace mucho tiempo tiene un interés en la comunicación social temprana y el lenguaje en el autismo, y es autora del Módulo para niños pequeños del Programa de observación para el diagnóstico del autismo, segunda edición (ADOS-2). Su trabajo ha recibido el apoyo de los Institutos Nacionales de Salud, la Fundación Nacional de Ciencias, la Asociación Estadounidense del Habla, el Lenguaje y la Audición, la Sociedad Filosófica Estadounidense, la Fundación para la Investigación del Cerebro y la Conducta, la Organización para la Investigación del Autismo y el Emerson College. La Dra. Luyster ha publicado su trabajo en varias revistas revisadas por pares, entre ellas Developmental Psychology, Development & Psychopathology, Journal of Child Language, Journal of Speech, Language and Hearing Research, Autism Research y Journal of Autism and Developmental Disorders.
+          </p>
+          <p className="mb-4">
+            La Dra. Luyster ofrece cursos de posgrado sobre métodos de investigación y autismo, así como un curso de pregrado sobre psicología del desarrollo. Sus actividades de investigación están abiertas a los estudiantes de Emerson interesados en aprender más sobre la investigación clínica con niños pequeños.
 
+          </p>
+          <p className="mb-4">
+            La Dra. Luyster ofrece cursos de posgrado sobre métodos de investigación y autismo, así como un curso de pregrado sobre psicología del desarrollo. Sus actividades de investigación están abiertas a los estudiantes de Emerson interesados en aprender más sobre la investigación clínica con niños pequeños.
+          </p>
+          <p className="mb-6">
+            La Dra. Luyster recibió el premio Emerson College Alumni Award por innovación en la enseñanza en 2016. Recibió un premio Huret Faculty Excellence Award en 2021 y un premio Norman e Irma Mann Stearns en 2023.
+          </p>
+          <Link href="https://emerson.edu/faculty-staff-directory/rhiannon-luyster#publicaciones" className="bg-blue text-white hover:bg-blue2 py-3 px-8 rounded-3xl" target='_blank'>
+            Publicaciones
+          </Link>
+        </div>
+      </CourseSection>
       <CourseSection title="Coordinación e Inscripción">
         <p>El curso está coordinado por la Lic. Silvia Tedesco de ACTUALMENTE.</p>
         <p className="mt-2">Si tienen preguntas o alguna dificultad, pueden enviar un correo a:</p>
