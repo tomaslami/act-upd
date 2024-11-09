@@ -1,11 +1,11 @@
 "use client"
 import React, { useCallback, useMemo } from 'react'
 import Image from 'next/image'
-import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import {
   Calendar, Clock, Users, Book
 } from 'lucide-react'
+import Link from 'next/link'
 
 // Reusable components
 const SectionHeader = (({ title, className }: { title: string; className?: string }) => (
@@ -158,9 +158,9 @@ export default function Home() {
               <p className="font-bold mb-2">cursosactualmente@gmail.com</p>
               <p className="mb-4">o contactar al WhatsApp +549114033632</p>
             </div>
-            <Button className="bg-blue text-white hover:bg-blue2">
+            <Link href="#contact" className="bg-blue text-white hover:bg-blue2">
               Contactar Ahora
-            </Button>
+            </Link>
           </div>
         </div>
       </section>
