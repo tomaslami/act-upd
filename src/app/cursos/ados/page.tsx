@@ -64,13 +64,13 @@ export default function ADOS2CourseInfo() {
           <p className="mb-6">
             La Dra. Luyster recibió el premio Emerson College Alumni Award por innovación en la enseñanza en 2016. Recibió un premio Huret Faculty Excellence Award en 2021 y un premio Norman e Irma Mann Stearns en 2023.
           </p>
-          <div className="flex space-x-4">
+          <div className="flex justify-center items-start gap-5 flex-col md:flex-row">
             {/* Enlace a publicaciones */}
             <Link
               href="https://emerson.edu/faculty-staff-directory/rhiannon-luyster#publicaciones"
-              className="bg-blue text-white hover:bg-blue2 py-3 px-10 rounded-3xl flex justify-center items-center flex-row"
+              className="bg-blue text-white hover:bg-blue2 py-3 px-12 rounded-3xl flex justify-center items-center flex-row"
             >
-              <span className="mr-2">Publicaciones</span>
+              <p className="mr-2 text-sm lg:text-base">Publicaciones</p>
               <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
                 <path fillRule="evenodd" d="M12.586 4.586a2 2 0 112.828 2.828l-3 3a2 2 0 01-2.828 0 1 1 0 00-1.414 1.414 4 4 0 005.656 0l3-3a4 4 0 00-5.656-5.656l-1.5 1.5a1 1 0 101.414 1.414l1.5-1.5zm-5 5a2 2 0 012.828 0 1 1 0 101.414-1.414 4 4 0 00-5.656 0l-3 3a4 4 0 105.656 5.656l1.5-1.5a1 1 0 10-1.414-1.414l-1.5 1.5a2 2 0 11-2.828-2.828l3-3z" clipRule="evenodd" />
               </svg>
@@ -82,7 +82,7 @@ export default function ADOS2CourseInfo() {
               download="Prueba"
               className="bg-blue text-white hover:bg-blue2 py-3 px-10 rounded-3xl flex justify-center items-center flex-row"
             >
-              <span className="mr-2">Investigaciones Actualizadas</span>
+              <p className="mr-2 text-sm lg:text-base">Investigaciones</p>
               <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
                 <path fillRule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clipRule="evenodd" />
               </svg>
