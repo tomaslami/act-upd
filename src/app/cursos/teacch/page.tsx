@@ -3,7 +3,9 @@ import React, { useCallback, useMemo } from 'react'
 import Image from 'next/image'
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Calendar, Clock, Users, Book, DollarSign, CreditCard } from 'lucide-react'
+import {
+  Calendar, Clock, Users, Book
+} from 'lucide-react'
 
 // Reusable components
 const SectionHeader = (({ title, className }: { title: string; className?: string }) => (
