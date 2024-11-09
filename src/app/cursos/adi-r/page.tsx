@@ -52,16 +52,6 @@ export default function ADIRCourseInfo() {
       <CourseSection title="Incluye">
         <p>La entrevista y el algoritmo.</p>
       </CourseSection>
-
-      <CourseSection title="Valor de Inscripción">
-        <p>Valor hasta 1 Diciembre: 650 USD</p>
-        <p>Si abonas por paypal 690 USD (incluye comisión)</p>
-      </CourseSection>
-
-      <CourseSection title="Medio de Pago">
-        <p>Efectivo, Transferencias Internacionales o Nacionales el importe NO incluye IVA.</p>
-      </CourseSection>
-
       <CourseSection title="Recomendación para la Conexión">
         <p>
           Es muy importante que preparen los aspectos técnicos para facilitar la conexión y buena comunicación de imagen y sonido, tanto para el propio participante como para el resto de los conectados. Deben contar con buena conexión a internet. El curso tendrá un control de participación activa durante los 2 días.

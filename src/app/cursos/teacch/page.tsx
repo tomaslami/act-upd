@@ -119,11 +119,6 @@ export default function Home() {
               <p>Cámara encendida durante toda la formación</p>
               <p className="mt-2">Certificado sujeto al cumplimiento de requisitos</p>
             </CourseCard>
-            <CourseCard title="Valor de Inscripción" icon={<DollarSign className="w-6 h-6" />}>
-              <p className="font-bold">VALOR ANTICIPADO: 750 USD</p>
-              <p className="mt-2">Descuento grupal: 15% (3+ profesionales)</p>
-              <p className="text-sm italic mt-2">(Profesionales de Argentina pueden abonar en pesos)</p>
-            </CourseCard>
           </div>
         </div>
       </section>
@@ -155,22 +150,6 @@ export default function Home() {
         <div className="px-4 text-start">
           <SectionHeader title="Coordinación e Inscripción" className="text-blue" />
           <div className=" flex flex-col items-center">
-            <CourseCard title="Formas de Pago" icon={<CreditCard className="w-6 h-6 text-black " />}>
-              <div className=" flex gap-8 justify-start items-start flex-col md:flex-row">
-                <div className=" rounded text-center md:w-1/3 w-full">
-                  <Image src="/icons/paypal.png" alt="PayPal" width={100} height={40} />
-                  <p className="text-start text-sm font-bold">Más la comisión del 6%</p>
-                </div>
-                <div className=" rounded text-center md:w-1/3 w-full">
-                  <Image src="/icons/mercadopago.png" alt="Mercado Pago" width={100} height={40} />
-                  <p className="text-start text-sm font-bold">Más comisión</p>
-                </div>
-                <div className=" rounded text-center md:w-1/3 w-full">
-                  <Image src="/icons/bank-transfer.png" alt="Transferencia bancaria" width={100} height={40} />
-                  <p className="text-start text-sm font-bold">Transferencia bancaria</p>
-                </div>
-              </div>
-            </CourseCard>
             <div className='flex justify-center items-start flex-col'>
               <p className="mb-2">El curso está coordinado por la Lic. Silvia Tedesco de ACTUALMENTE.</p>
               <p className="mb-2">Si tienen preguntas o alguna dificultad, pueden enviar un correo a:</p>

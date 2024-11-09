@@ -39,24 +39,6 @@ export default function ADOS2CourseInfo() {
           Profesionales que tengan experiencia en TEA y que quieran mejorar sus habilidades diagnósticas o del conocimiento de la psicopatología como también que necesiten una formación en instrumentos diagnósticos para la aplicación y/o en investigación científica.
         </p>
       </CourseSection>
-
-      <CourseSection title="Valor de Inscripción">
-        <ul className="list-disc list-inside space-y-2">
-          <li>OPCIÓN 1: El valor es de 750 dólares con protocolos. Este precio incluye protocolos y acceso a videos.</li>
-          <li>OPCIÓN 2: El valor es de 900 dólares con protocolos y manual. Este precio incluye protocolos, manual digital y acceso a videos.</li>
-          <li>CUOTAS: Podes abonar en hasta 3 cuotas.</li>
-        </ul>
-        <p className="mt-4">RESPECTO AL MATERIAL: En esta formación el manual digital será entregado únicamente por correo electrónico.</p>
-      </CourseSection>
-
-      <CourseSection title="Formas de Pago">
-        <ul className="list-disc list-inside space-y-2">
-          <li>Efectivo</li>
-          <li>Transferencias internacionales o nacionales</li>
-          <li className='text-bold'> NO incluye IVA.</li>
-        </ul>
-      </CourseSection>
-
       <CourseSection title="Recomendación para la Conexión">
         <p>
           Es muy importante que preparen los aspectos técnicos para facilitar la conexión y buena comunicación de imagen y sonido, tanto para el propio participante como para el resto de los conectados. Deben contar con buena conexión a internet. El curso tendrá un control de participación activa durante los 3 días.
