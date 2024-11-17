@@ -17,7 +17,8 @@ const Cursos = ({ params }: { params: { slug: string } }) => {
       const curso = data.curso.find((curso) => curso.title === params.slug)
       if (!curso) notFound()
       return curso as CursosType
-    } catch (error) {
+    } catch (err) {
+      console.error(err)
       notFound()
     }
   }
