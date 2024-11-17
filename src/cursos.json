@@ -1,0 +1,88 @@
+{
+  "curso": [
+    {
+      "title": "teacch",
+      "text": "text-blue",
+      "bgcolor": "bg-blue",
+      "value": "TEACCH, Enfocado en niños de 3 a 5 años",
+      "subtitle": "Primera vez dictado en habla hispana",
+      "date": "FECHA: MES DE DICIEMBRE",
+      "modality": "Únicamente 40 lugares disponibles",
+      "timemorning": "10:00 am - 12:15 pm",
+      "timeafternoon": "2:00 pm - 4:15 pm",
+      "about": "Sobre el Curso TEACCH",
+      "objectives": [
+        "Identificar los estilos de aprendizaje de las personas que se encuentran dentro del espectro autista.",
+        "Diagramar la organización física de los espacios de aprendizaje.",
+        "Desarrollar horarios personalizados y sistemas de actividades.",
+        "Desarrollar una estructura visual significativa para su utilización en áreas clave.",
+        "Adquirir conductas para la resolución de problemas utilizando un abordaje basado en un antecedente y en los principios del programa TEACCH con estructuración."
+      ],
+      "topics": [
+        "Estilos de Aprendizaje en Autismo",
+        "Evaluación",
+        "Organización Física & Horarios",
+        "Sistemas de Actividades y Estructura del Material",
+        "Estrategias de Aprendizaje; Estrategias Naturalistas & Vinculadas con la interacción",
+        "Manualidades",
+        "Juego dramático",
+        "Habilidades la Motricidad Gruesa & Autoayuda",
+        "Manejo de la Conducta"
+      ],
+      "button": "Inscribirse ahora"
+    },
+    {
+      "title": "ados",
+      "text": "text-blue",
+      "bgcolor": "bg-blue",
+      "value": "AUTISM DIAGNOSTIC OBSERVATIONAL SCHEDULE (ADOS-2)",
+      "subtitle": "Formación Clínica de ADOS-2 - Instructora: Dra. Rhiannon Luyster",
+      "date": "Fecha: 9, 10 y 11 de Noviembre",
+      "modality": "LUGARES AGOTADOS",
+      "timemorning": "10:00 am - 12:15 pm",
+      "timeafternoon": "2:00 pm - 4:15 pm",
+      "about": "Sobre el Curso ADOS-2",
+      "topics": [
+        "Curso de formación, acreditación clínica y de investigación. La entrevista diagnóstica ADOS-2 (Autism Diagnostic Observational Schedule) es una entrevista semiestructurada que se realiza con niños, adolescentes y adultos con TEA y se complementa con la administración del ADI-R Autism Diagnostic InterviewRevised. Ambos instrumentos diagnósticos son de gran complejidad en su administración y han sido diseñados especialmente para su uso en la investigación."
+      ],
+      "cv": "/Luyster_CV_2024.pdf",
+      "button": "Consultar Información"
+    },
+    {
+      "value": "Autism Diagnostic Interview Revised (ADI-R)",
+      "title": "adi-r",
+      "text": "text-blue",
+      "bgcolor": "bg-blue",
+      "subtitle": "Curso dictado por primera vez con traducción simultánea al español",
+      "date": "FECHA: 20 y 21 de Diciembre",
+      "modality": "Modalidad online a través de Zoom",
+      "timemorning": "10:00 am - 1:00 pm",
+      "timeafternoon": "2:00 pm - 5:00 pm",
+      "about": "Sobre el curso ADI-R",
+      "objectives": [
+        "Realizar entrevistas diagnósticas semi-estructuradas para pacientes con TEA.",
+        "Complementar la administración del ADI-R con el ADOS-2 para una evaluación más completa.",
+        "Adquirir habilidades para la investigación en diagnósticos de TEA.",
+        "Capacitarse en el uso de herramientas diagnósticas complejas para la práctica profesional."
+      ],
+      "topics": [
+        "Entrevista Diagnóstica ADI-R",
+        "Evaluación de pacientes con TEA",
+        "Complemento con ADOS-2",
+        "Metodología de investigación en TEA",
+        "Administración y algoritmos diagnósticos",
+        "Casos prácticos y ejemplos reales"
+      ],
+      "instructor": "Dra. Rhiannon Luyster, PHD - Investigadora y Autora del Módulo T de ADOS-2",
+      "button": "Inscribirse ahora",
+      "contact": {
+        "email": "cursosactualmente@gmail.com",
+        "whatsapp": "+549114033632"
+      },
+      "recommendations": "Es fundamental contar con buena conexión a internet para la correcta participación.",
+      "includes": "Incluye la entrevista diagnóstica y el algoritmo.",
+      "coordination": "Curso coordinado por la Lic. Silvia Tedesco de ACTUALMENTE",
+      "registration_note": "Los participantes recibirán la invitación por ZOOM un día antes del inicio del curso."
+    }
+  ]
+}
