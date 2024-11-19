@@ -9,30 +9,46 @@ import { Book, Calendar, Clock, Users } from 'lucide-react'
 import Link from 'next/link'
 
 const Cursos = ({ params }: { params: { slug: string } }) => {
-  const [curso, setCurso] = useState({} as CursosType)
+  const [curso, setCurso] = useState({} as CursosType);
 
-  const verifyData = () => {
+  const verifyData = useCallback(() => {
     try {
-      if (!params.slug) notFound()
-      const curso = data.curso.find((curso) => curso.title === params.slug)
-      if (!curso) notFound()
-      return curso as CursosType
+      if (!params.slug) notFound();
+      const curso = data.curso.find((curso) => curso.title === params.slug);
+      if (!curso) notFound();
+      return curso as CursosType;
     } catch (err) {
-      console.error(err)
-      notFound()
+      console.error("Error verifying data:", err);
+      notFound();
     }
-  }
+  }, [params.slug]);
 
   useEffect(() => {
-    const curso = verifyData()
-    setCurso(curso)
-  }, [params])
+    const curso = verifyData();
+    if (curso) setCurso(curso);
+  }, [verifyData]);
 
-  const SectionHeader = (({ title, className }: { title: string; className?: string }) => (
-    <h2 className={`text-3xl font-bold mb-8 text-center ${className}`}>{title}</h2>
-  ))
+  const SectionHeader = ({
+    title,
+    className,
+  }: {
+    title: string;
+    className?: string;
+  }) => (
+    <h2 className={`text-3xl font-bold mb-8 text-center ${className}`}>
+      {title}
+    </h2>
+  );
 
-  const CourseCard = (({ title, icon, children }: { title: string; icon: React.ReactNode; children: React.ReactNode }) => (
+  const CourseCard = ({
+    title,
+    icon,
+    children,
+  }: {
+    title: string;
+    icon: React.ReactNode;
+    children: React.ReactNode;
+  }) => (
     <Card className="bg-white">
       <CardHeader>
         <CardTitle className="text-2xl font-bold flex items-center">
@@ -42,7 +58,8 @@ const Cursos = ({ params }: { params: { slug: string } }) => {
       </CardHeader>
       <CardContent>{children}</CardContent>
     </Card>
-  ))
+  );
+
   const renderList = useCallback((items: string[] | undefined) => {
     if (!items || items.length === 0) return null;
 
