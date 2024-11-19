@@ -147,7 +147,7 @@ const Cursos = ({ params }: { params: { slug: string } }) => {
               <p className="font-bold mb-2">cursosactualmente@gmail.com</p>
               <p className="mb-4">o contactar al WhatsApp +549114033632</p>
             </div>
-            <Link href="#contact" className={`${curso.bgcolor} text-white py-3 px-8 rounded-3xl`}>
+            <Link href="https://api.whatsapp.com/send/?phone=5491140336320&text&type=phone_number&app_absent=0" className={`${curso.bgcolor} text-white py-3 px-8 rounded-3xl`}>
               {curso.button}
             </Link>
           </div>
