@@ -1,47 +1,28 @@
-import { Toaster } from "sonner"
+"use client"
+import { toast, Toaster } from "sonner"
 import { Facebook, Instagram } from 'lucide-react'
 import Link from 'next/link'
-// import { ContactSchema } from '@/lib/validations/Schema'
-// import axios from 'axios'
-// import { z } from 'zod'
+import { handleSubmit } from "@/actions/contact-actions"
 
 
 const Contact = () => {
 
-  // const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-  //   e.preventDefault()
-  //   const formData = new FormData(e.currentTarget)
-  //   const values = Object.fromEntries(formData.entries())
-
-  //   if (Object.values(values).some((value) => value === "")) {
-  //     toast.error("Please fill in all fields")
-  //     return
-  //   }
-
-  //   try {
-  //     const result = ContactSchema.parse(values)
-
-  //     await axios
-  //       .post("/api/emails", result)
-  //       .then(() => {
-  //         toast.success("Message sent successfully")
-  //       })
-  //       .catch((error) => {
-  //         toast.error("An error occurred, please try again later")
-  //         console.log(error)
-  //       })
-  //   } catch (error) {
-  //     if (error instanceof z.ZodError) {
-  //       const errors = error.errors.map((err) => err.message)
-  //       errors.forEach((err) => toast.error(err))
-  //       return
-  //     } else {
-  //       toast.error("An error occurred, please try again later")
-  //       console.log(error)
-  //     }
-  //   }
-  // }
-
+  const FormAction = async (formData: any) => {
+    const res = await handleSubmit(formData)
+    switch (res.status) {
+      case 200:
+        toast.success(res.message)
+        break
+      case 500:
+        // Check if message is an array, if not convert it to an array
+        const messages = Array.isArray(res.message) ? res.message : [res.message]
+        messages.forEach((msg: string) => toast.error(msg))
+        break
+      default:
+        toast.info("Error al enviar el mensaje")
+        break
+    }
+  }
   return (
     <section id='contact' className="relative bg-blue py-16 text-white scroll-m-10">
       <Toaster position="top-center" duration={3000} richColors />
@@ -54,8 +35,7 @@ const Contact = () => {
               Contactate con nosotros si querés información sobre nuestras formaciones y novedades.
             </p>
             <form
-              action="https://formspree.io/f/mvgokwlb"
-              method="POST"
+              action={FormAction}
               className="space-y-4">
               <div className="grid gap-4 sm:grid-cols-2">
                 <input
@@ -91,6 +71,7 @@ const Contact = () => {
                 <button
                   type="submit"
                   className="w-2/3 h-12 flex items-center justify-center bg-red text-white text-base font-normal hover:opacity-95 outline-none transition-colors duration-200 mb-12 sm:w-1/3 rounded-2xl"
+
                 >
                   Enviar
                 </button>

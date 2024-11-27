@@ -14,12 +14,10 @@ const Cursos = ({ params }: { params: { slug: string } }) => {
   const verifyData = useCallback(() => {
     if (!params.slug) {
       notFound();
-      return null;
     }
     const foundCurso = data.curso.find((curso) => curso.title === params.slug);
     if (!foundCurso) {
       notFound();
-      return null;
     }
     return foundCurso;
   }, [params.slug]);

@@ -1,42 +1,63 @@
-"use server"
-import { ContactSchema } from "@/lib/validations/Schema"
-import axios from "axios"
-import { z } from "zod"
+'use server'
 
-export const handleSubmit = async (formData: FormData) => {
-  const name = formData.get("name")
-  const email = formData.get("email")
-  const phone = formData.get("phone")
-  const message = formData.get("message")
+import { Resend } from 'resend'
 
-  const values = {
-    name: name as string,
-    email: email as string,
-    phone: phone as string,
-    message: message as string,
-  }
+const resend = new Resend(process.env.RESEND_API_KEY)
 
-  if (Object.values(values).some((value) => value === "")) {
-    return { status: 500, message: "Por favor, complete todos los campos" }
+export async function handleSubmit(formData: FormData) {
+  if (!process.env.RESEND_API_KEY) {
+    console.error('RESEND_API_KEY is not defined')
+    return {
+      status: 500,
+      message: 'Error de configuración del servidor'
+    }
   }
 
   try {
-    const result = ContactSchema.parse(values)
-    const res = await axios.post(
-      process.env.NODE_ENV === "development"
-        ? "http://localhost:3000/api/emails"
-        : "https://actualmente.com.ar/api/emails",
-      result
-    )
+    const name = formData.get('name')
+    const email = formData.get('email')
+    const phone = formData.get('phone')
+    const message = formData.get('message')
 
-    return res.data
+    if (!name || !email || !message) {
+      return {
+        status: 500,
+        message: 'Todos los campos son requeridos'
+      }
+    }
+
+    const { error } = await resend.emails.send({
+      from: 'info@actualmente.com.ar',
+      to: ['info@actualmente.com.ar'], // Reemplaza con el email de destino
+      subject: 'Nuevo contacto desde el formulario web',
+      html: `
+        <h2>Nuevo mensaje de contacto</h2>
+        <p><strong>Nombre:</strong> ${name}</p>
+        <p><strong>Email:</strong> ${email}</p>
+        <p><strong>Teléfono:</strong> ${phone}</p>
+        <p><strong>Mensaje:</strong> ${message}</p>
+      `,
+    })
+
+    if (error) {
+      console.error('Error de Resend:', error)
+      return {
+        status: 500,
+        message: 'Error al enviar el email. Por favor intente nuevamente.'
+      }
+    }
+
+    return {
+      status: 200,
+      message: 'Mensaje enviado exitosamente'
+    }
+
   } catch (error) {
-    if (error instanceof z.ZodError) {
-      const errors = error.errors.map((err) => err.message)
-      return { status: 500, message: errors }
-    } else {
-      console.log(error)
-      return error
+    // Log the full error for debugging
+    console.error('Error completo:', error)
+    return {
+      status: 500,
+      message: 'Error al enviar el email. Por favor intente nuevamente.'
     }
   }
 }
