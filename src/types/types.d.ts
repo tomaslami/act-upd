@@ -15,3 +15,8 @@ export interface Cursos {
   cv?: string,
   button: string,
 }
+
+export interface ServerActionResponse {
+  status: 200 | 500
+  message: string | string[]
+}

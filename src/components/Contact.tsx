@@ -1,20 +1,19 @@
 "use client"
+
 import { toast, Toaster } from "sonner"
 import { Facebook, Instagram } from 'lucide-react'
 import Link from 'next/link'
 import { handleSubmit } from "@/actions/contact-actions"
-
+import type { ServerActionResponse } from "@/types/types"
 
 const Contact = () => {
-
-  const FormAction = async (formData: any) => {
-    const res = await handleSubmit(formData)
+  const FormAction = async (formData: FormData): Promise<void> => {
+    const res = await handleSubmit(formData) as ServerActionResponse
     switch (res.status) {
       case 200:
         toast.success(res.message)
         break
       case 500:
-        // Check if message is an array, if not convert it to an array
         const messages = Array.isArray(res.message) ? res.message : [res.message]
         messages.forEach((msg: string) => toast.error(msg))
         break
@@ -23,6 +22,7 @@ const Contact = () => {
         break
     }
   }
+
   return (
     <section id='contact' className="relative bg-blue py-16 text-white scroll-m-10">
       <Toaster position="top-center" duration={3000} richColors />
@@ -71,7 +71,6 @@ const Contact = () => {
                 <button
                   type="submit"
                   className="w-2/3 h-12 flex items-center justify-center bg-red text-white text-base font-normal hover:opacity-95 outline-none transition-colors duration-200 mb-12 sm:w-1/3 rounded-2xl"
-
                 >
                   Enviar
                 </button>
@@ -115,3 +114,4 @@ const Contact = () => {
 }
 
 export default Contact
+
