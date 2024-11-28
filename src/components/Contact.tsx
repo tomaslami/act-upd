@@ -23,7 +23,7 @@ export default function Contact() {
         const messages = Array.isArray(res.message) ? res.message : [res.message]
         messages.forEach((msg: string) => toast.error(msg))
       }
-    } catch (error) {
+    } catch {
       toast.error("Error al enviar el mensaje")
     } finally {
       setIsLoading(false)
