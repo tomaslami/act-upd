@@ -1,50 +1,47 @@
-import { Resend } from "resend"
-import { NextResponse } from "next/server"
-import { EmailTemplate } from "@/components/email-template"
+import { NextResponse } from 'next/server'
+import { Resend } from 'resend'
+
+const resend = new Resend(process.env.RESEND_API_KEY)
 
 export async function POST(req: Request) {
-  if (req.method !== "POST") {
-    return NextResponse.json({ message: "Method not allowed", status: 405 })
-  }
-
   try {
-    const resend = new Resend(process.env.RESEND_API_KEY)
+    const body = await req.json()
+    const { name, email, phone, message } = body
 
-    const data = await req.json()
-
-    if (!data) {
-      return NextResponse.json({
-        message: "No data provided",
-        status: 400,
-      })
+    if (!name || !email || !message) {
+      return NextResponse.json(
+        { error: 'Missing required fields' },
+        { status: 400 }
+      )
     }
 
-    const { name, email, phone, message } = data
-
-    await resend.emails.send({
-      from: "info@actualmente.com.ar",
-      to: [
-        "guralniktomas@gmail.com "
-      ],
-      subject: "Nuevo mensaje de contacto desde Actualmente",
-      react: EmailTemplate({
-        name: name,
-        message: message,
-        phone: phone,
-        email: email,
-      }),
-      text: "",
+    const { data, error } = await resend.emails.send({
+      from: 'onboarding@resend.dev',
+      to: ['info@actualmente.com.ar'],
+      subject: 'Nuevo contacto desde el formulario web',
+      html: `
+        <h2>Nuevo mensaje de contacto</h2>
+        <p><strong>Nombre:</strong> ${name}</p>
+        <p><strong>Email:</strong> ${email}</p>
+        <p><strong>Teléfono:</strong> ${phone}</p>
+        <p><strong>Mensaje:</strong> ${message}</p>
+      `,
     })
 
-    return NextResponse.json({
-      message: "The email was sent successfully.",
-      status: 200,
-    })
+    if (error) {
+      console.error('Resend error:', error)
+      return NextResponse.json(
+        { error: 'Failed to send email' },
+        { status: 500 }
+      )
+    }
+
+    return NextResponse.json({ success: true, data })
   } catch (error) {
-    console.error(error)
-    return NextResponse.json({
-      message: "The email could not be sent. Please try again later.",
-      status: 500,
-    })
+    console.error('Server error:', error)
+    return NextResponse.json(
+      { error: 'Internal server error' },
+      { status: 500 }
+    )
   }
 }

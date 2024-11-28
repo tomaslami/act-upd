@@ -1,63 +1,83 @@
 'use server'
 
 import { Resend } from 'resend'
+import axios from 'axios'
 
 const resend = new Resend(process.env.RESEND_API_KEY)
 
 export async function handleSubmit(formData: FormData) {
-  if (!process.env.RESEND_API_KEY) {
-    console.error('RESEND_API_KEY is not defined')
-    return {
-      status: 500,
-      message: 'Error de configuración del servidor'
-    }
-  }
-
   try {
+    console.log('API Key exists:', !!process.env.RESEND_API_KEY)
+
     const name = formData.get('name')
     const email = formData.get('email')
     const phone = formData.get('phone')
     const message = formData.get('message')
 
     if (!name || !email || !message) {
+      console.log('Missing required fields')
       return {
         status: 500,
-        message: 'Todos los campos son requeridos'
+        message: 'Por favor complete todos los campos requeridos'
       }
     }
 
-    const { error } = await resend.emails.send({
-      from: 'info@actualmente.com.ar',
-      to: ['info@actualmente.com.ar'], // Reemplaza con el email de destino
-      subject: 'Nuevo contacto desde el formulario web',
-      html: `
-        <h2>Nuevo mensaje de contacto</h2>
-        <p><strong>Nombre:</strong> ${name}</p>
-        <p><strong>Email:</strong> ${email}</p>
-        <p><strong>Teléfono:</strong> ${phone}</p>
-        <p><strong>Mensaje:</strong> ${message}</p>
-      `,
-    })
-
-    if (error) {
-      console.error('Error de Resend:', error)
-      return {
-        status: 500,
-        message: 'Error al enviar el email. Por favor intente nuevamente.'
-      }
+    const emailData = {
+      name,
+      email,
+      phone,
+      message
     }
 
-    return {
-      status: 200,
-      message: 'Mensaje enviado exitosamente'
+    console.log('Attempting to send email with data:', emailData)
+
+    try {
+      const res = await axios.post(
+        process.env.NODE_ENV === "development"
+          ? "http://localhost:3000/api/emails"
+          : "https://actualmente.com.ar/api/emails",
+        emailData
+      )
+
+      console.log('Email sent successfully:', res.data)
+      return res.data
+
+    } catch (axiosError) {
+      console.error('Axios error:', axiosError)
+
+      // Fallback to Resend if axios request fails
+      console.log('Attempting to send via Resend as fallback')
+      const { data, error } = await resend.emails.send({
+        from: 'info@actualmente.com.ar',
+        to: ['guralniktomas@gmail.com'],
+        subject: 'Nuevo contacto desde el formulario web',
+        html: `
+          <h2>Nuevo mensaje de contacto</h2>
+          <p><strong>Nombre:</strong> ${name}</p>
+          <p><strong>Email:</strong> ${email}</p>
+          <p><strong>Teléfono:</strong> ${phone}</p>
+          <p><strong>Mensaje:</strong> ${message}</p>
+        `,
+      })
+
+      if (error) {
+        console.error('Resend error:', error)
+        throw new Error('Failed to send email via both methods')
+      }
+
+      console.log('Email sent successfully:', data)
+      return {
+        status: 200,
+        message: 'Mensaje enviado exitosamente'
+      }
     }
 
   } catch (error) {
-    // Log the full error for debugging
-    console.error('Error completo:', error)
+    console.error('Full error object:', error)
     return {
       status: 500,
       message: 'Error al enviar el email. Por favor intente nuevamente.'
     }
   }
 }
+

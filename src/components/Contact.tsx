@@ -1,5 +1,4 @@
 "use client"
-
 import { toast, Toaster } from "sonner"
 import { Facebook, Instagram } from 'lucide-react'
 import Link from 'next/link'
