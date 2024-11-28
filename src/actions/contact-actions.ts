@@ -49,7 +49,7 @@ export async function handleSubmit(formData: FormData) {
       console.log('Attempting to send via Resend as fallback')
       const { data, error } = await resend.emails.send({
         from: 'info@actualmente.com.ar',
-        to: ['guralniktomas@gmail.com'],
+        to: ['cursosactualmente@gmail.com'],
         subject: 'Nuevo contacto desde el formulario web',
         html: `
           <h2>Nuevo mensaje de contacto</h2>
