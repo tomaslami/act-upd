@@ -54,7 +54,7 @@ export default function ServicesSection() {
       title: 'Certificaciones oficiales',
       description: 'Capacitación a profesionales que trabajan con niños, jóvenes y adultos con diagnóstico de autismo.',
       color: 'green',
-      href: '/cursos',
+      href: '/#certificaciones',
     },
     {
       icon: lupa,

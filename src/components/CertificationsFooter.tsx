@@ -28,7 +28,7 @@ const logos = [
 
 export default function CertificationsFooter() {
   return (
-    <section className="relative py-16 overflow-hidden">
+    <section id='certificaciones' className="relative py-16 overflow-hidden">
       <Image
         src={backgroundImage}
         alt="Alphabet blocks background"
