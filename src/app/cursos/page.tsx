@@ -20,7 +20,7 @@ const upcomingCourses: Course[] = [
     title: 'ADOS-2 (Noviembre)',
     subtitle: 'ADOS-2',
     date: 'Inicio: 16, 17 y 18 de Mayo',
-    image: '/icons/ados2-nov.png',
+    image: '/cursos/ados_posteo.png',
     location: 'Virtual • Zoom',
     href: '/cursos/ados'
   },
