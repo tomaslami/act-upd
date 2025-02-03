@@ -36,7 +36,7 @@
       "text": "text-blue",
       "bgcolor": "bg-blue",
       "value": "AUTISM DIAGNOSTIC OBSERVATIONAL SCHEDULE (ADOS-2)",
-      "subtitle": "Formación Clínica de ADOS-2 - Instructora: Dra. Rhiannon Luyster",
+      "subtitle": "Formación Clínica de ADOS-2 ",
       "date": "Fecha: 16, 17 y 18 de Mayo",
       "modality": "LUGARES AGOTADOS",
       "timemorning": "10:00 am - 12:15 pm",
@@ -83,6 +83,52 @@
       "includes": "Incluye la entrevista diagnóstica y el algoritmo.",
       "coordination": "Curso coordinado por la Lic. Silvia Tedesco de ACTUALMENTE",
       "registration_note": "Los participantes recibirán la invitación por ZOOM un día antes del inicio del curso."
+    },
+    {
+      "title": "MP-R",
+      "text": "text-blue",
+      "bgcolor": "bg-blue",
+      "value": "Formación en la Escala de Desarrollo Merrill-Palmer",
+      "subtitle": "Capacitación para Profesionales de la Salud",
+      "date": "FECHA: 28 de Febrero - 1 de Marzo",
+      "modality": "Modalidad online a través de Zoom",
+      "timemorning": "Horario no especificado",
+      "timeafternoon": "Horario no especificado",
+      "about": "La Escala de Desarrollo Merrill-Palmer es una herramienta estandarizada para evaluar el desarrollo infantil en áreas cognitivas, motoras, socioemocionales y de lenguaje.",
+      "objectives": [
+        "Introducir la batería Merrill-Palmer y su fundamentación teórica.",
+        "Capacitar en la administración de la prueba, su estructura y aplicación.",
+        "Enseñar criterios de puntuación y codificación.",
+        "Analizar e interpretar perfiles de desarrollo.",
+        "Aplicar la herramienta en casos clínicos y prácticos."
+      ],
+      "topics": [
+        "Fundamentación teórica de Merrill-Palmer",
+        "Estructura y aplicación de la prueba",
+        "Criterios de puntuación y codificación",
+        "Análisis e interpretación de resultados",
+        "Aplicaciones clínicas y prácticas"
+      ],
+      "instructor": [
+        "Lic. Silvia Tedesco",
+        " y Lic. María Sol Stamati"
+      ],
+      "button": "Inscribirse ahora",
+      "contact": {
+        "email": "cursosactualmente@gmail.com",
+        "whatsapp": "+5491140336320"
+      },
+      "recommendations": "Se recomienda contar con la herramienta Merrill-Palmer-R para el entrenamiento en la aplicación y codificación final.",
+      "includes": "Incluye formación avalada por especialistas en desarrollo infantil y entrenamiento práctico en una de las herramientas diagnósticas más utilizadas.",
+      "coordination": "Curso coordinado por la Lic. Silvia Tedesco de ACTUALMENTE",
+      "registration_note": "Los participantes recibirán una invitación por ZOOM un día antes del inicio del curso.",
+      "price": "160 U$D (170 U$D vía PayPal con comisión)",
+      "payment_methods": [
+        "Efectivo",
+        "Transferencias internacionales o nacionales",
+        "PayPal"
+      ],
+      "attendance": "Se tomará asistencia al inicio y final de cada día. Es obligatorio el uso de cámara y micrófono en condiciones óptimas para obtener el certificado."
     }
   ]
 }

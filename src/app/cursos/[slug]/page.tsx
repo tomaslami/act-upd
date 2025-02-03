@@ -1,69 +1,66 @@
 "use client"
-import { notFound } from 'next/navigation'
-import React, { useCallback, useEffect, useState } from 'react'
-import { Cursos as CursosType } from '@/types/types'
+import { notFound } from "next/navigation"
+import type React from "react"
+import { useCallback, useEffect, useState } from "react"
+import type { Cursos as CursosType } from "@/types/types"
 import data from "../../../cursos.json"
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
-import Image from 'next/image'
-import { Book, Calendar, Clock, Users } from 'lucide-react'
-import Link from 'next/link'
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import Image from "next/image"
+import { Book, Calendar, Clock, Users, User } from "lucide-react"
+import Link from "next/link"
 
 const Cursos = ({ params }: { params: { slug: string } }) => {
-  const [curso, setCurso] = useState<CursosType | null>(null);
+  const [curso, setCurso] = useState<CursosType | null>(null)
 
   const verifyData = useCallback(() => {
     if (!params.slug) {
-      notFound();
+      notFound()
     }
-    const foundCurso = data.curso.find((curso) => curso.title === params.slug);
+    const foundCurso = data.curso.find((curso) => curso.title === params.slug)
     if (!foundCurso) {
-      notFound();
+      notFound()
     }
-    return foundCurso;
-  }, [params.slug]);
+    return foundCurso
+  }, [params.slug])
 
   useEffect(() => {
-    const foundCurso = verifyData();
-    if (foundCurso) setCurso(foundCurso);
-  }, [verifyData]);
+    const foundCurso = verifyData()
+    if (foundCurso) setCurso(foundCurso)
+  }, [verifyData])
 
   // Early return if curso is not loaded
-  if (!curso) return null;
+  if (!curso) return null
 
   const SectionHeader = ({
     title,
     className,
   }: {
-    title: string;
-    className?: string;
-  }) => (
-    <h2 className={`text-3xl font-bold mb-8 text-center ${className}`}>
-      {title}
-    </h2>
-  );
+    title: string
+    className?: string
+  }) => <h2 className={`text-3xl font-bold mb-8 text-center ${className}`}>{title}</h2>
 
   const CourseCard = ({
     title,
     icon,
     children,
   }: {
-    title: string;
-    icon: React.ReactNode;
-    children: React.ReactNode;
+    title: string
+    icon: React.ReactNode
+    children: React.ReactNode
   }) => (
-    <Card className="bg-white">
+    <Card className="bg-white ">
       <CardHeader>
-        <CardTitle className="text-2xl font-bold flex items-center">
+        <CardTitle className="text-2xl font-bold flex items-center ">
           {icon}
           <span className="ml-2">{title}</span>
         </CardTitle>
       </CardHeader>
       <CardContent>{children}</CardContent>
     </Card>
-  );
+  )
 
   const renderList = (items: string[] | undefined) => {
-    if (!items?.length) return null;
+    if (!items?.length) return null
 
     return (
       <ul className="list-disc list-inside space-y-2">
@@ -71,19 +68,13 @@ const Cursos = ({ params }: { params: { slug: string } }) => {
           <li key={index}>{item}</li>
         ))}
       </ul>
-    );
-  };
+    )
+  }
 
   return (
     <div className="bg-white min-h-screen">
       <section className="relative h-screen flex items-center justify-center text-white">
-        <Image
-          src="/images/hero-background.jpg"
-          alt="TEACCH Course"
-          fill
-          className="object-cover z-0"
-          priority
-        />
+        <Image src="/images/hero-background.jpg" alt="TEACCH Course" fill className="object-cover z-0" priority />
         <div className={`absolute inset-0 ${curso.bgcolor} z-10`}></div>
         <div className="container mx-auto text-center relative z-20 px-4">
           <h1 className="text-3xl md:text-5xl font-bold mb-4">{curso.value}</h1>
@@ -128,8 +119,15 @@ const Cursos = ({ params }: { params: { slug: string } }) => {
               <p className="mt-2">{curso.modality}</p>
             </CourseCard>
             <CourseCard title="Horarios" icon={<Clock className="w-6 h-6" />}>
-              <p>10:00 am - 12:15 pm: <span className="font-bold">(GMT-3)</span></p>
-              <p>2:00 pm - 4:15 pm: <span className="font-bold">(GMT-3)</span></p>
+              <p>
+                10:00 am - 12:15 pm: <span className="font-bold">(GMT-3)</span>
+              </p>
+              <p>
+                2:00 pm - 4:15 pm: <span className="font-bold">(GMT-3)</span>
+              </p>
+            </CourseCard>
+            <CourseCard title="Instructor" icon={<User className="w-6 h-6" />} >
+              <p className="w-full flex flex-col font-bold">{curso.instructor}</p>
             </CourseCard>
           </div>
         </div>
@@ -159,3 +157,4 @@ const Cursos = ({ params }: { params: { slug: string } }) => {
 }
 
 export default Cursos
+
