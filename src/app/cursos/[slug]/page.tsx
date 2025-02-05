@@ -4,6 +4,7 @@ import { useCallback, useEffect, useState } from "react"
 import type { Cursos as CursosType } from "@/types/types"
 import data from "../../../cursos.json"
 import { Calendar, Users, CheckCircle, MessageCircle } from "lucide-react"
+import Image from "next/image"
 
 const Cursos = ({ params }: { params: { slug: string } }) => {
   const [curso, setCurso] = useState<CursosType | null>(null)
@@ -28,7 +29,7 @@ const Cursos = ({ params }: { params: { slug: string } }) => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-100 to-purple-100">
-      <main className="md:mx-16 mx-6 pt-20 flex gap-20 flex-col justify-center">
+      <main className="md:mx-16 mx-6 pt-10 md:pt-20 flex gap-20 flex-col justify-center">
         <section id="hero" className="text-center  mt-20">
           <h1 className="text-4xl md:text-5xl font-bold text-[#1b4da1] mb-4">{curso.value}</h1>
           <p className="text-xl md:text-2xl text-[#e74322] mb-8">{curso.subtitle}</p>
@@ -71,7 +72,7 @@ const Cursos = ({ params }: { params: { slug: string } }) => {
                 key={index}
                 className="bg-white shadow-lg p-6 text-center w-full sm:w-64 border-b-4 border-[#e74322]"
               >
-                <div className="w-32 h-32 bg-gray-300 rounded-full mx-auto mb-4"></div>
+                <Image src="/2024/silvia-avatar.png" alt="Silvia Tedesco" width={128} height={128} className=" rounded-full mx-auto mb-4"></Image>
                 <h3 className="text-xl font-semibold text-[#1b4da1]">{speaker}</h3>
               </div>
             ))}
