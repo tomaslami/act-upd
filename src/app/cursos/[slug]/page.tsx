@@ -1,13 +1,9 @@
 "use client"
 import { notFound } from "next/navigation"
-import type React from "react"
 import { useCallback, useEffect, useState } from "react"
 import type { Cursos as CursosType } from "@/types/types"
 import data from "../../../cursos.json"
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import Image from "next/image"
-import { Book, Calendar, Clock, Users, User } from "lucide-react"
-import Link from "next/link"
+import { Calendar, Users, CheckCircle, MessageCircle } from "lucide-react"
 
 const Cursos = ({ params }: { params: { slug: string } }) => {
   const [curso, setCurso] = useState<CursosType | null>(null)
@@ -28,130 +24,122 @@ const Cursos = ({ params }: { params: { slug: string } }) => {
     if (foundCurso) setCurso(foundCurso)
   }, [verifyData])
 
-  // Early return if curso is not loaded
   if (!curso) return null
 
-  const SectionHeader = ({
-    title,
-    className,
-  }: {
-    title: string
-    className?: string
-  }) => <h2 className={`text-3xl font-bold mb-8 text-center ${className}`}>{title}</h2>
-
-  const CourseCard = ({
-    title,
-    icon,
-    children,
-  }: {
-    title: string
-    icon: React.ReactNode
-    children: React.ReactNode
-  }) => (
-    <Card className="bg-white ">
-      <CardHeader>
-        <CardTitle className="text-2xl font-bold flex items-center ">
-          {icon}
-          <span className="ml-2">{title}</span>
-        </CardTitle>
-      </CardHeader>
-      <CardContent>{children}</CardContent>
-    </Card>
-  )
-
-  const renderList = (items: string[] | undefined) => {
-    if (!items?.length) return null
-
-    return (
-      <ul className="list-disc list-inside space-y-2">
-        {items.map((item, index) => (
-          <li key={index}>{item}</li>
-        ))}
-      </ul>
-    )
-  }
-
   return (
-    <div className="bg-white min-h-screen">
-      <section className="relative h-screen flex items-center justify-center text-white">
-        <Image src="/images/hero-background.jpg" alt="TEACCH Course" fill className="object-cover z-0" priority />
-        <div className={`absolute inset-0 ${curso.bgcolor} z-10`}></div>
-        <div className="container mx-auto text-center relative z-20 px-4">
-          <h1 className="text-3xl md:text-5xl font-bold mb-4">{curso.value}</h1>
-          <p className="text-xl md:text-2xl mb-8">{curso.subtitle}</p>
-          <div className={`bg-white ${curso.text} p-6 rounded-lg inline-block`}>
-            <div className="flex items-center justify-center space-x-4">
-              <Calendar className="w-6 h-6" />
-              <p className="font-bold">{curso.date}</p>
+    <div className="min-h-screen bg-gradient-to-br from-blue-100 to-purple-100">
+      <main className="mx-16 pt-20 flex gap-20 flex-col justify-center">
+        <section id="hero" className="text-center  mt-20">
+          <h1 className="text-4xl md:text-5xl font-bold text-[#1b4da1] mb-4">{curso.value}</h1>
+          <p className="text-xl md:text-2xl text-[#e74322] mb-8">{curso.subtitle}</p>
+          <div className="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-8">
+            <div className="flex items-center">
+              <Calendar className="w-6 h-6 text-[#1b4da1] mr-2" />
+              <span className="text-[#1b4da1]">{curso.date}</span>
+            </div>
+            <div className="flex items-center">
+              <Users className="w-6 h-6 text-[#1b4da1] mr-2" />
+              <span className="text-[#1b4da1]">{curso.modality}</span>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      <section id="about" className="py-16">
-        <div className="container mx-auto px-4">
-          <SectionHeader title="Sobre el Curso" className={`text-${curso.bgcolor}`} />
-          <div className="grid md:grid-cols-2 gap-8">
-            {!curso.objectives ? (
-              <CourseCard title="Temas del Curso" icon={<Book className="w-6 h-6" />}>
-                {renderList(curso.topics)}
-              </CourseCard>
-            ) : (
-              <>
-                <CourseCard title="Objetivos del Curso" icon={<Book className="w-6 h-6" />}>
-                  {renderList(curso.objectives)}
-                </CourseCard>
-                <CourseCard title="Temas del Curso" icon={<Book className="w-6 h-6" />}>
-                  {renderList(curso.topics)}
-                </CourseCard>
-              </>
-            )}
+        <section id="about" className="mb-12">
+          <div className="bg-white shadow-lg p-6 md:p-8 border-t-4 border-[#1b4da1]">
+            <h2 className="text-2xl md:text-3xl font-semibold text-[#1b4da1] mb-4">Sobre el Curso</h2>
+            <p className="text-gray-700">{curso.about}</p>
           </div>
-        </div>
-      </section>
+        </section>
 
-      <section id="details" className={`${curso.bgcolor} py-16`}>
-        <div className="container mx-auto px-4">
-          <SectionHeader title="Detalles del Curso" className="text-white" />
-          <div className="gap-8 flex justify-center items-center flex-col md:flex-row">
-            <CourseCard title="Modalidad" icon={<Users className="w-6 h-6" />}>
-              <p>A TRAVÉS DE ZOOM</p>
-              <p className="mt-2">{curso.modality}</p>
-            </CourseCard>
-            <CourseCard title="Horarios" icon={<Clock className="w-6 h-6" />}>
-              <p>
-                10:00 am - 12:15 pm: <span className="font-bold">(GMT-3)</span>
-              </p>
-              <p>
-                2:00 pm - 4:15 pm: <span className="font-bold">(GMT-3)</span>
-              </p>
-            </CourseCard>
-            <CourseCard title="Instructor" icon={<User className="w-6 h-6" />} >
-              <p className="w-full flex flex-col font-bold">{curso.instructor}</p>
-            </CourseCard>
+        <section id="content" className="mb-12">
+          <h2 className="text-2xl md:text-3xl font-semibold text-[#1b4da1] mb-4">Contenido del curso</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {curso.topics?.map((item, index) => (
+              <div key={index} className="flex items-start bg-white shadow-md p-4 border-l-4 border-[#e74322]">
+                <CheckCircle className="w-6 h-6 text-[#1b4da1] mr-2 flex-shrink-0" />
+                <span className="text-gray-700">{item}</span>
+              </div>
+            ))}
           </div>
-        </div>
-      </section>
+        </section>
 
-      <section className="py-16">
-        <div className="px-4 text-start">
-          <SectionHeader title="Coordinación e Inscripción" className={curso.text} />
-          <div className="flex flex-col items-center">
-            <div className="flex justify-center items-start flex-col">
-              <p className="mb-2">El curso está coordinado por la Lic. Silvia Tedesco de ACTUALMENTE.</p>
-              <p className="mb-2">Si tienen preguntas o alguna dificultad, pueden enviar un correo a:</p>
-              <p className="font-bold mb-2">cursosactualmente@gmail.com</p>
-              <p className="mb-4">o contactar al WhatsApp +549114033632</p>
+        <section id="speakers" className="mb-12">
+          <h2 className="text-2xl md:text-3xl font-semibold text-[#1b4da1] mb-4">Disertantes</h2>
+          <div className="flex flex-wrap justify-center gap-8">
+            {(Array.isArray(curso.instructor) ? curso.instructor : [curso.instructor]).map((speaker, index) => (
+              <div
+                key={index}
+                className="bg-white shadow-lg p-6 text-center w-full sm:w-64 border-b-4 border-[#e74322]"
+              >
+                <div className="w-32 h-32 bg-gray-300 rounded-full mx-auto mb-4"></div>
+                <h3 className="text-xl font-semibold text-[#1b4da1]">{speaker}</h3>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {curso.objectives && (
+          <section id="benefits" className="mb-12">
+            <h2 className="text-2xl md:text-3xl font-semibold text-[#1b4da1] mb-4">Objetivos del curso</h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+              {curso.objectives.map((objective, index) => (
+                <div key={index} className="bg-white shadow p-6 border-r-4 border-[#1b4da1]">
+                  <CheckCircle className="w-8 h-8 text-[#e74322] mb-2" />
+                  <p className="text-gray-700">{objective}</p>
+                </div>
+              ))}
             </div>
-            <Link
-              href="https://api.whatsapp.com/send/?phone=5491140336320&text&type=phone_number&app_absent=0"
-              className={`${curso.bgcolor} text-white py-3 px-8 rounded-3xl`}
+          </section>
+        )}
+        <section className="mb-12 px-4">
+          <div className="container mx-auto">
+            <div className="flex flex-col md:flex-row gap-6">
+              <div className="flex-1 bg-white shadow-lg p-6 border-t-4 border-[#e74322]">
+                <h2 className="text-2xl font-semibold text-[#1b4da1] mb-4">Dirigido a:</h2>
+                <p className="text-gray-700">
+                  {curso.includes ||
+                    "Esta formación está destinada a profesionales de la salud que trabajan con niños en primera infancia y desean profundizar en el uso e interpretación de esta herramienta."}
+                </p>
+              </div>
+
+              <div className="flex-1 bg-white shadow-lg p-6 border-t-4 border-[#1b4da1]">
+                <h2 className="text-2xl font-semibold text-[#1b4da1] mb-4">Requisitos técnicos</h2>
+                <ul className="list-disc list-inside text-gray-700 space-y-2">
+                  <li>Buena conexión a internet</li>
+                  <li>Cámara y micrófono en condiciones óptimas</li>
+                  <li>
+                    {curso.recommendations ||
+                      "Se recomienda contar con la herramienta necesaria para el entrenamiento en la aplicación y la codificación final"}
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="contact" className="text-center mb-12">
+          <h2 className="text-2xl md:text-3xl font-semibold text-[#1b4da1] mb-4">¿Te gustaría sumarte?</h2>
+          <p className="text-gray-700 mb-4">Contáctanos en:</p>
+          <div className="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-8">
+            <a
+              href={`mailto:${curso.contact?.email || "cursosactualmente@gmail.com"}`}
+              className="flex items-center text-[#1b4da1] hover:text-[#e74322]"
             >
-              {curso.button}
-            </Link>
+              <MessageCircle className="w-6 h-6 mr-2" />
+              {curso.contact?.email || "cursosactualmente@gmail.com"}
+            </a>
+            <a
+              href={`https://wa.me/${curso.contact?.whatsapp?.replace(/\D/g, "") || "5491140336320"}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center text-[#1b4da1] hover:text-[#e74322]"
+            >
+              <MessageCircle className="w-6 h-6 mr-2" />
+              WhatsApp
+            </a>
           </div>
-        </div>
-      </section>
+        </section>
+      </main>
     </div>
   )
 }

@@ -36,17 +36,54 @@
       "text": "text-blue",
       "bgcolor": "bg-blue",
       "value": "AUTISM DIAGNOSTIC OBSERVATIONAL SCHEDULE (ADOS-2)",
-      "subtitle": "Formación Clínica de ADOS-2 ",
-      "date": "Fecha: 16, 17 y 18 de Mayo",
-      "modality": "LUGARES AGOTADOS",
+      "subtitle": "Formación Clínica de ADOS-2 con validez internacional",
+      "date": "FECHA: 16 al 19 de Mayo",
+      "modality": "Modalidad online a través de Zoom",
       "timemorning": "10:00 am - 12:15 pm",
       "timeafternoon": "2:00 pm - 4:15 pm",
-      "about": "Sobre el Curso ADOS-2",
-      "topics": [
-        "Curso de formación, acreditación clínica y de investigación. La entrevista diagnóstica ADOS-2 (Autism Diagnostic Observational Schedule) es una entrevista semiestructurada que se realiza con niños, adolescentes y adultos con TEA y se complementa con la administración del ADI-R Autism Diagnostic InterviewRevised. Ambos instrumentos diagnósticos son de gran complejidad en su administración y han sido diseñados especialmente para su uso en la investigación."
+      "about": "La entrevista diagnóstica ADOS-2 es una herramienta semiestructurada para evaluar niños, adolescentes y adultos con TEA. Se complementa con el ADI-R y está diseñada para la investigación y el diagnóstico clínico.",
+      "objectives": [
+        "Capacitar a profesionales en la administración del ADOS-2.",
+        "Proveer formación en diagnóstico clínico e investigación en TEA.",
+        "Enseñar la aplicación de protocolos diagnósticos.",
+        "Ofrecer acceso a recursos audiovisuales y material complementario."
       ],
-      "cv": "/Luyster_CV_2024.pdf",
-      "button": "Consultar Información"
+      "topics": [
+        "Fundamentos del ADOS-2 y su aplicación",
+        "Evaluación diagnóstica en TEA",
+        "Complemento con ADI-R",
+        "Administración y puntuación de módulos",
+        "Casos prácticos y ejemplos clínicos"
+      ],
+      "instructor": "Dra. Rhiannon Luyster",
+      "button": "Inscribirse ahora",
+      "contact": {
+        "email": "cursosactualmente@gmail.com",
+        "whatsapp": "+5491140336320"
+      },
+      "recommendations": "Es fundamental contar con buena conexión a internet, cámara y micrófono en condiciones óptimas. Se tomará asistencia al inicio y final de cada día.",
+      "includes": "Incluye protocolos diagnósticos y acceso a videos. El manual digital es obligatorio y no está incluido en el precio.",
+      "coordination": "Curso coordinado por la Lic. Silvia Tedesco de ACTUALMENTE",
+      "registration_note": "Los participantes recibirán la invitación por ZOOM un día antes del inicio del curso.",
+      "price_options": [
+        {
+          "option": "Opción 1",
+          "price": "750 U$D (795 U$D vía PayPal)",
+          "includes": "Protocolos y acceso a videos."
+        },
+        {
+          "option": "Opción 2",
+          "price": "900 U$D (954 U$D vía PayPal)",
+          "includes": "Protocolos, manual digital y acceso a videos."
+        }
+      ],
+      "payment_methods": [
+        "Efectivo",
+        "Transferencias internacionales o nacionales",
+        "PayPal"
+      ],
+      "attendance": "Se tomará asistencia al inicio y final de cada día. Es obligatorio el uso de cámara y micrófono en condiciones óptimas para obtener el certificado.",
+      "cv": "/Luyster_CV_2024.pdf"
     },
     {
       "value": "Autism Diagnostic Interview Revised (ADI-R)",
@@ -111,7 +148,7 @@
       ],
       "instructor": [
         "Lic. Silvia Tedesco",
-        " y Lic. María Sol Stamati"
+        "Lic. María Sol Stamati"
       ],
       "button": "Inscribirse ahora",
       "contact": {
