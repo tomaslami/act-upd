@@ -28,7 +28,7 @@ const Cursos = ({ params }: { params: { slug: string } }) => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-100 to-purple-100">
-      <main className="mx-16 pt-20 flex gap-20 flex-col justify-center">
+      <main className="md:mx-16 mx-6 pt-20 flex gap-20 flex-col justify-center">
         <section id="hero" className="text-center  mt-20">
           <h1 className="text-4xl md:text-5xl font-bold text-[#1b4da1] mb-4">{curso.value}</h1>
           <p className="text-xl md:text-2xl text-[#e74322] mb-8">{curso.subtitle}</p>
