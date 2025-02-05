@@ -25,6 +25,7 @@ export type Cursos = {
   payment_methods?: string[];
   attendance?: string;
   cv?: string;
+  avatar?: string | StaticImport;
 };
 
 export interface ServerActionResponse {

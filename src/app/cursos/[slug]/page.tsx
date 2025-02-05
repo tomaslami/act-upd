@@ -72,7 +72,7 @@ const Cursos = ({ params }: { params: { slug: string } }) => {
                 key={index}
                 className="bg-white shadow-lg p-6 text-center w-full sm:w-64 border-b-4 border-[#e74322]"
               >
-                <Image src="/2024/silvia-avatar.png" alt="Silvia Tedesco" width={128} height={128} className=" rounded-full mx-auto mb-4"></Image>
+                <Image src={curso.avatar} alt="Silvia Tedesco" width={128} height={128} className=" rounded-full mx-auto mb-4"></Image>
                 <h3 className="text-xl font-semibold text-[#1b4da1]">{speaker}</h3>
               </div>
             ))}
