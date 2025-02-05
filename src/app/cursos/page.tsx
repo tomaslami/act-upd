@@ -16,7 +16,7 @@ const upcomingCourses: Course[] = [
   {
     id: '1',
     title: 'Formación en la Escala de Desarrollo Merrill-Palmer-R',
-    subtitle: 'MP-R',
+    subtitle: 'Escala de Desarrollo MP',
     date: '28 de febrero y 1 de marzo',
     image: '/cursos/merrilPalmer.png',
     location: 'Virtual • Zoom',

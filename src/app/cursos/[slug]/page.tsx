@@ -35,12 +35,12 @@ const Cursos = ({ params }: { params: { slug: string } }) => {
           <p className="text-xl md:text-2xl text-[#e74322] mb-8">{curso.subtitle}</p>
           <div className="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-8">
             <div className="flex items-center">
-              <Calendar className="w-6 h-6 text-[#1b4da1] mr-2" />
-              <span className="text-[#1b4da1]">{curso.date}</span>
+              <Calendar className="w-6 h-6 text-[#1b4da1] mr-2 " />
+              <span className="text-[#1b4da1] text-lg">{curso.date}</span>
             </div>
             <div className="flex items-center">
-              <Users className="w-6 h-6 text-[#1b4da1] mr-2" />
-              <span className="text-[#1b4da1]">{curso.modality}</span>
+              <Users className="w-6 h-6 text-[#1b4da1] mr-2 " />
+              <span className="text-[#1b4da1] text-lg">{curso.modality}</span>
             </div>
           </div>
         </section>

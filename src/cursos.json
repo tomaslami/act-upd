@@ -62,7 +62,7 @@
         "email": "cursosactualmente@gmail.com",
         "whatsapp": "+5491140336320"
       },
-      "recommendations": "Es fundamental contar con buena conexión a internet, cámara y micrófono en condiciones óptimas. Se tomará asistencia al inicio y final de cada día.",
+      "recommendations": "Es fundamental contar con buena conexión a internet, cámara y micrófono en condiciones óptimas.",
       "includes": "Incluye protocolos diagnósticos y acceso a videos. El manual digital es obligatorio y no está incluido en el precio.",
       "coordination": "Curso coordinado por la Lic. Silvia Tedesco de ACTUALMENTE",
       "registration_note": "Los participantes recibirán la invitación por ZOOM un día antes del inicio del curso.",
@@ -83,7 +83,10 @@
         "Transferencias internacionales o nacionales",
         "PayPal"
       ],
-      "attendance": "Se tomará asistencia al inicio y final de cada día. Es obligatorio el uso de cámara y micrófono en condiciones óptimas para obtener el certificado.",
+      "attendance": [
+        "Se tomará asistencia al inicio y final de cada día.",
+        "Es obligatorio el uso de cámara y micrófono en condiciones óptimas para obtener el certificado."
+      ],
       "cv": "/Luyster_CV_2024.pdf"
     },
     {
@@ -126,7 +129,7 @@
       "title": "MP-R",
       "text": "text-blue",
       "bgcolor": "bg-blue",
-      "value": "Formación en la Escala de Desarrollo Merrill-Palmer",
+      "value": "Escala de Desarrollo MP",
       "subtitle": "Capacitación para Profesionales de la Salud",
       "date": "FECHA: 28 de Febrero - 1 de Marzo",
       "modality": "Modalidad online a través de Zoom",
