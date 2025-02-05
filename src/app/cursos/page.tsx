@@ -31,24 +31,24 @@ const upcomingCourses: Course[] = [
     location: 'Virtual • Zoom',
     href: '/cursos/ados'
   },
-  {
-    id: '3',
-    title: 'TEACHH, Enfocado en niños entre 3 y 5 años',
-    subtitle: 'TEACCH',
-    date: 'Inicio: 9 al 13 de Diciembre',
-    image: '/icons/TEACCH-nov.png',
-    location: 'Virtual • Zoom',
-    href: '/cursos/teacch'
-  },
-  {
-    id: '4',
-    title: 'ADI-R',
-    subtitle: 'ADI-R',
-    date: 'Inicio: 20 y 21 de Diciembre',
-    image: '/icons/ADIR-dic.png',
-    location: 'Virtual • Zoom',
-    href: '/cursos/adi-r'
-  },
+  // {
+  //   id: '3',
+  //   title: 'TEACHH, Enfocado en niños entre 3 y 5 años',
+  //   subtitle: 'TEACCH',
+  //   date: 'Inicio: 9 al 13 de Diciembre',
+  //   image: '/icons/TEACCH-nov.png',
+  //   location: 'Virtual • Zoom',
+  //   href: '/cursos/teacch'
+  // },
+  // {
+  //   id: '4',
+  //   title: 'ADI-R',
+  //   subtitle: 'ADI-R',
+  //   date: 'Inicio: 20 y 21 de Diciembre',
+  //   image: '/icons/ADIR-dic.png',
+  //   location: 'Virtual • Zoom',
+  //   href: '/cursos/adi-r'
+  // },
 ]
 
 
