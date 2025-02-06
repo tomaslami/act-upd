@@ -48,7 +48,7 @@ const Cursos = ({ params }: { params: { slug: string } }) => {
         <section id="about" className="mb-12">
           <div className="bg-white shadow-lg p-6 md:p-8 border-t-4 border-[#1b4da1]">
             <h2 className="text-2xl md:text-3xl font-semibold text-[#1b4da1] mb-4">Sobre el Curso</h2>
-            <p className="text-gray-700">{curso.about}</p>
+            <p className="text-gray-700 xl:text-lg font-semibold">{curso.about}</p>
           </div>
         </section>
 
@@ -58,7 +58,7 @@ const Cursos = ({ params }: { params: { slug: string } }) => {
             {curso.topics?.map((item, index) => (
               <div key={index} className="flex items-start bg-white shadow-md p-4 border-l-4 border-[#e74322]">
                 <CheckCircle className="w-6 h-6 text-[#1b4da1] mr-2 flex-shrink-0" />
-                <span className="text-gray-700">{item}</span>
+                <span className="text-gray-700 xl:text-lg">{item}</span>
               </div>
             ))}
           </div>
@@ -86,7 +86,7 @@ const Cursos = ({ params }: { params: { slug: string } }) => {
               {curso.objectives.map((objective, index) => (
                 <div key={index} className="bg-white shadow p-6 border-r-4 border-[#1b4da1]">
                   <CheckCircle className="w-8 h-8 text-[#e74322] mb-2" />
-                  <p className="text-gray-700">{objective}</p>
+                  <p className="text-gray-700 xl:text-lg">{objective}</p>
                 </div>
               ))}
             </div>
@@ -97,14 +97,14 @@ const Cursos = ({ params }: { params: { slug: string } }) => {
             <div className="flex flex-col md:flex-row gap-6">
               <div className="flex-1 bg-white shadow-lg p-6 border-t-4 border-[#e74322]">
                 <h2 className="text-2xl font-semibold text-[#1b4da1] mb-4">Incluye</h2>
-                <ul className="w-full h-full flex justify-center items-start flex-col gap-2">
-                  <li className="list-disc">
+                <ul className="list-disc list-inside text-gray-700 space-y-2">
+                  <li className="xl:text-lg">
                     Para participar en esta formación, es obligatorio contar con el manual y los protocolos correspondientes. 📄✅
                   </li>
-                  <li className="list-disc">
+                  <li className="xl:text-lg">
                     📚 El curso incluye el material necesario para su desarrollo.
                   </li>
-                  <li className="list-disc">
+                  <li className="xl:text-lg">
                     ¡Para más información y consultas, escríbeme por mensaje privado!
                   </li>
                 </ul>
@@ -113,9 +113,9 @@ const Cursos = ({ params }: { params: { slug: string } }) => {
               <div className="flex-1 bg-white shadow-lg p-6 border-t-4 border-[#1b4da1]">
                 <h2 className="text-2xl font-semibold text-[#1b4da1] mb-4">Requisitos técnicos</h2>
                 <ul className="list-disc list-inside text-gray-700 space-y-2">
-                  <li>Título de grado</li>
-                  <li>Cámara y micrófono en condiciones óptimas</li>
-                  <li>
+                  <li className="xl:text-lg">Título de grado</li>
+                  <li className="xl:text-lg">Cámara y micrófono en condiciones óptimas</li>
+                  <li className="xl:text-lg">
                     {curso.recommendations ||
                       "Se recomienda contar con la herramienta necesaria para el entrenamiento en la aplicación y la codificación final"}
                   </li>

@@ -1,5 +1,5 @@
 import type { Metadata } from "next"
-import localFont from "next/font/local"
+import { Poppins } from "next/font/google"
 import "./globals.css"
 import NavBar from "@/components/NavBar"
 import Contact from "@/components/Contact"
@@ -7,33 +7,12 @@ import CertificationsFooter from "@/components/CertificationsFooter"
 import FloatingButton from "@/components/FloatingButton"
 import { TagManagerProvider } from "@/context/TagManager"
 import Script from "next/script"
+import type React from "react" // Import React
 
-const gothamRoundedBold = localFont({
-  src: "/fonts/gothamrnd_bold.otf",
-  variable: "--font-gotham-rounded-bold",
-  weight: "700",
-  style: "normal",
-})
-
-const gothamRoundedMedium = localFont({
-  src: "/fonts/gothamrnd_medium.otf",
-  variable: "--font-gotham-rounded-medium",
-  weight: "500",
-  style: "normal",
-})
-
-const gothamRoundedLight = localFont({
-  src: "/fonts/gothamrnd_light.otf",
-  variable: "--font-gotham-rounded-light",
-  weight: "300",
-  style: "normal",
-})
-
-const gothamRoundedBook = localFont({
-  src: "/fonts/gothamrnd_book.otf",
-  variable: "--font-gotham-rounded-book",
-  weight: "400",
-  style: "normal",
+const poppins = Poppins({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "700"],
+  variable: "--font-poppins",
 })
 
 export const metadata: Metadata = {
@@ -48,9 +27,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${gothamRoundedBold.className} ${gothamRoundedMedium.className} ${gothamRoundedLight.className} ${gothamRoundedBook.className} `}
-      >
+      <body className={`${poppins.variable} font-sans`}>
         <Script id="meta-pixel" strategy="afterInteractive">
           {`
             !function(f,b,e,v,n,t,s)
