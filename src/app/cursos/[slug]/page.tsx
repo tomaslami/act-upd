@@ -29,7 +29,7 @@ const Cursos = ({ params }: { params: { slug: string } }) => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-100 to-purple-100">
-      <main className="md:mx-16 mx-6 pt-10 md:pt-20 flex gap-20 flex-col justify-center">
+      <main className="md:mx-16 mx-4 pt-10 md:pt-20 flex gap-20 flex-col justify-center">
         <section id="hero" className="text-center  mt-20">
           <h1 className="text-4xl md:text-5xl font-bold text-[#1b4da1] mb-4">{curso.value}</h1>
           <p className="text-xl md:text-2xl text-[#e74322] mb-8">{curso.subtitle}</p>
@@ -97,16 +97,23 @@ const Cursos = ({ params }: { params: { slug: string } }) => {
             <div className="flex flex-col md:flex-row gap-6">
               <div className="flex-1 bg-white shadow-lg p-6 border-t-4 border-[#e74322]">
                 <h2 className="text-2xl font-semibold text-[#1b4da1] mb-4">Incluye</h2>
-                <p className="text-gray-700">
-                  {curso.includes ||
-                    "Esta formación está destinada a profesionales de la salud que trabajan con niños en primera infancia y desean profundizar en el uso e interpretación de esta herramienta."}
-                </p>
+                <ul className="w-full h-full flex justify-center items-start flex-col gap-2">
+                  <li className="list-disc">
+                    Para participar en esta formación, es obligatorio contar con el manual y los protocolos correspondientes. 📄✅
+                  </li>
+                  <li className="list-disc">
+                    📚 El curso incluye el material necesario para su desarrollo.
+                  </li>
+                  <li className="list-disc">
+                    ¡Para más información y consultas, escríbeme por mensaje privado!
+                  </li>
+                </ul>
               </div>
 
               <div className="flex-1 bg-white shadow-lg p-6 border-t-4 border-[#1b4da1]">
                 <h2 className="text-2xl font-semibold text-[#1b4da1] mb-4">Requisitos técnicos</h2>
                 <ul className="list-disc list-inside text-gray-700 space-y-2">
-                  <li>Buena conexión a internet</li>
+                  <li>Título de grado</li>
                   <li>Cámara y micrófono en condiciones óptimas</li>
                   <li>
                     {curso.recommendations ||

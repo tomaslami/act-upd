@@ -83,10 +83,6 @@
         "Transferencias internacionales o nacionales",
         "PayPal"
       ],
-      "attendance": [
-        "Se tomará asistencia al inicio y final de cada día.",
-        "Es obligatorio el uso de cámara y micrófono en condiciones óptimas para obtener el certificado."
-      ],
       "cv": "/Luyster_CV_2024.pdf"
     },
     {
@@ -168,8 +164,7 @@
         "Efectivo",
         "Transferencias internacionales o nacionales",
         "PayPal"
-      ],
-      "attendance": "Se tomará asistencia al inicio y final de cada día. Es obligatorio el uso de cámara y micrófono en condiciones óptimas para obtener el certificado."
+      ]
     }
   ]
 }
