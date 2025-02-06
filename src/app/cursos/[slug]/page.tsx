@@ -96,7 +96,7 @@ const Cursos = ({ params }: { params: { slug: string } }) => {
           <div className="container mx-auto">
             <div className="flex flex-col md:flex-row gap-6">
               <div className="flex-1 bg-white shadow-lg p-6 border-t-4 border-[#e74322]">
-                <h2 className="text-2xl font-semibold text-[#1b4da1] mb-4">Dirigido a:</h2>
+                <h2 className="text-2xl font-semibold text-[#1b4da1] mb-4">Incluye</h2>
                 <p className="text-gray-700">
                   {curso.includes ||
                     "Esta formación está destinada a profesionales de la salud que trabajan con niños en primera infancia y desean profundizar en el uso e interpretación de esta herramienta."}
