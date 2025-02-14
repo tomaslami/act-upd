@@ -1,5 +1,5 @@
-import Image from 'next/image'
-import Link from 'next/link'
+import Image from "next/image"
+import Link from "next/link"
 
 interface Course {
   id: string
@@ -12,24 +12,23 @@ interface Course {
 }
 
 const upcomingCourses: Course[] = [
-
   {
-    id: '1',
-    title: 'Formación en la Escala de Desarrollo Merrill-Palmer-R',
-    subtitle: 'Escala de Desarrollo MP',
-    date: '28 de febrero y 1 de marzo',
-    image: '/cursos/merrilPalmer.png',
-    location: 'Virtual • Zoom',
-    href: '/cursos/MP-R'
+    id: "1",
+    title: "Formación en la Escala de Desarrollo Merrill-Palmer-R",
+    subtitle: "Escala de Desarrollo MP",
+    date: "28 de febrero y 1 de marzo",
+    image: "/cursos/merrilPalmer.png",
+    location: "Virtual • Zoom",
+    href: "/cursos/MP-R",
   },
   {
-    id: '2',
-    title: 'ADOS-2 (Noviembre)',
-    subtitle: 'ADOS-2',
-    date: 'Inicio: 16, 17 y 18 de Mayo',
-    image: '/cursos/ados_posteo.png',
-    location: 'Virtual • Zoom',
-    href: '/cursos/ados'
+    id: "2",
+    title: "ADOS-2 (Noviembre)",
+    subtitle: "ADOS-2",
+    date: "Inicio: 16, 17 y 18 de Mayo",
+    image: "/cursos/ados_posteo.png",
+    location: "Virtual • Zoom",
+    href: "/cursos/ados",
   },
   // {
   //   id: '3',
@@ -49,19 +48,36 @@ const upcomingCourses: Course[] = [
   //   location: 'Virtual • Zoom',
   //   href: '/cursos/adi-r'
   // },
+  {
+    id: "5",
+    title: "Comunicación social en niños con autismo",
+    subtitle: "Trabajo junto a las familias.",
+    date: "FECHA: 21 de junio",
+    image: "/cursos/ados_posteo.png",
+    location: "Virtual • Zoom",
+    href: "/cursos/comunicacion-social",
+  },
 ]
-
 
 const CourseCard: React.FC<{ course: Course }> = ({ course }) => (
   <div className=" bg-white overflow-hidden pb-[75px]">
     <div className="relative h-[300px]">
-      <Image src={course.image} alt={course.title} layout="fill" objectFit="cover" className='rounded-xl' />
+      <Image
+        src={course.image}
+        alt={course.title}
+        layout="fill"
+        objectFit="cover"
+        className="rounded-xl"
+      />
     </div>
     <div className="h-max flex flex-col justify-start items-start p-4">
       <h3 className="h-[10%] text-lg font-semibold mb-2">{course.subtitle}</h3>
       <p className="h-[25%] text-sm text-gray-600 mb-2">{course.date}</p>
       <p className="h-[25%] text-sm text-blue-600 mb-4">{course.location}</p>
-      <Link href={course.href} className="h-[15%] bg-blue text-white px-4 py-2 rounded-full text-sm font-semibold hover:bg-blue-700 transition-colors">
+      <Link
+        href={course.href}
+        className="h-[15%] bg-blue text-white px-4 py-2 rounded-full text-sm font-semibold hover:bg-blue-700 transition-colors"
+      >
         Más info
       </Link>
     </div>

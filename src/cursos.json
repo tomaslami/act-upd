@@ -146,9 +146,7 @@
         "Análisis e interpretación de resultados",
         "Aplicaciones clínicas y prácticas"
       ],
-      "instructor": [
-        "Lic. Silvia Tedesco"
-      ],
+      "instructor": ["Lic. Silvia Tedesco"],
       "avatar": "/2024/silvia-avatar.png",
       "button": "Inscribirse ahora",
       "contact": {
@@ -165,6 +163,54 @@
         "Transferencias internacionales o nacionales",
         "PayPal"
       ]
+    },
+    {
+      "title": "comunicacion-social",
+      "text": "text-blue",
+      "bgcolor": "bg-blue",
+      "value": "comunicacion-social",
+      "subtitle": "Trabajo junto a las familias.",
+      "date": "FECHA: 21 de junio",
+      "modality": "Modalidad online a través de Zoom",
+      "timemorning": "10:00 a 14:00 (Hora Argentina)",
+      "timeafternoon": "10:00 a 14:00 (Hora Argentina)",
+      "about": "Este curso está diseñado para abordar los primeros signos sobre la comunicación social y la intervención terapéutica.",
+      "objectives": [
+        "El desarrollo social típico y los hitos de la comunicación temprana.",
+        "Estrategias para trabajar con padres y terapeutas del desarrollo.",
+        "Evaluación temprana de la comunicación social desarrollo y estrategias Además, los asistentes recibirán el pdf con material y recursos prácticos para compartir con padres y otros profesionales.",
+        "Durante la formación se utilizarán ejemplos en video para destacar las habilidades fundamentales de la comunicación social temprana."
+      ],
+      "topics": [
+        "Fundamentos del ADOS-2 y su aplicación",
+        "Evaluación diagnóstica en TEA",
+        "Complemento con ADI-R",
+        "Administración y puntuación de módulos",
+        "Casos prácticos y ejemplos clínicos"
+      ],
+      "instructor": "Dra. Rhiannon Luyster",
+      "avatar": "/2024/rhiannon-avatar.jpg",
+      "button": "Inscribirse ahora",
+      "contact": {
+        "email": "cursosactualmente@gmail.com",
+        "whatsapp": "+5491140336320"
+      },
+      "recommendations": "Es fundamental contar con buena conexión a internet, cámara y micrófono en condiciones óptimas.",
+      "includes": "Certificado oficial de asistencia y Material digital complementario.",
+      "coordination": "Curso coordinado por la Lic. Silvia Tedesco de ACTUALMENTE",
+      "registration_note": "Los participantes recibirán la invitación por ZOOM un día antes del inicio del curso.",
+      "price_options": [
+        {
+          "option": "Opción 1",
+          "price": "150 U$D incluye la comisión de paypal",
+          "includes": "Protocolos y acceso a videos."
+        }
+      ],
+      "payment_methods": [
+        "Transferencias internacionales o nacionales",
+        "PayPal"
+      ],
+      "cv": "/Luyster_CV_2024.pdf"
     }
   ]
 }
