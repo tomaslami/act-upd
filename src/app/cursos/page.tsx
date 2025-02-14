@@ -48,15 +48,15 @@ const upcomingCourses: Course[] = [
   //   location: 'Virtual • Zoom',
   //   href: '/cursos/adi-r'
   // },
-  {
-    id: "5",
-    title: "Comunicación social en niños con autismo",
-    subtitle: "Trabajo junto a las familias.",
-    date: "FECHA: 21 de junio",
-    image: "/cursos/ados_posteo.png",
-    location: "Virtual • Zoom",
-    href: "/cursos/comunicacion-social",
-  },
+  // {
+  //   id: "5",
+  //   title: "Comunicación social en niños con autismo",
+  //   subtitle: "Trabajo junto a las familias.",
+  //   date: "FECHA: 21 de junio",
+  //   image: "/cursos/ados_posteo.png",
+  //   location: "Virtual • Zoom",
+  //   href: "/cursos/comunicacion-social",
+  // },
 ]
 
 const CourseCard: React.FC<{ course: Course }> = ({ course }) => (
