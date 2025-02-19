@@ -7,24 +7,14 @@ export type Cursos = {
   date: string;
   modality: string;
   timemorning: string;
-  timeafternoon: string;
   about: string;
   objectives?: string[];
   topics: string[];
-  includes?: string;
   instructor?: string | string[];
   button: string;
-  contact?: {
-    email: string;
-    whatsapp: string;
-  };
   recommendations?: string;
   coordination?: string;
-  registration_note?: string;
-  price?: string;
-  payment_methods?: string[];
   attendance?: string;
-  cv?: string;
   avatar?: string | StaticImport;
 };
 

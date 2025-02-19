@@ -29,7 +29,9 @@
         "Habilidades la Motricidad Gruesa & Autoayuda",
         "Manejo de la Conducta"
       ],
-      "button": "Inscribirse ahora"
+      "avatar": "",
+      "button": "Inscribirse ahora",
+      "instructor": ""
     },
     {
       "title": "ados",
@@ -55,35 +57,9 @@
         "Administración y puntuación de módulos",
         "Casos prácticos y ejemplos clínicos"
       ],
-      "instructor": "Dra. Rhiannon Luyster",
+      "instructor": "Dra. Rhiannon Luyster, PHD - Investigadora",
       "avatar": "/2024/rhiannon-avatar.jpg",
-      "button": "Inscribirse ahora",
-      "contact": {
-        "email": "cursosactualmente@gmail.com",
-        "whatsapp": "+5491140336320"
-      },
-      "recommendations": "Es fundamental contar con buena conexión a internet, cámara y micrófono en condiciones óptimas.",
-      "includes": "Protocolos, diagnósticos y acceso a videos. El manual digital es obligatorio y no está incluido en el precio.",
-      "coordination": "Curso coordinado por la Lic. Silvia Tedesco de ACTUALMENTE",
-      "registration_note": "Los participantes recibirán la invitación por ZOOM un día antes del inicio del curso.",
-      "price_options": [
-        {
-          "option": "Opción 1",
-          "price": "750 U$D (795 U$D vía PayPal)",
-          "includes": "Protocolos y acceso a videos."
-        },
-        {
-          "option": "Opción 2",
-          "price": "900 U$D (954 U$D vía PayPal)",
-          "includes": "Protocolos, manual digital y acceso a videos."
-        }
-      ],
-      "payment_methods": [
-        "Efectivo",
-        "Transferencias internacionales o nacionales",
-        "PayPal"
-      ],
-      "cv": "/Luyster_CV_2024.pdf"
+      "button": "Inscribirse ahora"
     },
     {
       "value": "Autism Diagnostic Interview Revised (ADI-R)",
@@ -111,15 +87,7 @@
         "Casos prácticos y ejemplos reales"
       ],
       "instructor": "Dra. Rhiannon Luyster, PHD - Investigadora y Autora del Módulo T de ADOS-2",
-      "button": "Inscribirse ahora",
-      "contact": {
-        "email": "cursosactualmente@gmail.com",
-        "whatsapp": "+549114033632"
-      },
-      "recommendations": "Es fundamental contar con buena conexión a internet para la correcta participación.",
-      "includes": "Entrevista diagnóstica y el algoritmo.",
-      "coordination": "Curso coordinado por la Lic. Silvia Tedesco de ACTUALMENTE",
-      "registration_note": "Los participantes recibirán la invitación por ZOOM un día antes del inicio del curso."
+      "button": "Inscribirse ahora"
     },
     {
       "title": "MP-R",
@@ -146,71 +114,39 @@
         "Análisis e interpretación de resultados",
         "Aplicaciones clínicas y prácticas"
       ],
-      "instructor": ["Lic. Silvia Tedesco"],
+      "instructor": [
+        "Lic. Silvia Tedesco"
+      ],
       "avatar": "/2024/silvia-avatar.png",
-      "button": "Inscribirse ahora",
-      "contact": {
-        "email": "cursosactualmente@gmail.com",
-        "whatsapp": "+5491140336320"
-      },
-      "recommendations": "Se recomienda contar con la herramienta Merrill-Palmer-R para el entrenamiento en la aplicación y codificación final.",
-      "includes": "Formación avalada por especialistas en desarrollo infantil y entrenamiento práctico en una de las herramientas diagnósticas más utilizadas.",
-      "coordination": "Curso coordinado por la Lic. Silvia Tedesco de ACTUALMENTE",
-      "registration_note": "Los participantes recibirán una invitación por ZOOM un día antes del inicio del curso.",
-      "price": "160 U$D (170 U$D vía PayPal con comisión)",
-      "payment_methods": [
-        "Efectivo",
-        "Transferencias internacionales o nacionales",
-        "PayPal"
-      ]
+      "button": "Inscribirse ahora"
     },
     {
-      "title": "comunicacion-social",
+      "title": "tea-comorbilidades",
       "text": "text-blue",
       "bgcolor": "bg-blue",
-      "value": "comunicacion-social",
-      "subtitle": "Trabajo junto a las familias.",
-      "date": "FECHA: 21 de junio",
+      "value": "TEA y Comorbilidades 2025",
+      "subtitle": "La mirada del psiquiatra sobre TEA y sus comorbilidades",
+      "date": "FECHA: 22 y 23 de Marzo",
       "modality": "Modalidad online a través de Zoom",
-      "timemorning": "10:00 a 14:00 (Hora Argentina)",
-      "timeafternoon": "10:00 a 14:00 (Hora Argentina)",
-      "about": "Este curso está diseñado para abordar los primeros signos sobre la comunicación social y la intervención terapéutica.",
+      "timemorning": "10:00 am - 3:00 pm",
+      "about": "Capacitación impartida por el Dr. Adolfo Benito Ruiz sobre la relación entre TEA y comorbilidades psiquiátricas.",
       "objectives": [
-        "El desarrollo social típico y los hitos de la comunicación temprana.",
-        "Estrategias para trabajar con padres y terapeutas del desarrollo.",
-        "Evaluación temprana de la comunicación social desarrollo y estrategias Además, los asistentes recibirán el pdf con material y recursos prácticos para compartir con padres y otros profesionales.",
-        "Durante la formación se utilizarán ejemplos en video para destacar las habilidades fundamentales de la comunicación social temprana."
+        "Comprender las bases neurobiológicas del TEA y su relación con la salud mental",
+        "Diferenciar y diagnosticar las comorbilidades psiquiátricas en el TEA",
+        "Explorar estrategias terapéuticas farmacológicas",
+        "Analizar casos clínicos reales para la práctica profesional"
       ],
       "topics": [
-        "Fundamentos del ADOS-2 y su aplicación",
-        "Evaluación diagnóstica en TEA",
-        "Complemento con ADI-R",
-        "Administración y puntuación de módulos",
-        "Casos prácticos y ejemplos clínicos"
+        "Bases neurobiológicas del autismo y la comorbilidad en la salud mental",
+        "Autismo y TDAH",
+        "Autismo y discapacidad intelectual",
+        "Autismo y depresión",
+        "Autismo y patologías orgánicas",
+        "Manejo farmacológico de sintomatología en TEA"
       ],
-      "instructor": "Dra. Rhiannon Luyster",
-      "avatar": "/2024/rhiannon-avatar.jpg",
-      "button": "Inscribirse ahora",
-      "contact": {
-        "email": "cursosactualmente@gmail.com",
-        "whatsapp": "+5491140336320"
-      },
-      "recommendations": "Es fundamental contar con buena conexión a internet, cámara y micrófono en condiciones óptimas.",
-      "includes": "Certificado oficial de asistencia y Material digital complementario.",
-      "coordination": "Curso coordinado por la Lic. Silvia Tedesco de ACTUALMENTE",
-      "registration_note": "Los participantes recibirán la invitación por ZOOM un día antes del inicio del curso.",
-      "price_options": [
-        {
-          "option": "Opción 1",
-          "price": "150 U$D incluye la comisión de paypal",
-          "includes": "Protocolos y acceso a videos."
-        }
-      ],
-      "payment_methods": [
-        "Transferencias internacionales o nacionales",
-        "PayPal"
-      ],
-      "cv": "/Luyster_CV_2024.pdf"
+      "instructor": "Dr. Adolfo Benito Ruiz",
+      "avatar": "/2024/adolfo-avatar.jpg",
+      "button": "Inscribirse ahora"
     }
   ]
 }

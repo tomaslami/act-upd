@@ -130,14 +130,14 @@ const Cursos = ({ params }: { params: { slug: string } }) => {
           <p className="text-gray-700 mb-4">Contáctanos en:</p>
           <div className="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-8">
             <a
-              href={`mailto:${curso.contact?.email || "cursosactualmente@gmail.com"}`}
+              href={`mailto: "cursosactualmente@gmail.com"}`}
               className="flex items-center text-[#1b4da1] hover:text-[#e74322]"
             >
               <MessageCircle className="w-6 h-6 mr-2" />
-              {curso.contact?.email || "cursosactualmente@gmail.com"}
+              {"cursosactualmente@gmail.com"}
             </a>
             <a
-              href={`https://wa.me/${curso.contact?.whatsapp?.replace(/\D/g, "") || "5491140336320"}`}
+              href={`https://wa.me/"5491140336320"}`}
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center text-[#1b4da1] hover:text-[#e74322]"

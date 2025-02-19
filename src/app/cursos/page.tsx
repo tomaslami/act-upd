@@ -30,6 +30,15 @@ const upcomingCourses: Course[] = [
     location: "Virtual • Zoom",
     href: "/cursos/ados",
   },
+  {
+    id: "3",
+    title: "Trastornos del Espectro Autista y Comorbilidad",
+    subtitle: "TEA y Comorbilidad",
+    date: "Inicio: 22 y 23 de Marzo",
+    image: "/cursos/comorbilidades.jpg",
+    location: "Virtual • Zoom",
+    href: "/cursos/tea-comorbilidades"
+  }
   // {
   //   id: '3',
   //   title: 'TEACHH, Enfocado en niños entre 3 y 5 años',
@@ -61,7 +70,7 @@ const upcomingCourses: Course[] = [
 
 const CourseCard: React.FC<{ course: Course }> = ({ course }) => (
   <div className=" bg-white overflow-hidden pb-[75px]">
-    <div className="relative h-[300px]">
+    <div className="relative h-[300px] border-[1px] rounded-xl">
       <Image
         src={course.image}
         alt={course.title}
