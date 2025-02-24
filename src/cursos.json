@@ -115,16 +115,17 @@
         "Aplicaciones clínicas y prácticas"
       ],
       "instructor": [
-        "Lic. Silvia Tedesco"
+        "Lic. Silvia Tedesco",
+        "Lic. Sol Stomati"
       ],
-      "avatar": "/2024/silvia-avatar.png",
+      "avatar": ["/2024/silvia-avatar.png", "/2024/sol-avatar.png"],
       "button": "Inscribirse ahora"
     },
     {
       "title": "tea-comorbilidades",
       "text": "text-blue",
       "bgcolor": "bg-blue",
-      "value": "TEA y Comorbilidades 2025",
+      "value": "TEA y Comorbilidades",
       "subtitle": "La mirada del psiquiatra sobre TEA y sus comorbilidades",
       "date": "FECHA: 22 y 23 de Marzo",
       "modality": "Modalidad online a través de Zoom",
@@ -147,6 +148,58 @@
       "instructor": "Dr. Adolfo Benito Ruiz",
       "avatar": "/2024/adolfo-avatar.jpg",
       "button": "Inscribirse ahora"
-    }
+    },
+    {
+      "title": "comunicacion-social",
+      "text": "text-blue",
+      "bgcolor": "bg-blue",
+      "value": "Comunicación Social en Niños Pequeños con Autismo",
+      "subtitle": "Trabajo junto a las familias en el desarrollo de la comunicación social",
+      "date": "FECHA: 21 de Junio",
+      "modality": "Modalidad online a través de Zoom con traducción simultánea al español",
+      "timemorning": "10:00 am - 2:00 pm (Hora Argentina)",
+      "about": "Curso diseñado para abordar los primeros signos de la comunicación social en niños pequeños con autismo, promoviendo estrategias efectivas para trabajar con familias y terapeutas.",
+      "objectives": [
+        "Comprender el desarrollo social típico y los hitos de la comunicación temprana.",
+        "Implementar estrategias para trabajar con padres y terapeutas del desarrollo.",
+        "Evaluar tempranamente la comunicación social en niños con TEA.",
+        "Utilizar material audiovisual y ejemplos en video para reforzar el aprendizaje."
+      ],
+      "topics": [
+        "Desarrollo social y comunicación temprana",
+        "Estrategias de intervención con padres y terapeutas",
+        "Evaluación de la comunicación social en niños con TEA",
+        "Implementación de estrategias terapéuticas efectivas",
+        "Casos prácticos y aplicación de herramientas audiovisuales"
+      ],
+      "button": "Inscribirse ahora"
+    },
+    {
+      "title": "conducta-disruptiva",
+      "text": "text-blue",
+      "bgcolor": "bg-blue",
+      "value": "Conducta Disruptiva 2025",
+      "subtitle": "Enfoque práctico para su manejo en personas con autismo",
+      "date": "FECHA: 5 de Julio",
+      "modality": "Modalidad online a través de Zoom",
+      "timemorning": "9:30 am - 4:30 pm (Hora Argentina)",
+      "about": "Curso diseñado para profesionales de la salud, educadores y cuidadores que buscan herramientas basadas en evidencia para comprender, prevenir y manejar conductas disruptivas de manera efectiva.",
+      "objectives": [
+        "Comprender las funciones de la conducta disruptiva y sus causas.",
+        "Aplicar estrategias de intervención positiva basadas en evidencia.",
+        "Desarrollar herramientas prácticas para la prevención y manejo de conductas problemáticas.",
+        "Analizar y resolver casos prácticos con un enfoque profesional.",
+        "Explorar estrategias de intervención adaptadas a diferentes entornos y necesidades individuales."
+      ],
+      "topics": [
+        "Introducción a las conductas disruptivas: causas y funciones.",
+        "Evaluación funcional de la conducta.",
+        "Estrategias de intervención positiva basadas en evidencia.",
+        "Resolución de casos prácticos y aplicación en entornos reales."
+      ],
+      
+      "button": "Inscribirse ahora"
+      }
+    
   ]
 }

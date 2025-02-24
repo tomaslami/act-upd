@@ -4,7 +4,6 @@ import Link from "next/link"
 interface Course {
   id: string
   title: string
-  subtitle: string
   date: string
   image: string
   location: string
@@ -14,8 +13,7 @@ interface Course {
 const upcomingCourses: Course[] = [
   {
     id: "1",
-    title: "Formación en la Escala de Desarrollo Merrill-Palmer-R",
-    subtitle: "Escala de Desarrollo MP",
+    title: "Escala de Desarrollo MP",
     date: "28 de febrero y 1 de marzo",
     image: "/cursos/merrilPalmer.png",
     location: "Virtual • Zoom",
@@ -23,8 +21,7 @@ const upcomingCourses: Course[] = [
   },
   {
     id: "2",
-    title: "ADOS-2 (Noviembre)",
-    subtitle: "ADOS-2",
+    title: "ADOS-2",
     date: "Inicio: 16, 17 y 18 de Mayo",
     image: "/cursos/ados_posteo.png",
     location: "Virtual • Zoom",
@@ -32,60 +29,56 @@ const upcomingCourses: Course[] = [
   },
   {
     id: "3",
-    title: "Trastornos del Espectro Autista y Comorbilidad",
-    subtitle: "TEA y Comorbilidad",
+    title: "TEA y Comorbilidad",
     date: "Inicio: 22 y 23 de Marzo",
-    image: "/cursos/comorbilidades.jpg",
+    image: "/cursos/comorbilidades.png",
     location: "Virtual • Zoom",
     href: "/cursos/tea-comorbilidades"
+  },
+  {
+    id: "4",
+    title: "Comunicación social",
+    date: "Inicio: 21 de junio",
+    image: "/cursos/comu_posteo.png",
+    location: "Virtual • Zoom",
+    href: "/cursos/comunicacion-social",
+  },
+  {
+    id: "5",
+    title: "Conducta disruptiva",
+    date: "Inicio: 5 y 6 de julio",
+    image: "/cursos/conducta_posteo.png",
+    location: "Virtual • Zoom",
+    href: "/cursos/conducta-disruptiva",
   }
-  // {
-  //   id: '3',
-  //   title: 'TEACHH, Enfocado en niños entre 3 y 5 años',
-  //   subtitle: 'TEACCH',
-  //   date: 'Inicio: 9 al 13 de Diciembre',
-  //   image: '/icons/TEACCH-nov.png',
-  //   location: 'Virtual • Zoom',
-  //   href: '/cursos/teacch'
-  // },
-  // {
-  //   id: '4',
-  //   title: 'ADI-R',
-  //   subtitle: 'ADI-R',
-  //   date: 'Inicio: 20 y 21 de Diciembre',
-  //   image: '/icons/ADIR-dic.png',
-  //   location: 'Virtual • Zoom',
-  //   href: '/cursos/adi-r'
-  // },
-  // {
-  //   id: "5",
-  //   title: "Comunicación social en niños con autismo",
-  //   subtitle: "Trabajo junto a las familias.",
-  //   date: "FECHA: 21 de junio",
-  //   image: "/cursos/ados_posteo.png",
-  //   location: "Virtual • Zoom",
-  //   href: "/cursos/comunicacion-social",
-  // },
 ]
 
 const CourseCard: React.FC<{ course: Course }> = ({ course }) => (
-  <div className=" bg-white overflow-hidden pb-[75px]">
-    <div className="relative h-[300px] border-[1px] rounded-xl">
+  <div className="group relative bg-white rounded-2xl overflow-hidden transition-all duration-300 ">
+    <div className="relative w-full pt-[100%]">
       <Image
-        src={course.image}
+        src={course.image || "/placeholder.svg"}
         alt={course.title}
-        layout="fill"
-        objectFit="cover"
-        className="rounded-xl"
+        fill
+        className="object-cover rounded-2xl"
+        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
       />
+      {/* Floating Date Badge */}
+      {/* <div className="absolute top-2 left-2 z-20 bg-white/90 backdrop-blur-sm px-4 py-2 rounded-full">
+        <div className="flex items-center gap-2">
+          <Calendar className="w-4 h-4 text-blue-600" />
+          <span className="text-sm font-medium text-gray-800">{course.date}</span>
+        </div>
+      </div> */}
     </div>
-    <div className="h-max flex flex-col justify-start items-start p-4">
-      <h3 className="h-[10%] text-lg font-semibold mb-2">{course.subtitle}</h3>
-      <p className="h-[25%] text-sm text-gray-600 mb-2">{course.date}</p>
-      <p className="h-[25%] text-sm text-blue-600 mb-4">{course.location}</p>
+
+    <div className="h-max flex flex-col justify-start items-start pt-4">
+      <h3 className="h-[10%] text-lg font-semibold mb-2">{course.title}</h3>
+      <p className="h-[25%] text-sm text-blue-600 mb-2">{course.location}</p>
+      <p className="h-[25%] text-sm text-blue-600 mb-4">{course.date}</p>
       <Link
         href={course.href}
-        className="h-[15%] bg-blue text-white px-4 py-2 rounded-full text-sm font-semibold hover:bg-blue-700 transition-colors"
+        className="h-[15%] bg-blue text-white px-4 py-2 rounded-full text-sm font-semibold hover:bg-blue/90 transition-colors"
       >
         Más info
       </Link>
@@ -95,28 +88,24 @@ const CourseCard: React.FC<{ course: Course }> = ({ course }) => (
 
 export default function CoursesSection() {
   return (
-    <section className="md:px-20 px-5 pt-[150px]">
-      <h2 className="text-3xl font-bold mb-8">Cursos</h2>
-      <div className="flex space-x-3 mb-8">
-        <button
-          className={`px-4 py-2 rounded-full text-sm font-semibold bg-blue border-2 text-white`}
-        >
-          PROXIMOS CURSOS
-        </button>
-        {/* <button
-          className={`px-4 py-2 rounded-full text-sm font-semibold  bg-blue border-2 ${!showUpcoming
-            ? 'bg-blue-600 text-white'
-            : 'bg-gray-200 text-gray-700 hover:bg-gray-100 border-2 border-blue transition-colors'
-            }`}
-          onClick={() => setShowUpcoming(false)}
-        >
-          CURSOS PASADOS
-        </button> */}
-      </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
-        {upcomingCourses.map((course) => (
-          <CourseCard key={course.id} course={course} />
-        ))}
+    <section className="md:px-20 px-5 pt-[150px] pb-20 bg-gray-50">
+      <div className="max-w-7xl mx-auto">
+        <h2 className="text-4xl font-bold mb-4">Cursos</h2>
+        <p className="text-gray-600 mb-8 text-lg">
+          Descubre nuestra selección de cursos especializados
+        </p>
+        
+        <div className="flex space-x-3 mb-12">
+          <button className="px-6 py-2.5 rounded-full text-sm font-semibold bg-blue text-white shadow-sm hover:bg-blue-700 transition-colors">
+            PRÓXIMOS CURSOS
+          </button>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10">
+          {upcomingCourses.map((course) => (
+            <CourseCard key={course.id} course={course} />
+          ))}
+        </div>
       </div>
     </section>
   )

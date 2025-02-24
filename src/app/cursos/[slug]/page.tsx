@@ -66,16 +66,23 @@ const Cursos = ({ params }: { params: { slug: string } }) => {
 
         <section id="speakers" className="mb-12">
           <h2 className="text-2xl md:text-3xl font-semibold text-[#1b4da1] mb-4">Disertantes</h2>
-          <div className="flex flex-wrap justify-center gap-8">
-            {(Array.isArray(curso.instructor) ? curso.instructor : [curso.instructor]).map((speaker, index) => (
-              <div
-                key={index}
-                className="bg-white shadow-lg p-6 text-center w-full sm:w-64 border-b-4 border-[#e74322]"
-              >
-                <Image src={curso.avatar} alt="Silvia Tedesco" width={128} height={128} className=" rounded-full mx-auto mb-4"></Image>
-                <h3 className="text-xl font-semibold text-[#1b4da1]">{speaker}</h3>
-              </div>
-            ))}
+          <div className=" flex flex-wrap justify-center gap-8">
+          {Array.isArray(curso.instructor) && Array.isArray(curso.avatar)
+              ? curso.instructor.map((speaker, index) => (
+                  <div
+                    key={index}
+                    className="bg-white shadow-lg p-6 text-center w-full sm:w-64 border-b-4 border-[#e74322]"
+                  >
+                    <Image src={curso.avatar[index]} alt={speaker} width={128} height={128} className="rounded-full mx-auto mb-4" />
+                    <h3 className="w-full text-xl font-semibold text-[#1b4da1]">{speaker}</h3>
+                  </div>
+                ))
+              : curso.instructor && curso.avatar && (
+                  <div className="bg-white shadow-lg p-6 text-center w-full sm:w-64 border-b-4 border-[#e74322]">
+                    <Image src={curso.avatar} alt="Profesionales" width={128} height={128} className="rounded-full mx-auto mb-4" />
+                    <h3 className="w-full text-xl font-semibold text-[#1b4da1]">{curso.instructor}</h3>
+                  </div>
+                )}
           </div>
         </section>
 
@@ -115,9 +122,7 @@ const Cursos = ({ params }: { params: { slug: string } }) => {
                 <ul className="list-disc list-inside text-gray-700 space-y-2">
                   <li className="xl:text-lg">Título de grado</li>
                   <li className="xl:text-lg">Cámara y micrófono en condiciones óptimas</li>
-                  <li className="xl:text-lg">
-                    {curso.recommendations ||
-                      "Se recomienda contar con la herramienta necesaria para el entrenamiento en la aplicación y la codificación final"}
+                  <li className="xl:text-lg">Se recomienda contar con la herramienta necesaria para el entrenamiento en la aplicación y la codificación final
                   </li>
                 </ul>
               </div>

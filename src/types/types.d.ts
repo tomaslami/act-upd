@@ -12,10 +12,7 @@ export type Cursos = {
   topics: string[];
   instructor?: string | string[];
   button: string;
-  recommendations?: string;
-  coordination?: string;
-  attendance?: string;
-  avatar?: string | StaticImport;
+  avatar?: string[] | StaticImport;
 };
 
 export interface ServerActionResponse {
