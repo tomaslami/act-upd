@@ -39,15 +39,15 @@ export default function Courses() {
       color: 'green',
     },
     {
-      status: 'Finalizado',
+      status: 'Próximo',
       title: 'Escala de desarrollo infantil Merrill-Palmer-R',
-      date: 'Dictado: 24 y 25 Junio 2022',
+      date: 'Inicio: 28 de febrero y 1 de marzo',
       color: 'purple',
     },
     {
-      status: 'Finalizado',
+      status: 'Próximo',
       title: 'Certificación oficial ADOS-2',
-      date: 'Dictado: 14, 15 y 16 de Octubre 2022',
+      date: 'Inicio: 16, 17 y 18 de Mayo',
       color: 'red',
     },
   ]
