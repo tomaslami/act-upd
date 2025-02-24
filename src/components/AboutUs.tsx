@@ -16,7 +16,7 @@ const AboutUs = () => {
             </span>
           </h1>
         </div>
-        <p className="text-white text-sm sm:text-base md:text-lg max-w-2xl">
+        <p className="text-white  sm:text-base md:text-lg max-w-2xl">
         Soy Licenciada en Fonoaudiología con abordaje Neurolingüístico por la Universidad del Museo Social Argentino (UMSA) y Máster en Autismo en España. Actualmente, estoy finalizando la carrera de Psicología.
         </p>
         <Link
