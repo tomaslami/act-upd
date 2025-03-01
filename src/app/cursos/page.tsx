@@ -50,6 +50,14 @@ const upcomingCourses: Course[] = [
     image: "/cursos/conducta_posteo.png",
     location: "Virtual • Zoom",
     href: "/cursos/conducta-disruptiva",
+  },
+  {
+    id: "6",
+    title: "Mujeres y Autismo",
+    date: "Inicio: 26 de Abril",
+    image: "/cursos/mujeres_posteo.png",
+    location: "Virtual • Zoom",
+    href: "/cursos/mujeres-autismo",
   }
 ]
 

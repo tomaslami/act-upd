@@ -1,39 +1,6 @@
 {
   "curso": [
     {
-      "title": "teacch",
-      "text": "text-blue",
-      "bgcolor": "bg-blue",
-      "value": "TEACCH, Enfocado en niños de 3 a 5 años",
-      "subtitle": "Primera vez dictado en habla hispana",
-      "date": "FECHA: MES DE DICIEMBRE",
-      "modality": "Únicamente 40 lugares disponibles",
-      "timemorning": "10:00 am - 12:15 pm",
-      "timeafternoon": "2:00 pm - 4:15 pm",
-      "about": "Sobre el Curso TEACCH",
-      "objectives": [
-        "Identificar los estilos de aprendizaje de las personas que se encuentran dentro del espectro autista.",
-        "Diagramar la organización física de los espacios de aprendizaje.",
-        "Desarrollar horarios personalizados y sistemas de actividades.",
-        "Desarrollar una estructura visual significativa para su utilización en áreas clave.",
-        "Adquirir conductas para la resolución de problemas utilizando un abordaje basado en un antecedente y en los principios del programa TEACCH con estructuración."
-      ],
-      "topics": [
-        "Estilos de Aprendizaje en Autismo",
-        "Evaluación",
-        "Organización Física & Horarios",
-        "Sistemas de Actividades y Estructura del Material",
-        "Estrategias de Aprendizaje; Estrategias Naturalistas & Vinculadas con la interacción",
-        "Manualidades",
-        "Juego dramático",
-        "Habilidades la Motricidad Gruesa & Autoayuda",
-        "Manejo de la Conducta"
-      ],
-      "avatar": "",
-      "button": "Inscribirse ahora",
-      "instructor": ""
-    },
-    {
       "title": "ados",
       "text": "text-blue",
       "bgcolor": "bg-blue",
@@ -59,34 +26,6 @@
       ],
       "instructor": "Dra. Rhiannon Luyster, PHD - Investigadora",
       "avatar": "/2024/rhiannon-avatar.jpg",
-      "button": "Inscribirse ahora"
-    },
-    {
-      "value": "Autism Diagnostic Interview Revised (ADI-R)",
-      "title": "adi-r",
-      "text": "text-blue",
-      "bgcolor": "bg-blue",
-      "subtitle": "Curso dictado por primera vez con traducción simultánea al español",
-      "date": "FECHA: 20 y 21 de Diciembre",
-      "modality": "Modalidad online a través de Zoom",
-      "timemorning": "10:00 am - 1:00 pm",
-      "timeafternoon": "2:00 pm - 5:00 pm",
-      "about": "Sobre el curso ADI-R",
-      "objectives": [
-        "Realizar entrevistas diagnósticas semi-estructuradas para pacientes con TEA.",
-        "Complementar la administración del ADI-R con el ADOS-2 para una evaluación más completa.",
-        "Adquirir habilidades para la investigación en diagnósticos de TEA.",
-        "Capacitarse en el uso de herramientas diagnósticas complejas para la práctica profesional."
-      ],
-      "topics": [
-        "Entrevista Diagnóstica ADI-R",
-        "Evaluación de pacientes con TEA",
-        "Complemento con ADOS-2",
-        "Metodología de investigación en TEA",
-        "Administración y algoritmos diagnósticos",
-        "Casos prácticos y ejemplos reales"
-      ],
-      "instructor": "Dra. Rhiannon Luyster, PHD - Investigadora y Autora del Módulo T de ADOS-2",
       "button": "Inscribirse ahora"
     },
     {
@@ -172,7 +111,9 @@
         "Implementación de estrategias terapéuticas efectivas",
         "Casos prácticos y aplicación de herramientas audiovisuales"
       ],
-      "button": "Inscribirse ahora"
+      "button": "Inscribirse ahora",
+      "instructor": "Lic. Moira Pileggi",
+      "avatar": "/2024/moira-pileggi.png"
     },
     {
       "title": "conducta-disruptiva",
@@ -197,8 +138,38 @@
         "Estrategias de intervención positiva basadas en evidencia.",
         "Resolución de casos prácticos y aplicación en entornos reales."
       ],
-      
+      "instructor": "Lic. Jorge Mármol",  
+      "avatar": "/2024/marmol-jorge.png",
       "button": "Inscribirse ahora"
+      },
+      {
+        "title": "mujeres-autismo",
+        "text": "text-blue",
+        "bgcolor": "bg-blue",
+        "value": "Mujeres y Autismo",
+        "subtitle": "Valoración y diagnóstico en mujeres con TEA",
+        "date": "FECHA: 26 de Abril",
+        "modality": "Modalidad online a través de Zoom",
+        "timemorning": "10:30 am - 4:00 pm (Hora Argentina)",
+        "about": "Curso impartido por la Dra. María Merino, psicóloga y autora del libro 'Mujeres y Autismo'. Enfocado en la valoración y diagnóstico diferencial del autismo en mujeres.",
+        "objectives": [
+          "Comprender las particularidades del autismo en mujeres.",
+          "Adquirir herramientas para la identificación y detección del TEA en mujeres.",
+          "Conocer las diferencias en el diagnóstico y abordaje en distintas etapas de la vida.",
+          "Aprender estrategias de entrevista y evaluación diagnóstica."
+        ],
+        "topics": [
+          "Introducción a la valoración en mujeres con TEA",
+          "Proceso de valoración y diagnóstico",
+          "Preparación de la entrevista y selección de informantes clave",
+          "Recopilación de datos y habilidades en la entrevista",
+          "Herramientas de detección y diagnóstico",
+          "Elaboración de informes clínicos",
+          "Temas relevantes en la vida de mujeres con autismo"
+        ],
+        "instructor": "Dra. María Merino",
+        "avatar": "/2024/maria-merino.png",
+        "button": "Inscribirse ahora"
       }
     
   ]

@@ -39,7 +39,7 @@ export default function Courses() {
       color: 'green',
     },
     {
-      status: 'Próximo',
+      status: 'Finalizado',
       title: 'Escala de desarrollo infantil Merrill-Palmer-R',
       date: 'Inicio: 28 de febrero y 1 de marzo',
       color: 'purple',
