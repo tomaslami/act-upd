@@ -21,14 +21,6 @@ const upcomingCourses: Course[] = [
   },
   {
     id: "2",
-    title: "ADOS-2",
-    date: "Inicio: 16, 17 y 18 de Mayo",
-    image: "/cursos/ados_posteo.png",
-    location: "Virtual • Zoom",
-    href: "/cursos/ados",
-  },
-  {
-    id: "3",
     title: "TEA y Comorbilidad",
     date: "Inicio: 22 y 23 de Marzo",
     image: "/cursos/comorbilidades.png",
@@ -36,7 +28,23 @@ const upcomingCourses: Course[] = [
     href: "/cursos/tea-comorbilidades"
   },
   {
+    id: "3",
+    title: "Mujeres y Autismo",
+    date: "Inicio: 26 de Abril",
+    image: "/cursos/mujeres_posteo.png",
+    location: "Virtual • Zoom",
+    href: "/cursos/mujeres-autismo",
+  },
+  {
     id: "4",
+    title: "ADOS-2",
+    date: "Inicio: 16, 17 y 18 de Mayo",
+    image: "/cursos/ados_posteo.png",
+    location: "Virtual • Zoom",
+    href: "/cursos/ados",
+  },
+  {
+    id: "5",
     title: "Comunicación social",
     date: "Inicio: 21 de junio",
     image: "/cursos/comu_posteo.png",
@@ -44,21 +52,13 @@ const upcomingCourses: Course[] = [
     href: "/cursos/comunicacion-social",
   },
   {
-    id: "5",
+    id: "6",
     title: "Conducta disruptiva",
     date: "Inicio: 5 y 6 de julio",
     image: "/cursos/conducta_posteo.png",
     location: "Virtual • Zoom",
     href: "/cursos/conducta-disruptiva",
   },
-  {
-    id: "6",
-    title: "Mujeres y Autismo",
-    date: "Inicio: 26 de Abril",
-    image: "/cursos/mujeres_posteo.png",
-    location: "Virtual • Zoom",
-    href: "/cursos/mujeres-autismo",
-  }
 ]
 
 const CourseCard: React.FC<{ course: Course }> = ({ course }) => (
