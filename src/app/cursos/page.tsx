@@ -14,7 +14,7 @@ const upcomingCourses: Course[] = [
   {
     id: "1",
     title: "Escala de Desarrollo MP",
-    date: "28 de febrero y 1 de marzo",
+    date: "28 de Febrero y 1 de Marzo",
     image: "/cursos/merrilPalmer.png",
     location: "Virtual • Zoom",
     href: "/cursos/MP-R",
@@ -46,7 +46,7 @@ const upcomingCourses: Course[] = [
   {
     id: "5",
     title: "Comunicación social",
-    date: "Inicio: 21 de junio",
+    date: "Inicio: 21 de Junio",
     image: "/cursos/comu_posteo.png",
     location: "Virtual • Zoom",
     href: "/cursos/comunicacion-social",
@@ -54,7 +54,7 @@ const upcomingCourses: Course[] = [
   {
     id: "6",
     title: "Conducta disruptiva",
-    date: "Inicio: 5 y 6 de julio",
+    date: "Inicio: 5 y 6 de Julio",
     image: "/cursos/conducta_posteo.png",
     location: "Virtual • Zoom",
     href: "/cursos/conducta-disruptiva",
