@@ -30,9 +30,10 @@ const Cursos = ({ params }: { params: { slug: string } }) => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-100 to-purple-100">
       <main className="md:mx-16 mx-4 pt-10 md:pt-20 flex gap-20 flex-col justify-center">
-        <section id="hero" className="text-center  mt-20">
-          <h1 className="text-4xl md:text-5xl font-bold text-[#1b4da1] mb-4">{curso.value}</h1>
-          <p className="text-xl md:text-2xl text-[#e74322] mb-8">{curso.subtitle}</p>
+        <section id="hero" className="text-center mt-20">
+          <h1 className="text-4xl md:text-5xl font-bold text-[#1b4da1] mb-5">{curso.value}</h1>
+          <p className="text-xl md:text-2xl text-[#e74322] mb-5">{curso.subtitle}</p>
+          <div className="flex flex-col justify-center items-center gap-8">
           <div className="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-8">
             <div className="flex items-center">
               <Calendar className="w-6 h-6 text-[#1b4da1] mr-2 " />
@@ -43,6 +44,13 @@ const Cursos = ({ params }: { params: { slug: string } }) => {
               <span className="text-[#1b4da1] text-lg">{curso.modality}</span>
             </div>
           </div>
+          {/*BOTON CURSOS */}
+            <button
+              className="h-[15%] bg-blue text-white px-4 py-2 rounded-full text-sm font-semibold hover:bg-blue/90 transition-colors"
+              >
+              Agregar Curso
+              </button>
+            </div>
         </section>
 
         <section id="about" className="mb-12">
@@ -130,9 +138,9 @@ const Cursos = ({ params }: { params: { slug: string } }) => {
           </div>
         </section>
 
-        <section id="contact" className="text-center mb-12">
+        <section id="contact" className="text-center mb-12 flex flex-col justify-center items-center gap-5">
           <h2 className="text-2xl md:text-3xl font-semibold text-[#1b4da1] mb-4">¿Te gustaría sumarte?</h2>
-          <p className="text-gray-700 mb-4">Contáctanos en:</p>
+          <p className="text-gray-700">Contáctanos en:</p>
           <div className="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-8">
             <a
               href={`mailto: "cursosactualmente@gmail.com"}`}
@@ -151,6 +159,12 @@ const Cursos = ({ params }: { params: { slug: string } }) => {
               WhatsApp
             </a>
           </div>
+          {/*BOTON CURSOS*/}
+          <button
+            className="h-[15%] bg-blue text-white px-4 py-2 rounded-full text-sm font-semibold hover:bg-blue/90 transition-colors"
+            >
+            Agregar Curso
+          </button>
         </section>
       </main>
     </div>
