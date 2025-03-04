@@ -45,11 +45,11 @@ const Cursos = ({ params }: { params: { slug: string } }) => {
             </div>
           </div>
           {/*BOTON CURSOS */}
-            <button
+            {/* <button
               className="h-[15%] bg-blue text-white px-4 py-2 rounded-full text-sm font-semibold hover:bg-blue/90 transition-colors"
               >
               Agregar Curso
-              </button>
+              </button> */}
             </div>
         </section>
 
@@ -160,11 +160,11 @@ const Cursos = ({ params }: { params: { slug: string } }) => {
             </a>
           </div>
           {/*BOTON CURSOS*/}
-          <button
+          {/* <button
             className="h-[15%] bg-blue text-white px-4 py-2 rounded-full text-sm font-semibold hover:bg-blue/90 transition-colors"
             >
             Agregar Curso
-          </button>
+          </button> */}
         </section>
       </main>
     </div>
