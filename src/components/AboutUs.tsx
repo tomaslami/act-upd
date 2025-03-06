@@ -1,6 +1,4 @@
 import Image from "next/image"
-import Link from "next/link"
-import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 
@@ -36,16 +34,6 @@ export default function AboutSection() {
                 </p>
               </CardContent>
             </Card>
-
-            <div>
-              <Button
-                asChild
-                size="lg"
-                className="bg-white text-[#6758c7] hover:bg-white/90 rounded-full px-6 font-semibold"
-              >
-                <Link href="#">Conocé más</Link>
-              </Button>
-            </div>
           </div>
 
           {/* Right column: Image */}
