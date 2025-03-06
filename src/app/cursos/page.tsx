@@ -124,7 +124,7 @@ const courses: Course[] = [
   },
   {
     id: "11",
-    title: "Escala de Desarrollo Merrill-Palmer-R",
+    title: "Escala de Desarrollo MP",
     date: "Inicio: 1 y 9 de Octubre",
     image: "/cursos/POSTEO_MERRIL_OCTUBRE.png",
     location: "Virtual • Zoom",
