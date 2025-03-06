@@ -89,7 +89,7 @@ export default function CourseDetails({
     if (!params.slug) {
       notFound()
     }
-    const foundCurso = data.curso.find((curso) => curso.title === params.slug)
+    const foundCurso = data.curso.find((curso) => curso.title === params.slug) as CursosType
     if (!foundCurso) {
       notFound()
     }
@@ -269,7 +269,7 @@ export default function CourseDetails({
               <Card className="border-none shadow-md overflow-hidden">
                 <CardHeader className="bg-[#1b4da1]/5 border-b">
                   <CardTitle className="text-2xl text-[#1b4da1]">
-                    Nuestros profesionales
+                    Dictado por
                   </CardTitle>
                 </CardHeader>
                 <CardContent className="pt-6">

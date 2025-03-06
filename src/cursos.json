@@ -173,6 +173,174 @@
       "avatar": "/2024/maria-merino.png",
       "button": "Inscribirse ahora",
       "price": 100000
+    },
+    {
+      "title": "peers-preescolar",
+      "text": "text-blue",
+      "bgcolor": "bg-blue",
+      "value": "Formación Oficial en PEERS® para Niños en Edad Preescolar",
+      "subtitle": "Capacitación en intervención social basada en evidencia",
+      "date": "FECHA: 13 al 15 de Agosto de 2025",
+      "modality": "Modalidad online a través de Zoom",
+      "timemorning": "11:00 am - 7:00 pm (Hora Argentina)",
+      "about": "PEERS® es un programa basado en evidencia para el desarrollo de habilidades sociales en niños con TEA, TDAH y otras dificultades socioemocionales.",
+      "objectives": [
+        "Implementar el programa PEERS® en niños en edad preescolar.",
+        "Aplicar estrategias basadas en evidencia para mejorar la interacción social.",
+        "Desarrollar habilidades para la terapia individual y grupal.",
+        "Evaluar habilidades sociales y diseñar estrategias de intervención."
+      ],
+      "topics": [
+        "Fundamentos y estructura del programa PEERS®.",
+        "Estrategias de intervención social para niños preescolares.",
+        "Técnicas terapéuticas individuales y grupales.",
+        "Evaluación y diseño de estrategias de intervención."
+      ],
+      "instructor": "Dra. Elizabeth Laugeson",
+      "avatar": "/2024/elizabeth-laugeson.jpg",
+      "button": "Inscribirse ahora",
+      "price": 580
+    },
+    {
+      "title": "pecs-nivel1",
+      "text": "text-blue",
+      "bgcolor": "bg-blue",
+      "value": "Introducción al Sistema PECS - Nivel 1",
+      "subtitle": "Curso de comunicación aumentativa y alternativa",
+      "date": "FECHA: 8 y 9 de Noviembre de 2025",
+      "modality": "Modalidad online a través de Zoom con traducción simultánea",
+      "timemorning": "9:00 am - 4:00 pm (Hora Argentina)",
+      "about": "PECS es un sistema de comunicación basado en intercambio de imágenes, diseñado para ayudar a personas con TEA y otras dificultades comunicativas a desarrollar habilidades de lenguaje funcional.",
+      "objectives": [
+        "Aprender las seis fases de PECS y su implementación efectiva.",
+        "Diseñar entornos educativos que favorezcan la comunicación.",
+        "Aplicar principios del Análisis de la Conducta en la enseñanza de PECS.",
+        "Evaluar la transición de PECS a otros sistemas de comunicación."
+      ],
+      "topics": [
+        "Introducción al sistema PECS y su fundamento teórico.",
+        "Las seis fases de implementación de PECS.",
+        "Estrategias para la enseñanza efectiva de PECS.",
+        "Transición de PECS a otros sistemas de comunicación."
+      ],
+      "instructor": "PECS España",
+      "avatar": "/2024/pecs-avatar.jpg",
+      "button": "Inscribirse ahora",
+      "price": 250
+    },
+    {
+      "title": "selectividad-alimentaria",
+      "text": "text-blue",
+      "bgcolor": "bg-blue",
+      "value": "Selectividad Alimentaria y Rechazo a la Alimentación",
+      "subtitle": "Evaluación e intervención terapéutica en alimentación infantil",
+      "date": "FECHA: 9 y 10 de Agosto de 2025",
+      "modality": "Modalidad online a través de Zoom",
+      "timemorning": "10:00 am - 4:00 pm (Hora Argentina)",
+      "about": "Curso especializado en estrategias de evaluación e intervención para niños con rechazo a la alimentación y selectividad alimentaria.",
+      "objectives": [
+        "Identificar y analizar los desafíos del rechazo alimentario.",
+        "Aplicar estrategias de evaluación y diagnóstico en alimentación infantil.",
+        "Implementar técnicas de intervención para abordar la selectividad alimentaria.",
+        "Fomentar el trabajo multidisciplinario en trastornos de alimentación infantil."
+      ],
+      "topics": [
+        "Anatomía y neurofisiología de la deglución.",
+        "Evaluación y diagnóstico del rechazo alimentario.",
+        "Estrategias de intervención en la alimentación infantil.",
+        "Casos prácticos y aplicación de técnicas clínicas."
+      ],
+      "instructor": "Dra. Isabelle Beaudry",
+      "avatar": "/2024/isabelle-beaudry.jpg",
+      "button": "Inscribirse ahora",
+      "price": 200
+    },
+    {
+      "title": "teacch-educacion",
+      "text": "text-blue",
+      "bgcolor": "bg-blue",
+      "value": "Formación Oficial TEACCH - Estrategias Educativas para Niños con TEA",
+      "subtitle": "Curso certificado de The University of North Carolina",
+      "date": "FECHA: 1 al 5 de Diciembre de 2025",
+      "modality": "Modalidad online a través de Zoom con traducción simultánea",
+      "timemorning": "10:00 am - 12:15 pm | 2:00 pm - 4:15 pm (Hora Argentina)",
+      "about": "Capacitación oficial del programa TEACCH para profesionales en educación e intervención con niños con TEA de 3 a 5 años.",
+      "objectives": [
+        "Comprender los estilos de aprendizaje en autismo.",
+        "Diseñar espacios de aprendizaje estructurados y visuales.",
+        "Elaborar horarios y sistemas de actividades adaptadas.",
+        "Implementar estrategias para fomentar la interacción social y la autonomía."
+      ],
+      "topics": [
+        "Estilos de aprendizaje en niños con TEA.",
+        "Evaluación y organización del espacio educativo.",
+        "Estrategias de enseñanza estructurada.",
+        "Juego, habilidades motoras y manejo de la conducta."
+      ],
+      "instructor": "The University of North Carolina",
+      "avatar": "/2024/teacch-avatar.png",
+      "button": "Inscribirse ahora",
+      "price": 750
+    },
+    {
+      "curso": [
+        {
+          "title": "ados-actualizacion",
+          "text": "text-blue",
+          "bgcolor": "bg-blue",
+          "value": "Actualización en ADOS-2",
+          "subtitle": "Capacitación avanzada con la Dra. Rhiannon Luyster",
+          "date": "FECHA: 13 de septiembre de 2025",
+          "modality": "Modalidad online a través de Zoom con interpretación simultánea al español",
+          "timemorning": "9:30 am - 4:30 pm (Hora Argentina)",
+          "about": "Curso diseñado para profesionales certificados en ADOS-2 que buscan actualizar sus conocimientos en administración, puntuación e interpretación.",
+          "objectives": [
+            "Revisión de fundamentos de administración del ADOS-2.",
+            "Actualización en puntuación e interpretación de la prueba.",
+            "Aplicación práctica mediante videos y análisis de casos.",
+            "Tiempo para preguntas y respuestas con la especialista."
+          ],
+          "topics": [
+            "Fundamentos de administración y puntuación del ADOS-2.",
+            "Casos prácticos y revisión de videos.",
+            "Interpretación avanzada y aplicación clínica.",
+            "Discusión con la Dra. Rhiannon Luyster."
+          ],
+          "instructor": "Dra. Rhiannon Luyster",
+          "avatar": "/2024/rhiannon-avatar.jpg",
+          "button": "Inscribirse ahora",
+          "price": 100
+        },
+        {
+          "title": "adi-r-actualizacion",
+          "text": "text-blue",
+          "bgcolor": "bg-blue",
+          "value": "Actualización en ADI-R",
+          "subtitle": "Capacitación avanzada con la Dra. Rhiannon Luyster",
+          "date": "FECHA: 27 de septiembre de 2025",
+          "modality": "Modalidad online a través de Zoom con interpretación simultánea al español",
+          "timemorning": "9:30 am - 4:30 pm (Hora Argentina)",
+          "about": "Curso dirigido a profesionales certificados en ADI-R que desean actualizar sus habilidades en administración, puntuación e interpretación.",
+          "objectives": [
+            "Revisión de los principios clave del ADI-R.",
+            "Actualización en administración y puntuación.",
+            "Aplicación práctica mediante análisis de casos y videos.",
+            "Espacio para consultas con la especialista."
+          ],
+          "topics": [
+            "Fundamentos de administración y puntuación del ADI-R.",
+            "Revisión de protocolos y análisis de casos.",
+            "Interpretación clínica avanzada.",
+            "Discusión con la Dra. Rhiannon Luyster."
+          ],
+          "instructor": "Dra. Rhiannon Luyster",
+          "avatar": "/2024/rhiannon-avatar.jpg",
+          "button": "Inscribirse ahora",
+          "price": 100
+        }
+      ]
     }
+    
+        
   ]
 }
