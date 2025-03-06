@@ -197,7 +197,7 @@
         "Evaluación y diseño de estrategias de intervención."
       ],
       "instructor": "Dra. Elizabeth Laugeson",
-      "avatar": "/2024/elizabeth-laugeson.jpg",
+      "avatar": "/2024/peers-avatar.png",
       "button": "Inscribirse ahora",
       "price": 580
     },
@@ -223,8 +223,8 @@
         "Estrategias para la enseñanza efectiva de PECS.",
         "Transición de PECS a otros sistemas de comunicación."
       ],
-      "instructor": "PECS España",
-      "avatar": "/2024/pecs-avatar.jpg",
+      "instructor": "Pyuramid Educational Consultants",
+      "avatar": "/2024/pecs-avatar.png",
       "button": "Inscribirse ahora",
       "price": 250
     },
@@ -283,8 +283,7 @@
       "price": 750
     },
     {
-      "curso": [
-        {
+
           "title": "ados-actualizacion",
           "text": "text-blue",
           "bgcolor": "bg-blue",
@@ -312,7 +311,7 @@
           "price": 100
         },
         {
-          "title": "adi-r-actualizacion",
+          "title": "adir-actualizacion",
           "text": "text-blue",
           "bgcolor": "bg-blue",
           "value": "Actualización en ADI-R",
@@ -338,9 +337,5 @@
           "button": "Inscribirse ahora",
           "price": 100
         }
-      ]
-    }
-    
-        
-  ]
+      ]        
 }
