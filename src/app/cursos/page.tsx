@@ -1,13 +1,13 @@
 "use client"
 
-import { useState } from "react"
+//import { useState } from "react"
 import Image from "next/image"
 import Link from "next/link"
 import { Calendar, MapPin, ArrowRight } from "lucide-react"
 import { Card, CardContent, CardFooter } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
-import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs"
+//import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { motion } from "framer-motion"
 
 interface Course {
@@ -132,12 +132,12 @@ const CourseCard = ({ course }: { course: Course }) => {
 }
 
 export default function CoursesSection() {
-  const [filter, setFilter] = useState<string>("todos")
+  //const [filter, setFilter] = useState<string>("todos")
 
-  const filteredCourses =
-    filter === "todos"
-      ? courses
-      : courses.filter((course) => course.category === filter)
+  // const filteredCourses =
+  //   filter === "todos"
+  //     ? courses
+  //     : courses.filter((course) => course.category === filter)
 
   return (
     <section className="py-20 px-4 md:px-8 lg:px-16 bg-gradient-to-b from-white to-gray-50">
@@ -160,7 +160,7 @@ export default function CoursesSection() {
           </p>
         </div>
 
-        <Tabs defaultValue="todos" className="mb-10">
+        {/* <Tabs defaultValue="todos" className="mb-10">
           <TabsList className="bg-gray-100 max-sm:grid max-sm:grid-cols-2 max-sm:h-auto max-sm:gap-4 p-1 rounded-md w-full max-w-3xl mx-auto flex justify-between">
             <TabsTrigger
               value="todos"
@@ -191,10 +191,10 @@ export default function CoursesSection() {
               Comunicación
             </TabsTrigger>
           </TabsList>
-        </Tabs>
+        </Tabs> */}
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 md:gap-8">
-          {filteredCourses.map((course) => (
+          {courses.map((course) => (
             <CourseCard key={course.id} course={course} />
           ))}
         </div>
