@@ -247,12 +247,12 @@ function CertificationCard({
   color: "purple" | "indigo" | "blue" | "cyan" | "teal" | "green"
 }) {
   const colorClasses = {
-    purple: "from-violet-500 to-violet-600",
-    indigo: "from-indigo-500 to-indigo-600",
-    blue: "from-orange-500 to-orange-600",
-    cyan: "from-sky-500 to-sky-600",
-    teal: "from-yellow-500 to-yellow-600",
-    green: "from-emerald-500 to-emerald-600",
+    purple: "from-violet-400 to-violet-400",
+    indigo: "from-violet-400 to-violet-500",
+    blue: "from-violet-500 to-violet-600",
+    cyan: "from-violet-600 to-violet-700",
+    teal: "from-violet-700 to-violet-800",
+    green: "from-violet-800 to-violet-900",
   }
 
   return (
