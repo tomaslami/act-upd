@@ -24,7 +24,7 @@ const courses: Course[] = [
   {
     id: "1",
     title: "Escala de Desarrollo MP",
-    date: "28 de febrero y 1 de marzo",
+    date: "28 de Febrero y 1 de Marzo",
     image: "/cursos/merrilPalmer.png",
     location: "Virtual • Zoom",
     href: "/cursos/MP-R",
