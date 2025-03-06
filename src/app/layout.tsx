@@ -11,8 +11,8 @@ import type React from "react" // Import React
 
 const poppins = Poppins({
   subsets: ["latin"],
-  weight: ["300", "400", "500", "700"],
-  variable: "--font-poppins",
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+  display: "swap",
 })
 
 export const metadata: Metadata = {
@@ -27,7 +27,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${poppins.variable} font-sans`}>
+      <body className={`${poppins.className} font-sans`}>
         <Script id="meta-pixel" strategy="afterInteractive">
           {`
             !function(f,b,e,v,n,t,s)
@@ -64,4 +64,3 @@ export default function RootLayout({
     </html>
   )
 }
-

@@ -26,7 +26,8 @@
       ],
       "instructor": "Dra. Rhiannon Luyster, PHD - Investigadora",
       "avatar": "/2024/rhiannon-avatar.jpg",
-      "button": "Inscribirse ahora"
+      "button": "Inscribirse ahora",
+      "price": 100000
     },
     {
       "title": "MP-R",
@@ -53,12 +54,10 @@
         "Análisis e interpretación de resultados",
         "Aplicaciones clínicas y prácticas"
       ],
-      "instructor": [
-        "Lic. Silvia Tedesco",
-        "Lic. Sol Stomati"
-      ],
+      "instructor": ["Lic. Silvia Tedesco", "Lic. Sol Stomati"],
       "avatar": ["/2024/silvia-avatar.png", "/2024/sol-avatar.png"],
-      "button": "Inscribirse ahora"
+      "button": "Inscribirse ahora",
+      "price": 100000
     },
     {
       "title": "tea-comorbilidades",
@@ -86,7 +85,8 @@
       ],
       "instructor": "Dr. Adolfo Benito Ruiz",
       "avatar": "/2024/adolfo-avatar.jpg",
-      "button": "Inscribirse ahora"
+      "button": "Inscribirse ahora",
+      "price": 100000
     },
     {
       "title": "comunicacion-social",
@@ -113,7 +113,8 @@
       ],
       "button": "Inscribirse ahora",
       "instructor": "Lic. Moira Pileggi",
-      "avatar": "/2024/moira-pileggi.png"
+      "avatar": "/2024/moira-pileggi.png",
+      "price": 100000
     },
     {
       "title": "conducta-disruptiva",
@@ -138,39 +139,40 @@
         "Estrategias de intervención positiva basadas en evidencia.",
         "Resolución de casos prácticos y aplicación en entornos reales."
       ],
-      "instructor": "Lic. Jorge Mármol",  
+      "instructor": "Lic. Jorge Mármol",
       "avatar": "/2024/marmol-jorge.png",
-      "button": "Inscribirse ahora"
-      },
-      {
-        "title": "mujeres-autismo",
-        "text": "text-blue",
-        "bgcolor": "bg-blue",
-        "value": "Mujeres y Autismo",
-        "subtitle": "Valoración y diagnóstico en mujeres con TEA",
-        "date": "FECHA: 26 de Abril",
-        "modality": "Modalidad online a través de Zoom",
-        "timemorning": "10:30 am - 4:00 pm (Hora Argentina)",
-        "about": "Curso impartido por la Dra. María Merino, psicóloga y autora del libro 'Mujeres y Autismo'. Enfocado en la valoración y diagnóstico diferencial del autismo en mujeres.",
-        "objectives": [
-          "Comprender las particularidades del autismo en mujeres.",
-          "Adquirir herramientas para la identificación y detección del TEA en mujeres.",
-          "Conocer las diferencias en el diagnóstico y abordaje en distintas etapas de la vida.",
-          "Aprender estrategias de entrevista y evaluación diagnóstica."
-        ],
-        "topics": [
-          "Introducción a la valoración en mujeres con TEA",
-          "Proceso de valoración y diagnóstico",
-          "Preparación de la entrevista y selección de informantes clave",
-          "Recopilación de datos y habilidades en la entrevista",
-          "Herramientas de detección y diagnóstico",
-          "Elaboración de informes clínicos",
-          "Temas relevantes en la vida de mujeres con autismo"
-        ],
-        "instructor": "Dra. María Merino",
-        "avatar": "/2024/maria-merino.png",
-        "button": "Inscribirse ahora"
-      }
-    
+      "button": "Inscribirse ahora",
+      "price": 100000
+    },
+    {
+      "title": "mujeres-autismo",
+      "text": "text-blue",
+      "bgcolor": "bg-blue",
+      "value": "Mujeres y Autismo",
+      "subtitle": "Valoración y diagnóstico en mujeres con TEA",
+      "date": "FECHA: 26 de Abril",
+      "modality": "Modalidad online a través de Zoom",
+      "timemorning": "10:30 am - 4:00 pm (Hora Argentina)",
+      "about": "Curso impartido por la Dra. María Merino, psicóloga y autora del libro 'Mujeres y Autismo'. Enfocado en la valoración y diagnóstico diferencial del autismo en mujeres.",
+      "objectives": [
+        "Comprender las particularidades del autismo en mujeres.",
+        "Adquirir herramientas para la identificación y detección del TEA en mujeres.",
+        "Conocer las diferencias en el diagnóstico y abordaje en distintas etapas de la vida.",
+        "Aprender estrategias de entrevista y evaluación diagnóstica."
+      ],
+      "topics": [
+        "Introducción a la valoración en mujeres con TEA",
+        "Proceso de valoración y diagnóstico",
+        "Preparación de la entrevista y selección de informantes clave",
+        "Recopilación de datos y habilidades en la entrevista",
+        "Herramientas de detección y diagnóstico",
+        "Elaboración de informes clínicos",
+        "Temas relevantes en la vida de mujeres con autismo"
+      ],
+      "instructor": "Dra. María Merino",
+      "avatar": "/2024/maria-merino.png",
+      "button": "Inscribirse ahora",
+      "price": 100000
+    }
   ]
 }

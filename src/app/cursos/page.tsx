@@ -1,5 +1,14 @@
+"use client"
+
+import { useState } from "react"
 import Image from "next/image"
 import Link from "next/link"
+import { Calendar, MapPin, ArrowRight } from "lucide-react"
+import { Card, CardContent, CardFooter } from "@/components/ui/card"
+import { Button } from "@/components/ui/button"
+import { Badge } from "@/components/ui/badge"
+import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs"
+import { motion } from "framer-motion"
 
 interface Course {
   id: string
@@ -8,9 +17,10 @@ interface Course {
   image: string
   location: string
   href: string
+  category?: string
 }
 
-const upcomingCourses: Course[] = [
+const courses: Course[] = [
   {
     id: "1",
     title: "Escala de Desarrollo MP",
@@ -18,6 +28,7 @@ const upcomingCourses: Course[] = [
     image: "/cursos/merrilPalmer.png",
     location: "Virtual • Zoom",
     href: "/cursos/MP-R",
+    category: "evaluacion",
   },
   {
     id: "2",
@@ -26,6 +37,7 @@ const upcomingCourses: Course[] = [
     image: "/cursos/ados_posteo.png",
     location: "Virtual • Zoom",
     href: "/cursos/ados",
+    category: "evaluacion",
   },
   {
     id: "3",
@@ -33,7 +45,8 @@ const upcomingCourses: Course[] = [
     date: "Inicio: 22 y 23 de Marzo",
     image: "/cursos/comorbilidades.png",
     location: "Virtual • Zoom",
-    href: "/cursos/tea-comorbilidades"
+    href: "/cursos/tea-comorbilidades",
+    category: "intervencion",
   },
   {
     id: "4",
@@ -42,6 +55,7 @@ const upcomingCourses: Course[] = [
     image: "/cursos/comu_posteo.png",
     location: "Virtual • Zoom",
     href: "/cursos/comunicacion-social",
+    category: "comunicacion",
   },
   {
     id: "5",
@@ -50,6 +64,7 @@ const upcomingCourses: Course[] = [
     image: "/cursos/conducta_posteo.png",
     location: "Virtual • Zoom",
     href: "/cursos/conducta-disruptiva",
+    category: "intervencion",
   },
   {
     id: "6",
@@ -58,62 +73,148 @@ const upcomingCourses: Course[] = [
     image: "/cursos/mujeres_posteo.png",
     location: "Virtual • Zoom",
     href: "/cursos/mujeres-autismo",
-  }
+    category: "investigacion",
+  },
 ]
 
-const CourseCard: React.FC<{ course: Course }> = ({ course }) => (
-  <div className="group relative bg-white rounded-2xl overflow-hidden transition-all duration-300 ">
-    <div className="relative w-full pt-[100%]">
-      <Image
-        src={course.image || "/placeholder.svg"}
-        alt={course.title}
-        fill
-        className="object-cover rounded-2xl"
-        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
-      />
-      {/* Floating Date Badge */}
-      {/* <div className="absolute top-2 left-2 z-20 bg-white/90 backdrop-blur-sm px-4 py-2 rounded-full">
-        <div className="flex items-center gap-2">
-          <Calendar className="w-4 h-4 text-blue-600" />
-          <span className="text-sm font-medium text-gray-800">{course.date}</span>
-        </div>
-      </div> */}
-    </div>
+const CourseCard = ({ course }: { course: Course }) => {
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.3 }}
+    >
+      <Card className="overflow-hidden border-none shadow-md h-full group hover:shadow-lg transition-all duration-300">
+        <div className="relative aspect-square overflow-hidden">
+          <Image
+            src={course.image || "/placeholder.svg"}
+            alt={course.title}
+            fill
+            className="object-cover transition-transform duration-500 group-hover:scale-105"
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 
-    <div className="h-max flex flex-col justify-start items-start pt-4">
-      <h3 className="h-[10%] text-lg font-semibold mb-2">{course.title}</h3>
-      <p className="h-[25%] text-sm text-blue-600 mb-2">{course.location}</p>
-      <p className="h-[25%] text-sm text-blue-600 mb-4">{course.date}</p>
-      <Link
-        href={course.href}
-        className="h-[15%] bg-blue text-white px-4 py-2 rounded-full text-sm font-semibold hover:bg-blue/90 transition-colors"
-      >
-        Más info
-      </Link>
-    </div>
-  </div>
-)
+          <div className="absolute top-3 left-3 z-10">
+            <Badge className="bg-white text-[#1b4da1] hover:bg-white/90">
+              Próximo
+            </Badge>
+          </div>
+        </div>
+
+        <CardContent className="p-5">
+          <h3 className="text-xl font-bold mb-3 group-hover:text-[#1b4da1] transition-colors">
+            {course.title}
+          </h3>
+
+          <div className="space-y-2 mb-4">
+            <div className="flex items-center text-sm text-gray-600">
+              <MapPin className="w-4 h-4 mr-2 text-[#1b4da1]" />
+              {course.location}
+            </div>
+
+            <div className="flex items-center text-sm text-gray-600">
+              <Calendar className="w-4 h-4 mr-2 text-[#1b4da1]" />
+              {course.date}
+            </div>
+          </div>
+        </CardContent>
+
+        <CardFooter className="px-5 pb-5 pt-0">
+          <Button
+            asChild
+            variant="default"
+            className="w-full bg-[#1b4da1] hover:bg-[#1b4da1]/90 rounded-full transition-all"
+          >
+            <Link href={course.href}>
+              <span>Más información</span>
+              <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-all" />
+            </Link>
+          </Button>
+        </CardFooter>
+      </Card>
+    </motion.div>
+  )
+}
 
 export default function CoursesSection() {
+  const [filter, setFilter] = useState<string>("todos")
+
+  const filteredCourses =
+    filter === "todos"
+      ? courses
+      : courses.filter((course) => course.category === filter)
+
   return (
-    <section className="md:px-20 px-5 pt-[150px] pb-20 bg-gray-50">
-      <div className="max-w-7xl mx-auto">
-        <h2 className="text-4xl font-bold mb-4">Cursos</h2>
-        <p className="text-gray-600 mb-8 text-lg">
-          Descubre nuestra selección de cursos especializados
-        </p>
-        
-        <div className="flex space-x-3 mb-12">
-          <button className="px-6 py-2.5 rounded-full text-sm font-semibold bg-blue text-white shadow-sm hover:bg-blue-700 transition-colors">
-            PRÓXIMOS CURSOS
-          </button>
+    <section className="py-20 px-4 md:px-8 lg:px-16 bg-gradient-to-b from-white to-gray-50">
+      <div className="max-w-7xl mx-auto mt-6">
+        <div className="text-center mb-12">
+          <Badge
+            variant="outline"
+            className="mb-3 px-4 py-1 border-[#1b4da1]/20 text-[#1b4da1] font-medium"
+          >
+            Formación Especializada
+          </Badge>
+
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-900">
+            Cursos y Certificaciones
+          </h2>
+
+          <p className="text-gray-600 max-w-2xl mx-auto max-md:text-sm">
+            Descubre nuestra selección de cursos especializados impartidos por
+            profesionales expertos en el campo del autismo y el neurodesarrollo.
+          </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10">
-          {upcomingCourses.map((course) => (
+        <Tabs defaultValue="todos" className="mb-10">
+          <TabsList className="bg-gray-100 max-sm:grid max-sm:grid-cols-2 max-sm:h-auto max-sm:gap-4 p-1 rounded-md w-full max-w-3xl mx-auto flex justify-between">
+            <TabsTrigger
+              value="todos"
+              onClick={() => setFilter("todos")}
+              className="data-[state=active]:bg-[#1b4da1] data-[state=active]:text-white rounded-md w-full max-sm:text-xs"
+            >
+              Todos los cursos
+            </TabsTrigger>
+            <TabsTrigger
+              value="evaluacion"
+              onClick={() => setFilter("evaluacion")}
+              className="data-[state=active]:bg-[#1b4da1] data-[state=active]:text-white rounded-md w-full max-sm:text-xs"
+            >
+              Evaluación
+            </TabsTrigger>
+            <TabsTrigger
+              value="intervencion"
+              onClick={() => setFilter("intervencion")}
+              className="data-[state=active]:bg-[#1b4da1] data-[state=active]:text-white rounded-md w-full max-sm:text-xs"
+            >
+              Intervención
+            </TabsTrigger>
+            <TabsTrigger
+              value="comunicacion"
+              onClick={() => setFilter("comunicacion")}
+              className="data-[state=active]:bg-[#1b4da1] data-[state=active]:text-white rounded-md w-full max-sm:text-xs"
+            >
+              Comunicación
+            </TabsTrigger>
+          </TabsList>
+        </Tabs>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 md:gap-8">
+          {filteredCourses.map((course) => (
             <CourseCard key={course.id} course={course} />
           ))}
         </div>
+
+        {/* <div className="mt-16 text-center">
+          <Button
+            variant="outline"
+            size="lg"
+            className="rounded-full border-[#1b4da1] text-[#1b4da1] hover:bg-[#1b4da1] hover:text-white"
+          >
+            <Clock className="mr-2 h-4 w-4" />
+            Ver cursos anteriores
+          </Button>
+        </div> */}
       </div>
     </section>
   )
