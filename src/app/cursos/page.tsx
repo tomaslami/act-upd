@@ -124,6 +124,16 @@ const courses: Course[] = [
   },
   {
     id: "11",
+    title: "Escala de Desarrollo Merrill-Palmer-R",
+    date: "Inicio: 1 y 9 de Octubre",
+    image: "/cursos/POSTEO_MERRIL_OCTUBRE.png",
+    location: "Virtual • Zoom",
+    href: "/cursos/merrill-palmer-oct",
+    category: "evaluacion",
+    month: "octubre",
+  },
+  {
+    id: "12",
     title: "PECS - Nivel 1",
     date: "Inicio: 8 y 9 de Noviembre",
     image: "/cursos/pecs_posteo.png",
@@ -133,7 +143,7 @@ const courses: Course[] = [
     month: "noviembre",
   },
   {
-    id: "12",
+    id: "13",
     title: "Formación TEACCH",
     date: "Inicio: 1 al 5 de Diciembre",
     image: "/cursos/posteo_teacch.png",

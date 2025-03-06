@@ -336,6 +336,34 @@
           "avatar": "/2024/rhiannon-avatar.jpg",
           "button": "Inscribirse ahora",
           "price": 100
+        },
+        {
+          "title": "merrill-palmer-oct",
+          "text": "text-blue",
+          "bgcolor": "bg-blue",
+          "value": "Formación en la Escala de Desarrollo Merrill-Palmer-R",
+          "subtitle": "Capacitación para profesionales de la salud en evaluación infantil",
+          "date": "FECHA: 1 y 9 de Octubre",
+          "modality": "Modalidad online a través de Zoom",
+          "about": "La Escala de Desarrollo Merrill-Palmer-R es una herramienta estandarizada utilizada en la evaluación del desarrollo infantil, midiendo habilidades cognitivas, motoras, socioemocionales y de lenguaje.",
+          "objectives": [
+            "Introducción a la batería Merrill-Palmer-R y su fundamentación teórica.",
+            "Administración de la prueba: estructura y aplicación.",
+            "Criterios de puntuación y codificación.",
+            "Análisis e interpretación de los perfiles de desarrollo.",
+            "Aplicaciones clínicas y casos prácticos."
+          ],
+          "topics": [
+            "Fundamentación teórica de Merrill-Palmer-R.",
+            "Estructura y aplicación de la prueba.",
+            "Criterios de puntuación y codificación.",
+            "Análisis e interpretación de resultados.",
+            "Aplicaciones clínicas y casos prácticos."
+          ],
+          "instructor": "TEA Ediciones - España",
+          "avatar": "/2024/tea-logo.png",
+          "button": "Inscribirse ahora",
+          "price": "Consultar"
         }
       ]        
 }
