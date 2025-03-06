@@ -1,7 +1,7 @@
 "use client"
 
-import { notFound, useRouter } from "next/navigation"
-import { type FormEvent, useCallback, useEffect, useState } from "react"
+import { notFound } from "next/navigation"
+import { useCallback, useEffect, useState } from "react"
 import type { Cursos as CursosType } from "@/types/types"
 import data from "../../../cursos.json"
 import {
@@ -12,11 +12,11 @@ import {
   BookOpen,
   Mail,
   Share2,
-  ChevronRight,
+  // ChevronRight,
 } from "lucide-react"
 import { initMercadoPago } from "@mercadopago/sdk-react"
-import axios from "axios"
-import { v4 as UUIDv4 } from "uuid"
+//import axios from "axios"
+//import { v4 as UUIDv4 } from "uuid"
 import { toast, Toaster } from "sonner"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
@@ -27,7 +27,7 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 // Initialize MercadoPago with your public key
 initMercadoPago("APP_USR-abeb9c5b-478e-4b5a-8304-9a513c20fae4")
 
-type Response = { id: string; init_point?: string }
+//type Response = { id: string; init_point?: string }
 
 export default function CourseDetails({
   params,
@@ -35,55 +35,55 @@ export default function CourseDetails({
   params: { slug: string }
 }) {
   const [curso, setCurso] = useState<CursosType | null>(null)
-  const [isLoading, setIsLoading] = useState(false)
-  const router = useRouter()
+  //const [isLoading, setIsLoading] = useState(false)
+  //const router = useRouter()
 
   // Get preference_id and init_point for payment
-  const handlePayment = async (): Promise<Response | null> => {
-    try {
-      const response = await axios.post("/api/mercadopago", {
-        id: UUIDv4(),
-        title: curso?.title,
-        quantity: 1,
-        price: curso?.price,
-      })
+  // const handlePayment = async (): Promise<Response | null> => {
+  //   try {
+  //     const response = await axios.post("/api/mercadopago", {
+  //       id: UUIDv4(),
+  //       title: curso?.title,
+  //       quantity: 1,
+  //       price: curso?.price,
+  //     })
 
-      if (!response.data.id) {
-        toast.error("Error al procesar el pago")
-        return null
-      }
+  //     if (!response.data.id) {
+  //       toast.error("Error al procesar el pago")
+  //       return null
+  //     }
 
-      return response.data
-    } catch (error) {
-      console.error(error)
-      toast.error("Error al procesar el pago")
-      return null
-    }
-  }
+  //     return response.data
+  //   } catch (error) {
+  //     console.error(error)
+  //     toast.error("Error al procesar el pago")
+  //     return null
+  //   }
+  // }
 
-  const handleEnrollment = async (e: FormEvent) => {
-    e.preventDefault()
-    setIsLoading(true)
+  // const handleEnrollment = async (e: FormEvent) => {
+  //   e.preventDefault()
+  //   setIsLoading(true)
 
-    try {
-      // Get preferenceId before continuing
-      const newPreferenceId = await handlePayment()
+  //   try {
+  //     // Get preferenceId before continuing
+  //     const newPreferenceId = await handlePayment()
 
-      if (!newPreferenceId?.id || !newPreferenceId?.init_point) {
-        toast.error("Ha ocurrido un error, intente nuevamente")
-        setIsLoading(false)
-        return
-      }
+  //     if (!newPreferenceId?.id || !newPreferenceId?.init_point) {
+  //       toast.error("Ha ocurrido un error, intente nuevamente")
+  //       setIsLoading(false)
+  //       return
+  //     }
 
-      router.push(
-        `/checkout?preferenceId=${newPreferenceId.id}&total=${curso?.price}&init_point=${newPreferenceId.init_point}&curso=${curso?.title}`
-      )
-    } catch (error) {
-      console.error(error)
-      toast.error("Ha ocurrido un error, intente nuevamente")
-      setIsLoading(false)
-    }
-  }
+  //     router.push(
+  //       `/checkout?preferenceId=${newPreferenceId.id}&total=${curso?.price}&init_point=${newPreferenceId.init_point}&curso=${curso?.title}`
+  //     )
+  //   } catch (error) {
+  //     console.error(error)
+  //     toast.error("Ha ocurrido un error, intente nuevamente")
+  //     setIsLoading(false)
+  //   }
+  // }
 
   const verifyData = useCallback(() => {
     if (!params.slug) {
