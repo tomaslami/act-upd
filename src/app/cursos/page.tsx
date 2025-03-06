@@ -32,21 +32,21 @@ const courses: Course[] = [
   },
   {
     id: "2",
-    title: "ADOS-2",
-    date: "Inicio: 16, 17 y 18 de Mayo",
-    image: "/cursos/ados_posteo.png",
-    location: "Virtual • Zoom",
-    href: "/cursos/ados",
-    category: "evaluacion",
-  },
-  {
-    id: "3",
     title: "TEA y Comorbilidad",
     date: "Inicio: 22 y 23 de Marzo",
     image: "/cursos/comorbilidades.png",
     location: "Virtual • Zoom",
     href: "/cursos/tea-comorbilidades",
     category: "intervencion",
+  },
+  {
+    id: "3",
+    title: "ADOS-2",
+    date: "Inicio: 16, 17 y 18 de Mayo",
+    image: "/cursos/ados_posteo.png",
+    location: "Virtual • Zoom",
+    href: "/cursos/ados",
+    category: "evaluacion",
   },
   {
     id: "4",
@@ -94,12 +94,6 @@ const CourseCard = ({ course }: { course: Course }) => {
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-
-          <div className="absolute top-3 left-3 z-10">
-            <Badge className="bg-white text-[#1b4da1] hover:bg-white/90">
-              Próximo
-            </Badge>
-          </div>
         </div>
 
         <CardContent className="p-5">
