@@ -158,7 +158,7 @@ export default function CourseDetails({
               )} */}
             </div>
 
-            <Button
+            {/* <Button
               onClick={handleEnrollment}
               size="lg"
               disabled={isLoading}
@@ -166,7 +166,7 @@ export default function CourseDetails({
             >
               {isLoading ? "Procesando..." : "Inscribirse al curso"}
               <ChevronRight className="ml-2 h-4 w-4" />
-            </Button>
+            </Button> */}
           </div>
         </div>
       </section>
@@ -429,7 +429,7 @@ export default function CourseDetails({
                 </Button>
               </div>
 
-              <div className="text-center">
+              {/* <div className="text-center">
                 <Button
                   onClick={handleEnrollment}
                   size="lg"
@@ -439,7 +439,7 @@ export default function CourseDetails({
                   {isLoading ? "Procesando..." : "Inscribirse al curso"}
                   <ChevronRight className="ml-2 h-4 w-4" />
                 </Button>
-              </div>
+              </div> */}
             </CardContent>
           </Card>
         </section>
