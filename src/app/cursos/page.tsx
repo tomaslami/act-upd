@@ -34,7 +34,7 @@ const courses: Course[] = [
   },
   {
     id: "2",
-    title: "Comorbilidades y Autismo",
+    title: "Comorbilidades",
     date: "Inicio: 22 y 23 de Marzo",
     image: "/cursos/comorbilidades.png",
     location: "Virtual • Zoom",
