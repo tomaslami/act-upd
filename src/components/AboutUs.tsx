@@ -14,12 +14,12 @@ export default function AboutSection() {
                 variant="outline"
                 className="bg-white text-[#6758c7] border-none px-4 py-1.5 text-base font-medium"
               >
-                Hola, soy
+                Hola, somos
               </Badge>
 
               <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white">
                 <span className="inline-block bg-white text-[#6758c7] px-4 py-2 rounded-full">
-                  Silvia Tedesco
+                  Actualmente
                 </span>
               </h1>
             </div>
@@ -27,10 +27,7 @@ export default function AboutSection() {
             <Card className="bg-white/10 border-none backdrop-blur-sm">
               <CardContent className="p-6">
                 <p className="text-white text-base md:text-lg leading-relaxed">
-                  Soy Licenciada en Fonoaudiología con abordaje Neurolingüístico
-                  por la Universidad del Museo Social Argentino (UMSA) y Máster
-                  en Autismo en España. Actualmente, estoy finalizando la
-                  carrera de Psicología.
+                Formamos a profesionales de la salud mental con capacitaciones basadas en la evidencia, especializadas en autismo y desarrollo infantil. Desde hace más de 15 años, ofrecemos formaciones oficiales con metodologías reconocidas a nivel internacional, como el Modelo Denver (ESDM), JASPER, ImPACT, TEACCH, PEERS clinic y Social Thinking
                 </p>
               </CardContent>
             </Card>

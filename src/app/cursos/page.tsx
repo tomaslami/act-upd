@@ -34,11 +34,11 @@ const courses: Course[] = [
   },
   {
     id: "2",
-    title: "TEA y Comorbilidad",
+    title: "Comorbilidades y Autismo",
     date: "Inicio: 22 y 23 de Marzo",
     image: "/cursos/comorbilidades.png",
     location: "Virtual • Zoom",
-    href: "/cursos/tea-comorbilidades",
+    href: "/cursos/comorbilidades",
     category: "intervencion",
     month: "marzo",
   },
@@ -85,7 +85,7 @@ const courses: Course[] = [
   {
     id: "7",
     title: "Selectividad Alimentaria",
-    date: "Inicio: 9 y 10 de Agosto",
+    date: "Inicio: 23 y 24 de Agosto",
     image: "/cursos/selectividad_posteo.png",
     location: "Virtual • Zoom",
     href: "/cursos/selectividad-alimentaria",
