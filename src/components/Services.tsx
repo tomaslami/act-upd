@@ -17,7 +17,7 @@ interface ServiceProps {
   title: string
   description: string
   color: "blue" | "green" | "teal" | "red" | "purple"
-  href: string
+  href?: string
 }
 
 const colorVariants = {
@@ -35,6 +35,8 @@ const ServiceCard: React.FC<ServiceProps> = ({
   color,
   href,
 }) => {
+  //make the logic to put any href, incluiding the pdfUrl
+
   return (
     <Card className="flex flex-col h-full overflow-hidden shadow-lg rounded-md">
       <CardHeader className="pb-0">
@@ -65,7 +67,7 @@ const ServiceCard: React.FC<ServiceProps> = ({
           asChild
           className={cn("rounded-full w-full sm:w-auto", colorVariants[color])}
         >
-          <Link href={href}>Más info</Link>
+          <Link href={href || "#"} download="agenda_2025.pdf">Más info</Link>
         </Button>
       </CardFooter>
     </Card>
@@ -80,7 +82,7 @@ export default function ServicesSection() {
       description:
         "Contamos con ofertas educativas dictadas por profesionales expertos.",
       color: "blue",
-      href: "/cursos",
+      href: "/docs/agenda_2025.pdf",
     },
     {
       icon: certification,
