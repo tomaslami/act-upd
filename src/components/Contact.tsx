@@ -163,7 +163,7 @@ export default function ContactSection() {
                       className="flex items-center"
                     >
                       <Instagram className="mr-2 h-5 w-5" />
-                      <span className="text-sm">@actualmente</span>
+                      <span className="text-sm">@actualmennte</span>
                     </Link>
                   </Button>
                 </div>
