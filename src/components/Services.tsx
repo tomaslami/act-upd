@@ -7,7 +7,7 @@ import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { cn } from "@/lib/utils"
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog"
-import { CheckCircle, Users, Brain, MessageSquare, Building} from "lucide-react"
+import { CheckCircle, Users, Brain, MessageSquare, Building } from 'lucide-react'
 import { useEffect } from "react"
 
 // Import icons
@@ -203,13 +203,16 @@ const ServiceCard: React.FC<ServiceProps> = ({ icon, title, description, color, 
             <DialogTrigger asChild>
               <Button className={cn("rounded-full w-full", colorVariants[color])}>Más info</Button>
             </DialogTrigger>
-            <DialogContent className="sm:max-w-[700px] max-h-[80vh] overflow-y-auto p-4 sm:p-6">
-              <DialogHeader>
-                <DialogTitle className="flex items-center gap-2 text-xl">
+            <DialogContent className="sm:max-w-[700px] max-h-[80vh] overflow-y-auto p-4  sm:p-6">
+              <DialogHeader className="flex items-center justify-between">
+                <DialogTitle className="flex items-center gap-2 text-xl mr-6">
                   <div className={cn("p-2 rounded-full", bgColorVariants[color])}>
                     <Image src={icon || "/placeholder.svg"} width={24} height={24} alt="" className="object-contain" />
                   </div>
-                  <span className="text-base sm:text-xl">{detailedInfo?.title || title}</span>
+                  <div className="flex flex-col">
+                    <span className="text-base sm:text-xl">{detailedInfo?.title || title}</span>
+                    {title.includes("Infantil") && <span className="text-sm text-muted-foreground">Infantil</span>}
+                  </div>
                 </DialogTitle>
               </DialogHeader>
 
@@ -242,7 +245,12 @@ const ServiceCard: React.FC<ServiceProps> = ({ icon, title, description, color, 
 
               <div className="mt-4 flex justify-center">
                 <Button className={cn("rounded-full", colorVariants[color])}>
-                <Link target="_blank" href={"https://api.whatsapp.com/send/?phone=5491140336320&text&type=phone_number&app_absent=0"}>Contactar</Link>
+                  <Link
+                    target="_blank"
+                    href={"https://api.whatsapp.com/send/?phone=5491140336320&text&type=phone_number&app_absent=0"}
+                  >
+                    Contactar
+                  </Link>
                 </Button>
               </div>
             </DialogContent>
@@ -270,7 +278,7 @@ export default function ServicesSection() {
       title: "Certificaciones oficiales",
       description: "Capacitación a profesionales que trabajan con niños, jóvenes y adultos con diagnóstico de autismo.",
       color: "green",
-      href: "/#certificaciones",  
+      href: "/#certificaciones",
     },
     {
       icon: lupa,
@@ -351,11 +359,9 @@ export default function ServicesSection() {
       title: "Evaluaciones de Desarrollo",
       description: "Escalas de desarrollo, evaluaciones de conductas, evaluaciones neurolinguisticas.",
       color: "red",
-      images: [
-        "/services/merrill.jpg",
-        ],
+      images: ["/services/merrill.jpg"],
       detailedInfo: {
-        title: "Evaluación del Desarrollo Infantil – Escala Merrill-Palmer",
+        title: "Evaluación del Desarrollo Infantil",
         sections: [
           {
             content: (
@@ -420,11 +426,6 @@ export default function ServicesSection() {
       title: "Supervisiones a profesionales",
       description: "Supervisiones a profesionales y a centros con niños que estén dentro del diagnóstico de autismo.",
       color: "purple",
-      images: [
-        "/services/supervisiones.jpg",
-        "/services/supervisiones2.jpg",
-
-      ],
       detailedInfo: {
         title: "Supervisiones Profesionales y para Centros de Autismo",
         sections: [
@@ -513,4 +514,3 @@ export default function ServicesSection() {
     </section>
   )
 }
-
