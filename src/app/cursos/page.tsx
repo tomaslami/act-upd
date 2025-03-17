@@ -144,6 +144,16 @@ const courses: Course[] = [
   },
   {
     id: "13",
+    title: "Transicion",
+    date: "Inicio: 29 de Noviembre",
+    image: "/cursos/posteo_transicion.png",
+    location: "Virtual • Zoom",
+    href: "/cursos/transicion-pecs",
+    category: "evaluacion",
+    month: "noviembre",
+  },
+  {
+    id: "14",
     title: "Formación TEACCH",
     date: "Inicio: 1 al 5 de Diciembre",
     image: "/cursos/posteo_teacch.png",

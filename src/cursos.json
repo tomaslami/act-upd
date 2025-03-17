@@ -223,7 +223,7 @@
         "Estrategias para la enseñanza efectiva de PECS.",
         "Transición de PECS a otros sistemas de comunicación."
       ],
-      "instructor": "Pyuramid Educational Consultants",
+      "instructor": "Pyramid Educational Consultants",
       "avatar": "/2024/pecs-avatar.png",
       "button": "Inscribirse ahora",
       "price": 250
@@ -364,6 +364,36 @@
           "avatar": "/2024/tea-logo.png",
           "button": "Inscribirse ahora",
           "price": "Consultar"
+        },
+        {
+            "title": "transicion-pecs",
+            "text": "text-blue",
+            "bgcolor": "bg-blue",
+            "value": "Transición de PECS a otros dispositivos de comunicación",
+            "subtitle": "Taller práctico para seleccionar y enseñar el uso de dispositivos de comunicación",
+            "date": "FECHA: 29 de Noviembre",
+            "modality": "Modalidad online a través de Zoom",
+            "timemorning": "Horario no especificado",
+            "timeafternoon": "Horario no especificado",
+            "about": "Taller de un día que describe los procedimientos para evaluar las habilidades en PECS, determinar la idoneidad para la transición a un dispositivo de comunicación, seleccionar el dispositivo adecuado y enseñar su uso funcional, asegurando la enseñanza previa de los principios básicos de comunicación.",
+            "objectives": [
+              "Evaluar las habilidades actuales en PECS para determinar la idoneidad de la transición.",
+              "Seleccionar el dispositivo de comunicación adecuado según las necesidades del paciente.",
+              "Enseñar el uso funcional del dispositivo basándose en principios básicos de comunicación.",
+              "Garantizar una transición segura y efectiva a través del análisis de casos prácticos."
+            ],
+            "topics": [
+              "Evaluación de habilidades en PECS",
+              "Criterios para la transición a dispositivos de comunicación",
+              "Selección de dispositivos adecuados",
+              "Estrategias para enseñar el uso funcional del dispositivo",
+              "Consideraciones técnicas para una conexión óptima en Zoom"
+            ],
+            "instructor": "Pyramid Educational Consultants",
+            "avatar": "/2024/pecs-avatar.png",
+            "button": "Inscribirse ahora",
+            "price": 52
+          
         }
       ]        
 }

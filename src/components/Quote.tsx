@@ -21,7 +21,7 @@ export default function QuoteSection() {
             height={30}
           />
           <h2 className="text-xl font-black leading-tight text-black sm:text-3xl md:text-3xl">
-            El grave error es corregir el autismo, lo importante es potenciar sus habilidades
+            El grave error es corregir el autismo, lo importante es potenciar sus habilidades.
           </h2>
           <p className=" text-base text-[#e95353] font-extrabold">Javier Arnaiz</p>
         </div>
