@@ -10,7 +10,7 @@ import logo from "/public/2023/01/actualmente-logo.png"
 
 const navItems = [
   { name: "INICIO", path: "/" },
-  { name: "NOSOTROS", path: "/nosotros" },
+  { name: "SOBRE NOSOTROS", path: "/sobre-nosotros" },
   { name: "CURSOS", path: "/cursos" },
   { name: "INSCRIPCIONES", path: "#contact" },
 ]

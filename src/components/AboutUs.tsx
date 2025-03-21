@@ -4,11 +4,11 @@ import { Badge } from "@/components/ui/badge"
 
 export default function AboutSection() {
   return (
-    <section className="relative min-h-screen w-full bg-gradient-to-b from-[#6758c7] to-[#5E56A0] py-16 md:py-24 overflow-hidden">
+    <section className="relative h-screen w-full bg-gradient-to-b from-[#6758c7] to-[#5E56A0] py-16 md:py-24 overflow-hidden">
       <div className="container px-4 md:px-6 mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
           {/* Left column: Text content */}
-          <div className="flex flex-col space-y-6 pt-16 md:pt-0">
+          <div className="flex flex-col space-y-6 pt-16 md:pt-0  mb-10">
             <div className="space-y-3">
               <Badge
                 variant="outline"
@@ -27,7 +27,8 @@ export default function AboutSection() {
             <Card className="bg-white/10 border-none backdrop-blur-sm">
               <CardContent className="p-6">
                 <p className="text-white text-base md:text-lg leading-relaxed">
-                Formamos a profesionales de la salud mental con capacitaciones basadas en la evidencia, especializadas en autismo y desarrollo infantil. Desde hace más de 15 años, ofrecemos formaciones oficiales con metodologías reconocidas a nivel internacional, como el Modelo Denver (ESDM), JASPER, ImPACT, TEACCH, PEERS clinic y Social Thinking
+                En Actualmente, formamos a profesionales de la salud mental con capacitaciones basadas en la evidencia, especializadas en autismo y desarrollo infantil. Desde hace más de 15 años, ofrecemos formaciones oficiales con metodologías reconocidas a nivel internacional, como el Modelo Denver (ESDM), JASPER, TEACCH y PEERS.
+
                 </p>
               </CardContent>
             </Card>
