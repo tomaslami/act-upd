@@ -174,7 +174,7 @@ export default function ContactSection() {
                 variant="link"
                 className="p-0 h-auto text-white text-xs hover:text-white/80"
               >
-                <Link href="#">POLÍTICA DE PRIVACIDAD</Link>
+                <Link  href="/docs/politica-privacidad.pdf" >POLÍTICA DE PRIVACIDAD</Link>
               </Button>
             </CardContent>
           </Card>
