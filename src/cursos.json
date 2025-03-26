@@ -376,6 +376,30 @@
       "button": "Inscribirse ahora",
       "price": "Consultar",
       "course_avatar": "/cursos/merrilPalmer.png"
+    },
+    {
+      "title": "modelo-jasper",
+      "text": "text-blue",
+      "bgcolor": "bg-blue",
+      "value": "Modelo JASPER de Intervención",
+      "subtitle": "Curso introductorio al enfoque JASPER en autismo",
+      "date": "FECHA: 4 de Octubre de 2025",
+      "modality": "Modalidad online a través de Zoom",
+      "timemorning": "1:00 pm - 5:00 pm (Hora Argentina)",
+      "about": "En este curso, aprenderás sobre JASPER (Joint Attention, Symbolic Play, Engagement, and Regulation), un modelo de intervención diseñado para trabajar con niños con autismo.",
+      "objectives": [],
+      "topics": [
+        "Presentación Introducción a JASPER",
+        "Dominios Core",
+        "Evaluación y objetivos de JASPER",
+        "Juego Corto y Evaluación de la Comunicación (SPACE); Selección de objetivos.",
+        "Mecánica de JASPER. Videos"
+      ],
+      "instructor": "A confirmar",
+      "avatar": "/2024/jasper-avatar.png",
+      "button": "Inscribirse ahora",
+      "price": "",
+      "course_avatar": "/cursos/posteo_jasper.png"
     }
   ]
 }
