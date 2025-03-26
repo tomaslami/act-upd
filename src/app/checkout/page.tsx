@@ -17,6 +17,7 @@ import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group"
 import { Label } from "@/components/ui/label"
 import { useRouter, useSearchParams } from "next/navigation"
 import CustomLoader from "@/components/loader/custom-loader"
+import Link from "next/link"
 
 const CheckoutSummaryContent = () => {
   const [paymentMethod, setPaymentMethod] = useState("credit-card")
@@ -26,6 +27,13 @@ const CheckoutSummaryContent = () => {
 
   const init_point = searchParams.get("init_point")
   const total = searchParams.get("total")
+  const title = searchParams.get("title")
+  const subtitle = searchParams.get("subtitle")
+  const date = searchParams.get("date")
+  const modality = searchParams.get("modality")
+  const objectives = searchParams.get("objectives")
+  const topics = searchParams.get("topics")
+  const course_avatar = searchParams.get("course_avatar")
 
   if (!init_point) return
 
@@ -52,26 +60,22 @@ const CheckoutSummaryContent = () => {
                     <div className="flex flex-col md:flex-row gap-4">
                       <div className="relative w-full md:w-32 h-24 bg-gray-200 rounded-md overflow-hidden">
                         <Image
-                          src="/placeholder.svg?height=96&width=128"
+                          src={course_avatar || "/images/placeholder.png"}
                           alt="Curso"
                           fill
                           className="object-cover"
                         />
                       </div>
                       <div className="flex-1">
-                        <h3 className="font-bold text-lg">
-                          Escala de Desarrollo MP
-                        </h3>
-                        <p className="text-orange-500">
-                          Capacitación para Profesionales de la Salud
-                        </p>
+                        <h3 className="font-bold text-lg">{title}</h3>
+                        <p className="text-orange-500">{subtitle}</p>
                         <div className="flex items-center mt-2 text-sm text-gray-600">
                           <Calendar className="w-4 h-4 mr-1" />
-                          <span>FECHA: 28 de Febrero - 1 de Marzo</span>
+                          <span>{date}</span>
                         </div>
                         <div className="flex items-center mt-1 text-sm text-gray-600">
                           <Check className="w-4 h-4 mr-1 text-green-500" />
-                          <span>Modalidad online a través de Zoom</span>
+                          <span>{modality}</span>
                         </div>
                       </div>
                     </div>
@@ -79,24 +83,24 @@ const CheckoutSummaryContent = () => {
 
                   <div>
                     <h3 className="font-medium text-lg mb-2">
-                      Información del Participante
+                      Datos importantes sobre el curso
                     </h3>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 bg-gray-50 p-4 rounded-lg">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 bg-gray-50 p-4 rounded-lg">
                       <div>
-                        <p className="text-sm text-gray-500">Nombre Completo</p>
-                        <p>María González Pérez</p>
+                        <small className="text-base text-black font-medium">
+                          Objetivos
+                        </small>
+                        <p className="text-sm text-gray-600 mt-2 leading-relaxed">
+                          {objectives && objectives.replace(/,\s*/g, ", ")}.
+                        </p>
                       </div>
                       <div>
-                        <p className="text-sm text-gray-500">Email</p>
-                        <p>maria.gonzalez@email.com</p>
-                      </div>
-                      <div>
-                        <p className="text-sm text-gray-500">Teléfono</p>
-                        <p>+56 9 1234 5678</p>
-                      </div>
-                      <div>
-                        <p className="text-sm text-gray-500">Profesión</p>
-                        <p>Psicóloga</p>
+                        <small className="text-base text-black font-medium">
+                          Temas a tratar
+                        </small>
+                        <p className="text-sm text-gray-600 mt-2 leading-relaxed">
+                          {topics && topics.replace(/,\s*/g, ", ")}.
+                        </p>
                       </div>
                     </div>
                   </div>
@@ -145,6 +149,19 @@ const CheckoutSummaryContent = () => {
                       Transferencia Bancaria
                     </Label>
                   </div>
+
+                  <div
+                    className={`flex items-center space-x-3 border p-4 rounded-lg ${
+                      paymentMethod === "paypal"
+                        ? "border-[#1e56a0] bg-blue-50"
+                        : ""
+                    }`}
+                  >
+                    <RadioGroupItem value="paypal" id="paypal" />
+                    <Label htmlFor="paypal" className="cursor-pointer">
+                      Paypal
+                    </Label>
+                  </div>
                 </RadioGroup>
 
                 {paymentMethod === "credit-card" && (
@@ -158,15 +175,44 @@ const CheckoutSummaryContent = () => {
 
                 {paymentMethod === "bank-transfer" && (
                   <div className="mt-4 p-4 bg-gray-50 rounded-lg">
-                    <p className="font-medium mb-2">Datos Bancarios:</p>
-                    <p className="text-sm">Banco: Banco de Chile</p>
-                    <p className="text-sm">Cuenta Corriente: 123-456-789</p>
-                    <p className="text-sm">Titular: Actualmente SpA</p>
-                    <p className="text-sm">RUT: 76.543.210-K</p>
-                    <p className="text-sm">Email: pagos@actualmente.cl</p>
-                    <p className="mt-2 text-sm text-gray-600">
-                      Una vez realizada la transferencia, envía el comprobante a
-                      pagos@actualmente.cl
+                    <p className="font-medium mb-2">
+                      Pago por transferencia bancaria:
+                    </p>
+                    <p className="text-sm">
+                      Deberas comunicarte con nosotros para coordinar el pago.
+                    </p>
+
+                    <p className="text-sm">
+                      Entra a este link para coordinar el pago:{" "}
+                      <Link
+                        className="underline text-blue-500 font-semibold"
+                        href={`https://wa.me/5491140336320?text=${encodeURIComponent(
+                          `Vengo del curso: ${title} para abonar por transferencia bancaria`
+                        )}`}
+                      >
+                        WhatsApp
+                      </Link>
+                    </p>
+                  </div>
+                )}
+
+                {paymentMethod === "paypal" && (
+                  <div className="mt-4 p-4 bg-gray-50 rounded-lg">
+                    <p className="font-medium mb-2">Pago por Paypal:</p>
+                    <p className="text-sm">
+                      Deberas comunicarte con nosotros para coordinar el pago.
+                    </p>
+
+                    <p className="text-sm">
+                      Entra a este link para coordinar el pago:{" "}
+                      <Link
+                        className="underline text-blue-500 font-semibold"
+                        href={`https://wa.me/5491140336320?text=${encodeURIComponent(
+                          `Vengo del curso: ${title} para abonar por Paypal`
+                        )}`}
+                      >
+                        WhatsApp
+                      </Link>
                     </p>
                   </div>
                 )}
@@ -185,22 +231,23 @@ const CheckoutSummaryContent = () => {
               <CardContent>
                 <div className="space-y-4">
                   <div className="flex justify-between">
-                    <span>Escala de Desarrollo MP</span>
-                    <span>$120.000</span>
+                    <span>{title}</span>
+                    <span>${Number(total) * 1210 + 20 * 1210} ARS</span>
                   </div>
                   <div className="flex justify-between text-sm text-gray-500">
                     <span>Descuento</span>
-                    <span>-$20.000</span>
+                    <span>-${20 * 1210} ARS</span>
                   </div>
                   <Separator />
                   <div className="flex justify-between font-bold">
                     <span>Total</span>
-                    <span>${total}</span>
+                    <span>${Number(total) * 1210} ARS</span>
                   </div>
                 </div>
               </CardContent>
               <CardFooter>
                 <Button
+                  disabled={paymentMethod !== "credit-card"}
                   onClick={() => router.push(init_point)}
                   className="w-full bg-[#1e56a0] hover:bg-[#164584]"
                 >

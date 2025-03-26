@@ -1,7 +1,7 @@
 "use client"
 
-import { notFound } from "next/navigation"
-import { useCallback, useEffect, useState } from "react"
+import { notFound, useRouter } from "next/navigation"
+import { FormEvent, useCallback, useEffect, useState } from "react"
 import type { Cursos as CursosType } from "@/types/types"
 import data from "../../../cursos.json"
 import {
@@ -12,22 +12,22 @@ import {
   BookOpen,
   Mail,
   Share2,
-  // ChevronRight,
+  ChevronRight,
 } from "lucide-react"
 import { initMercadoPago } from "@mercadopago/sdk-react"
-//import axios from "axios"
-//import { v4 as UUIDv4 } from "uuid"
+import axios from "axios"
+import { v4 as UUIDv4 } from "uuid"
 import { toast, Toaster } from "sonner"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
+import Link from "next/link"
 
-// Initialize MercadoPago with your public key
 initMercadoPago("APP_USR-abeb9c5b-478e-4b5a-8304-9a513c20fae4")
 
-//type Response = { id: string; init_point?: string }
+type Response = { id: string; init_point?: string }
 
 export default function CourseDetails({
   params,
@@ -35,61 +35,67 @@ export default function CourseDetails({
   params: { slug: string }
 }) {
   const [curso, setCurso] = useState<CursosType | null>(null)
-  //const [isLoading, setIsLoading] = useState(false)
-  //const router = useRouter()
+  const [isLoading, setIsLoading] = useState(false)
+  const router = useRouter()
 
-  // Get preference_id and init_point for payment
-  // const handlePayment = async (): Promise<Response | null> => {
-  //   try {
-  //     const response = await axios.post("/api/mercadopago", {
-  //       id: UUIDv4(),
-  //       title: curso?.title,
-  //       quantity: 1,
-  //       price: curso?.price,
-  //     })
+  //Get preference_id and init_point for payment
+  const handlePayment = async (): Promise<Response | null> => {
+    try {
+      const response = await axios.post("/api/mercadopago", {
+        id: UUIDv4(),
+        title: curso?.value,
+        quantity: 1,
+        price: curso?.price,
+        course_avatar: curso?.course_avatar,
+        subtitle: curso?.subtitle,
+        date: curso?.date,
+        modality: curso?.modality,
+      })
 
-  //     if (!response.data.id) {
-  //       toast.error("Error al procesar el pago")
-  //       return null
-  //     }
+      if (!response.data.id) {
+        toast.error("Error al procesar el pago")
+        return null
+      }
 
-  //     return response.data
-  //   } catch (error) {
-  //     console.error(error)
-  //     toast.error("Error al procesar el pago")
-  //     return null
-  //   }
-  // }
+      return response.data
+    } catch (error) {
+      console.error(error)
+      toast.error("Error al procesar el pago")
+      return null
+    }
+  }
 
-  // const handleEnrollment = async (e: FormEvent) => {
-  //   e.preventDefault()
-  //   setIsLoading(true)
+  const handleEnrollment = async (e: FormEvent) => {
+    e.preventDefault()
+    setIsLoading(true)
 
-  //   try {
-  //     // Get preferenceId before continuing
-  //     const newPreferenceId = await handlePayment()
+    try {
+      // Get preferenceId before continuing
+      const newPreferenceId = await handlePayment()
 
-  //     if (!newPreferenceId?.id || !newPreferenceId?.init_point) {
-  //       toast.error("Ha ocurrido un error, intente nuevamente")
-  //       setIsLoading(false)
-  //       return
-  //     }
+      if (!newPreferenceId?.id || !newPreferenceId?.init_point) {
+        toast.error("Ha ocurrido un error, intente nuevamente")
+        setIsLoading(false)
+        return
+      }
 
-  //     router.push(
-  //       `/checkout?preferenceId=${newPreferenceId.id}&total=${curso?.price}&init_point=${newPreferenceId.init_point}&curso=${curso?.title}`
-  //     )
-  //   } catch (error) {
-  //     console.error(error)
-  //     toast.error("Ha ocurrido un error, intente nuevamente")
-  //     setIsLoading(false)
-  //   }
-  // }
+      router.push(
+        `/checkout?total=${curso?.price}&init_point=${newPreferenceId.init_point}&title=${curso?.value}&subtitle=${curso?.subtitle}&date=${curso?.date}&modality=${curso?.modality}&objectives=${curso?.objectives}&topics=${curso?.topics}&course_avatar=${curso?.course_avatar}`
+      )
+    } catch (error) {
+      console.error(error)
+      toast.error("Ha ocurrido un error, intente nuevamente")
+      setIsLoading(false)
+    }
+  }
 
   const verifyData = useCallback(() => {
     if (!params.slug) {
       notFound()
     }
-    const foundCurso = data.curso.find((curso) => curso.title === params.slug) as CursosType
+    const foundCurso = data.curso.find(
+      (curso) => curso.title === params.slug
+    ) as CursosType
     if (!foundCurso) {
       notFound()
     }
@@ -158,7 +164,7 @@ export default function CourseDetails({
               )} */}
             </div>
 
-            {/* <Button
+            <Button
               onClick={handleEnrollment}
               size="lg"
               disabled={isLoading}
@@ -166,7 +172,7 @@ export default function CourseDetails({
             >
               {isLoading ? "Procesando..." : "Inscribirse al curso"}
               <ChevronRight className="ml-2 h-4 w-4" />
-            </Button> */}
+            </Button>
           </div>
         </div>
       </section>
@@ -386,13 +392,13 @@ export default function CourseDetails({
                   asChild
                   className="w-full sm:w-auto border-[#1b4da1] text-[#1b4da1] hover:bg-[#1b4da1] hover:text-white"
                 >
-                  <a
+                  <Link
                     href={`mailto:cursosactualmente@gmail.com`}
                     className="flex items-center gap-2"
                   >
                     <Mail className="w-4 h-4" />
                     cursosactualmente@gmail.com
-                  </a>
+                  </Link>
                 </Button>
 
                 <Button
@@ -400,7 +406,7 @@ export default function CourseDetails({
                   asChild
                   className="w-full sm:w-auto border-[#1b4da1] text-[#1b4da1] hover:bg-[#1b4da1] hover:text-white"
                 >
-                  <a
+                  <Link
                     href={`https://wa.me/5491140336320`}
                     target="_blank"
                     rel="noopener noreferrer"
@@ -408,7 +414,7 @@ export default function CourseDetails({
                   >
                     <MessageCircle className="w-4 h-4" />
                     WhatsApp
-                  </a>
+                  </Link>
                 </Button>
 
                 <Button
@@ -429,7 +435,7 @@ export default function CourseDetails({
                 </Button>
               </div>
 
-              {/* <div className="text-center">
+              <div className="text-center">
                 <Button
                   onClick={handleEnrollment}
                   size="lg"
@@ -439,7 +445,7 @@ export default function CourseDetails({
                   {isLoading ? "Procesando..." : "Inscribirse al curso"}
                   <ChevronRight className="ml-2 h-4 w-4" />
                 </Button>
-              </div> */}
+              </div>
             </CardContent>
           </Card>
         </section>

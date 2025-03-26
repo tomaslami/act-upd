@@ -6,8 +6,10 @@ interface RequestBody {
   title: string
   quantity: string
   price: string
-  stageId: string
-  stockToRemove: number
+  course_avatar: string
+  subtitle: string
+  date: string
+  modality: string
 }
 
 const access_token = process.env.MP_ACCESS_TOKEN
@@ -37,13 +39,13 @@ export async function POST(req: NextRequest) {
           id: body.id,
           title: body.title,
           quantity: 1,
-          unit_price: Number(body.price),
+          unit_price: Number(body.price) * 1210,
           currency_id: "ARS",
         },
       ],
       back_urls: {
-        success: `https://actualmente.com.ar/orders/success?price=${body.price}&quantity=${body.quantity}`,
-        failure: `https://actualmente.com.ar/orders/failure?price=${body.price}`,
+        success: `https://actualmente.com.ar/ordenes/exito?price=${body.price}&quantity=${body.quantity}&title=${body.title}&course_avatar=${body.course_avatar}&subtitle=${body.subtitle}&date=${body.date}&modality=${body.modality}`,
+        failure: `https://actualmente.com.ar/ordenes/error?price=${body.price}`,
         pending: "https://actualmente.com.ar/orders/pending",
       },
       auto_return: "approved",
