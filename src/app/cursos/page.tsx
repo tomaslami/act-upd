@@ -22,16 +22,16 @@ interface Course {
 }
 
 const courses: Course[] = [
-  {
-    id: "1",
-    title: "Escala de Desarrollo MP",
-    date: "28 de Febrero y 1 de Marzo",
-    image: "/cursos/merrilPalmer.png",
-    location: "Virtual • Zoom",
-    href: "/cursos/MP-R",
-    category: "evaluacion",
-    month: "marzo",
-  },
+  // {
+  //   id: "1",
+  //   title: "Escala de Desarrollo MP",
+  //   date: "28 de Febrero y 1 de Marzo",
+  //   image: "/cursos/merrilPalmer.png",
+  //   location: "Virtual • Zoom",
+  //   href: "/cursos/MP-R",
+  //   category: "evaluacion",
+  //   month: "marzo",
+  // },
   {
     id: "2",
     title: "Comorbilidades",
@@ -44,6 +44,16 @@ const courses: Course[] = [
   },
   {
     id: "3",
+    title: "Mujeres y Autismo",
+    date: "Inicio: 24 de Mayo",
+    image: "/cursos/mujeres_posteo.png",
+    location: "Virtual • Zoom",
+    href: "/cursos/mujeres-autismo",
+    category: "investigacion",
+    month: "mayo",
+  },
+  {
+    id: "4",
     title: "ADOS-2",
     date: "Inicio: 16, 17 y 18 de Mayo",
     image: "/cursos/ados_posteo.png",
@@ -166,7 +176,11 @@ const courses: Course[] = [
 
 const CourseCard = ({ course }: { course: Course }) => {
   return (
-    <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.3 }}>
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.3 }}
+    >
       <Card className="overflow-hidden border-none shadow-md h-full group hover:shadow-lg transition-all duration-300">
         <div className="relative aspect-square overflow-hidden">
           <Image
@@ -180,7 +194,9 @@ const CourseCard = ({ course }: { course: Course }) => {
         </div>
 
         <CardContent className="p-5">
-          <h3 className="text-xl font-bold mb-3 group-hover:text-[#1b4da1] transition-colors">{course.title}</h3>
+          <h3 className="text-xl font-bold mb-3 group-hover:text-[#1b4da1] transition-colors">
+            {course.title}
+          </h3>
 
           <div className="space-y-2 mb-4">
             <div className="flex items-center text-sm text-gray-600">
@@ -219,19 +235,27 @@ export default function CoursesSection() {
     if (filter === "todos") return courses
 
     if (filter === "mar-abr-may") {
-      return courses.filter((course) => ["marzo", "abril", "mayo"].includes(course.month || ""))
+      return courses.filter((course) =>
+        ["marzo", "abril", "mayo"].includes(course.month || "")
+      )
     }
 
     if (filter === "jun-jul-ago") {
-      return courses.filter((course) => ["junio", "julio", "agosto"].includes(course.month || ""))
+      return courses.filter((course) =>
+        ["junio", "julio", "agosto"].includes(course.month || "")
+      )
     }
 
     if (filter === "sep-oct") {
-      return courses.filter((course) => ["septiembre", "octubre"].includes(course.month || ""))
+      return courses.filter((course) =>
+        ["septiembre", "octubre"].includes(course.month || "")
+      )
     }
 
     if (filter === "nov-dic") {
-      return courses.filter((course) => ["noviembre", "diciembre"].includes(course.month || ""))
+      return courses.filter((course) =>
+        ["noviembre", "diciembre"].includes(course.month || "")
+      )
     }
 
     return courses
@@ -241,15 +265,20 @@ export default function CoursesSection() {
     <section className="py-20 px-4 md:px-8 lg:px-16 bg-gradient-to-b from-white to-gray-50">
       <div className="max-w-7xl mx-auto mt-6">
         <div className="text-center mb-12">
-          <Badge variant="outline" className="mb-3 px-4 py-1 border-[#1b4da1]/20 text-[#1b4da1] font-medium">
+          <Badge
+            variant="outline"
+            className="mb-3 px-4 py-1 border-[#1b4da1]/20 text-[#1b4da1] font-medium"
+          >
             Formación Especializada
           </Badge>
 
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-900">Cursos y Certificaciones</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-900">
+            Cursos y Certificaciones
+          </h2>
 
           <p className="text-gray-600 max-w-2xl mx-auto max-md:text-sm">
-            Descubre nuestra selección de cursos especializados impartidos por profesionales expertos en el campo del
-            autismo y el neurodesarrollo.
+            Descubre nuestra selección de cursos especializados impartidos por
+            profesionales expertos en el campo del autismo y el neurodesarrollo.
           </p>
         </div>
 
@@ -302,4 +331,3 @@ export default function CoursesSection() {
     </section>
   )
 }
-

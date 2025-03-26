@@ -27,7 +27,8 @@
       "instructor": "Dra. Rhiannon Luyster, PHD - Investigadora",
       "avatar": "/2024/rhiannon-avatar.jpg",
       "button": "Inscribirse ahora",
-      "price": 100000
+      "price": 750,
+      "course_avatar": "/cursos/ados_posteo.png"
     },
     {
       "title": "MP-R",
@@ -57,7 +58,8 @@
       "instructor": ["Lic. Silvia Tedesco", "Lic. Sol Stomati"],
       "avatar": ["/2024/silvia-avatar.png", "/2024/sol-avatar.png"],
       "button": "Inscribirse ahora",
-      "price": 100000
+      "price": 100000,
+      "course_avatar": "/cursos/POSTEO_MERRIL_OCTUBRE.png"
     },
     {
       "title": "comorbilidades",
@@ -86,7 +88,8 @@
       "instructor": "Dr. Adolfo Benito Ruiz",
       "avatar": "/2024/adolfo-avatar.jpg",
       "button": "Inscribirse ahora",
-      "price": 100000
+      "price": 180,
+      "course_avatar": "/cursos/comorbilidades.png"
     },
     {
       "title": "comunicacion-social",
@@ -114,7 +117,8 @@
       "button": "Inscribirse ahora",
       "instructor": "Lic. Moira Pileggi",
       "avatar": "/2024/moira-pileggi.png",
-      "price": 100000
+      "price": 150,
+      "course_avatar": "/cursos/comu_posteo.png"
     },
     {
       "title": "conducta-disruptiva",
@@ -142,7 +146,8 @@
       "instructor": "Lic. Jorge Mármol",
       "avatar": "/2024/marmol-jorge.png",
       "button": "Inscribirse ahora",
-      "price": 100000
+      "price": 150,
+      "course_avatar": "/cursos/conducta_posteo.png"
     },
     {
       "title": "mujeres-autismo",
@@ -172,7 +177,8 @@
       "instructor": "Dra. María Merino",
       "avatar": "/2024/maria-merino.png",
       "button": "Inscribirse ahora",
-      "price": 100000
+      "price": 150,
+      "course_avatar": "/cursos/mujeres_posteo.png"
     },
     {
       "title": "peers-preescolar",
@@ -199,7 +205,8 @@
       "instructor": "Dra. Elizabeth Laugeson",
       "avatar": "/2024/peers-avatar.png",
       "button": "Inscribirse ahora",
-      "price": 580
+      "price": 580,
+      "course_avatar": "/cursos/posteo_peers.png"
     },
     {
       "title": "pecs-nivel1",
@@ -226,7 +233,8 @@
       "instructor": "Pyramid Educational Consultants",
       "avatar": "/2024/pecs-avatar.png",
       "button": "Inscribirse ahora",
-      "price": 250
+      "price": 250,
+      "course_avatar": "/cursos/pecs_posteo.png"
     },
     {
       "title": "selectividad-alimentaria",
@@ -253,7 +261,8 @@
       "instructor": "Dra. Isabelle Beaudry",
       "avatar": "/2024/isabelle-beaudry.jpg",
       "button": "Inscribirse ahora",
-      "price": 200
+      "price": 200,
+      "course_avatar": "/cursos/selectividad_posteo.png"
     },
     {
       "title": "teacch-educacion",
@@ -280,120 +289,93 @@
       "instructor": "The University of North Carolina",
       "avatar": "/2024/teacch-avatar.png",
       "button": "Inscribirse ahora",
-      "price": 750
+      "price": 750,
+      "course_avatar": "/cursos/posteo_teacch.png"
     },
     {
-
-          "title": "ados-actualizacion",
-          "text": "text-blue",
-          "bgcolor": "bg-blue",
-          "value": "Actualización en ADOS-2",
-          "subtitle": "Capacitación avanzada con la Dra. Rhiannon Luyster",
-          "date": "FECHA: 13 de septiembre de 2025",
-          "modality": "Modalidad online a través de Zoom con interpretación simultánea al español",
-          "timemorning": "9:30 am - 4:30 pm (Hora Argentina)",
-          "about": "Curso diseñado para profesionales certificados en ADOS-2 que buscan actualizar sus conocimientos en administración, puntuación e interpretación.",
-          "objectives": [
-            "Revisión de fundamentos de administración del ADOS-2.",
-            "Actualización en puntuación e interpretación de la prueba.",
-            "Aplicación práctica mediante videos y análisis de casos.",
-            "Tiempo para preguntas y respuestas con la especialista."
-          ],
-          "topics": [
-            "Fundamentos de administración y puntuación del ADOS-2.",
-            "Casos prácticos y revisión de videos.",
-            "Interpretación avanzada y aplicación clínica.",
-            "Discusión con la Dra. Rhiannon Luyster."
-          ],
-          "instructor": "Dra. Rhiannon Luyster",
-          "avatar": "/2024/rhiannon-avatar.jpg",
-          "button": "Inscribirse ahora",
-          "price": 100
-        },
-        {
-          "title": "adir-actualizacion",
-          "text": "text-blue",
-          "bgcolor": "bg-blue",
-          "value": "Actualización en ADI-R",
-          "subtitle": "Capacitación avanzada con la Dra. Rhiannon Luyster",
-          "date": "FECHA: 27 de septiembre de 2025",
-          "modality": "Modalidad online a través de Zoom con interpretación simultánea al español",
-          "timemorning": "9:30 am - 4:30 pm (Hora Argentina)",
-          "about": "Curso dirigido a profesionales certificados en ADI-R que desean actualizar sus habilidades en administración, puntuación e interpretación.",
-          "objectives": [
-            "Revisión de los principios clave del ADI-R.",
-            "Actualización en administración y puntuación.",
-            "Aplicación práctica mediante análisis de casos y videos.",
-            "Espacio para consultas con la especialista."
-          ],
-          "topics": [
-            "Fundamentos de administración y puntuación del ADI-R.",
-            "Revisión de protocolos y análisis de casos.",
-            "Interpretación clínica avanzada.",
-            "Discusión con la Dra. Rhiannon Luyster."
-          ],
-          "instructor": "Dra. Rhiannon Luyster",
-          "avatar": "/2024/rhiannon-avatar.jpg",
-          "button": "Inscribirse ahora",
-          "price": 100
-        },
-        {
-          "title": "merrill-palmer-oct",
-          "text": "text-blue",
-          "bgcolor": "bg-blue",
-          "value": "Formación en la Escala de Desarrollo Merrill-Palmer-R",
-          "subtitle": "Capacitación para profesionales de la salud en evaluación infantil",
-          "date": "FECHA: 1 y 9 de Octubre",
-          "modality": "Modalidad online a través de Zoom",
-          "about": "La Escala de Desarrollo Merrill-Palmer-R es una herramienta estandarizada utilizada en la evaluación del desarrollo infantil, midiendo habilidades cognitivas, motoras, socioemocionales y de lenguaje.",
-          "objectives": [
-            "Introducción a la batería Merrill-Palmer-R y su fundamentación teórica.",
-            "Administración de la prueba: estructura y aplicación.",
-            "Criterios de puntuación y codificación.",
-            "Análisis e interpretación de los perfiles de desarrollo.",
-            "Aplicaciones clínicas y casos prácticos."
-          ],
-          "topics": [
-            "Fundamentación teórica de Merrill-Palmer-R.",
-            "Estructura y aplicación de la prueba.",
-            "Criterios de puntuación y codificación.",
-            "Análisis e interpretación de resultados.",
-            "Aplicaciones clínicas y casos prácticos."
-          ],
-          "instructor": "TEA Ediciones - España",
-          "avatar": "/2024/tea-logo.png",
-          "button": "Inscribirse ahora",
-          "price": "Consultar"
-        },
-        {
-            "title": "transicion-pecs",
-            "text": "text-blue",
-            "bgcolor": "bg-blue",
-            "value": "Transición de PECS a otros dispositivos de comunicación",
-            "subtitle": "Taller práctico para seleccionar y enseñar el uso de dispositivos de comunicación",
-            "date": "FECHA: 29 de Noviembre",
-            "modality": "Modalidad online a través de Zoom",
-            "timemorning": "Horario no especificado",
-            "timeafternoon": "Horario no especificado",
-            "about": "Taller de un día que describe los procedimientos para evaluar las habilidades en PECS, determinar la idoneidad para la transición a un dispositivo de comunicación, seleccionar el dispositivo adecuado y enseñar su uso funcional, asegurando la enseñanza previa de los principios básicos de comunicación.",
-            "objectives": [
-              "Evaluar las habilidades actuales en PECS para determinar la idoneidad de la transición.",
-              "Seleccionar el dispositivo de comunicación adecuado según las necesidades del paciente.",
-              "Enseñar el uso funcional del dispositivo basándose en principios básicos de comunicación.",
-              "Garantizar una transición segura y efectiva a través del análisis de casos prácticos."
-            ],
-            "topics": [
-              "Evaluación de habilidades en PECS",
-              "Criterios para la transición a dispositivos de comunicación",
-              "Selección de dispositivos adecuados",
-              "Estrategias para enseñar el uso funcional del dispositivo",
-              "Consideraciones técnicas para una conexión óptima en Zoom"
-            ],
-            "instructor": "Pyramid Educational Consultants",
-            "avatar": "/2024/pecs-avatar.png",
-            "button": "Inscribirse ahora",
-            "price": 52
-          
-        }
-      ]        
+      "title": "ados-actualizacion",
+      "text": "text-blue",
+      "bgcolor": "bg-blue",
+      "value": "Actualización en ADOS-2",
+      "subtitle": "Capacitación avanzada con la Dra. Rhiannon Luyster",
+      "date": "FECHA: 13 de septiembre de 2025",
+      "modality": "Modalidad online a través de Zoom con interpretación simultánea al español",
+      "timemorning": "9:30 am - 4:30 pm (Hora Argentina)",
+      "about": "Curso diseñado para profesionales certificados en ADOS-2 que buscan actualizar sus conocimientos en administración, puntuación e interpretación.",
+      "objectives": [
+        "Revisión de fundamentos de administración del ADOS-2.",
+        "Actualización en puntuación e interpretación de la prueba.",
+        "Aplicación práctica mediante videos y análisis de casos.",
+        "Tiempo para preguntas y respuestas con la especialista."
+      ],
+      "topics": [
+        "Fundamentos de administración y puntuación del ADOS-2.",
+        "Casos prácticos y revisión de videos.",
+        "Interpretación avanzada y aplicación clínica.",
+        "Discusión con la Dra. Rhiannon Luyster."
+      ],
+      "instructor": "Dra. Rhiannon Luyster",
+      "avatar": "/2024/rhiannon-avatar.jpg",
+      "button": "Inscribirse ahora",
+      "price": 100,
+      "course_avatar": "/cursos/posteo_ActualizacionAdos.png"
+    },
+    {
+      "title": "adir-actualizacion",
+      "text": "text-blue",
+      "bgcolor": "bg-blue",
+      "value": "Actualización en ADI-R",
+      "subtitle": "Capacitación avanzada con la Dra. Rhiannon Luyster",
+      "date": "FECHA: 27 de septiembre de 2025",
+      "modality": "Modalidad online a través de Zoom con interpretación simultánea al español",
+      "timemorning": "9:30 am - 4:30 pm (Hora Argentina)",
+      "about": "Curso dirigido a profesionales certificados en ADI-R que desean actualizar sus habilidades en administración, puntuación e interpretación.",
+      "objectives": [
+        "Revisión de los principios clave del ADI-R.",
+        "Actualización en administración y puntuación.",
+        "Aplicación práctica mediante análisis de casos y videos.",
+        "Espacio para consultas con la especialista."
+      ],
+      "topics": [
+        "Fundamentos de administración y puntuación del ADI-R.",
+        "Revisión de protocolos y análisis de casos.",
+        "Interpretación clínica avanzada.",
+        "Discusión con la Dra. Rhiannon Luyster."
+      ],
+      "instructor": "Dra. Rhiannon Luyster",
+      "avatar": "/2024/rhiannon-avatar.jpg",
+      "button": "Inscribirse ahora",
+      "price": 100,
+      "course_avatar": "/cursos/posteo_adir_actualizacion.png"
+    },
+    {
+      "title": "merrill-palmer-oct",
+      "text": "text-blue",
+      "bgcolor": "bg-blue",
+      "value": "Formación en la Escala de Desarrollo Merrill-Palmer-R",
+      "subtitle": "Capacitación para profesionales de la salud en evaluación infantil",
+      "date": "FECHA: 1 y 9 de Octubre",
+      "modality": "Modalidad online a través de Zoom",
+      "about": "La Escala de Desarrollo Merrill-Palmer-R es una herramienta estandarizada utilizada en la evaluación del desarrollo infantil, midiendo habilidades cognitivas, motoras, socioemocionales y de lenguaje.",
+      "objectives": [
+        "Introducción a la batería Merrill-Palmer-R y su fundamentación teórica.",
+        "Administración de la prueba: estructura y aplicación.",
+        "Criterios de puntuación y codificación.",
+        "Análisis e interpretación de los perfiles de desarrollo.",
+        "Aplicaciones clínicas y casos prácticos."
+      ],
+      "topics": [
+        "Fundamentación teórica de Merrill-Palmer-R.",
+        "Estructura y aplicación de la prueba.",
+        "Criterios de puntuación y codificación.",
+        "Análisis e interpretación de resultados.",
+        "Aplicaciones clínicas y casos prácticos."
+      ],
+      "instructor": ["TEA Ediciones - España", "Lic. Silvia Tedesco"],
+      "avatar": ["/2024/tea-logo.png", "/2024/silvia-avatar.png"],
+      "button": "Inscribirse ahora",
+      "price": "Consultar",
+      "course_avatar": "/cursos/merrilPalmer.png"
+    }
+  ]
 }
