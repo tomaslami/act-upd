@@ -80,7 +80,7 @@ export default function CourseDetails({
       }
 
       router.push(
-        `/checkout?total=${curso?.price}&init_point=${newPreferenceId.init_point}&title=${curso?.value}&subtitle=${curso?.subtitle}&date=${curso?.date}&modality=${curso?.modality}&objectives=${curso?.objectives}&topics=${curso?.topics}&course_avatar=${curso?.course_avatar}`
+        `/checkout?total=${curso?.price}&init_point=${newPreferenceId.init_point}&title=${curso?.value}&subtitle=${curso?.subtitle}&date=${curso?.date}&modality=${curso?.modality}&objectives=${curso?.objectives}&topics=${curso?.topics}&course_avatar=${curso?.course_avatar}&paypal_link=${curso?.paypal_link}`
       )
     } catch (error) {
       console.error(error)
@@ -151,20 +151,8 @@ export default function CourseDetails({
                 <Users className="w-4 h-4 text-[#1b4da1]" />
                 <span>{curso.modality}</span>
               </Badge>
-
-              {/* {curso.price && (
-                <Badge
-                  variant="outline"
-                  className="px-4 py-2 flex items-center gap-2 text-sm border-blue-200"
-                >
-                  <span className="font-bold text-[#1b4da1]">
-                    ${curso.price}
-                  </span>
-                </Badge>
-              )} */}
             </div>
-
-           {/*} <Button
+            {/* <Button
               onClick={handleEnrollment}
               size="lg"
               disabled={isLoading}

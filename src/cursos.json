@@ -59,7 +59,8 @@
       "avatar": ["/2024/silvia-avatar.png", "/2024/sol-avatar.png"],
       "button": "Inscribirse ahora",
       "price": 100000,
-      "course_avatar": "/cursos/POSTEO_MERRIL_OCTUBRE.png"
+      "course_avatar": "/cursos/POSTEO_MERRIL_OCTUBRE.png",
+      "paypal_link": "https://www.paypal.com/ncp/payment/PGGW4SZ2GC6N6"
     },
     {
       "title": "comorbilidades",
@@ -89,7 +90,8 @@
       "avatar": "/2024/adolfo-avatar.jpg",
       "button": "Inscribirse ahora",
       "price": 180,
-      "course_avatar": "/cursos/comorbilidades.png"
+      "course_avatar": "/cursos/comorbilidades.png",
+      "paypal_link": "https://www.paypal.com/ncp/payment/HDBU3LW745GYY"
     },
     {
       "title": "comunicacion-social",
@@ -118,7 +120,8 @@
       "instructor": "Lic. Moira Pileggi",
       "avatar": "/2024/moira-pileggi.png",
       "price": 150,
-      "course_avatar": "/cursos/comu_posteo.png"
+      "course_avatar": "/cursos/comu_posteo.png",
+      "paypal_link": "https://www.paypal.com/ncp/payment/RTZMRWRWE3ZR8"
     },
     {
       "title": "conducta-disruptiva",
@@ -147,7 +150,8 @@
       "avatar": "/2024/marmol-jorge.png",
       "button": "Inscribirse ahora",
       "price": 150,
-      "course_avatar": "/cursos/conducta_posteo.png"
+      "course_avatar": "/cursos/conducta_posteo.png",
+      "paypal_link": "https://www.paypal.com/ncp/payment/XL7DVPSBDNMPS"
     },
     {
       "title": "mujeres-autismo",
@@ -178,7 +182,8 @@
       "avatar": "/2024/maria-merino.png",
       "button": "Inscribirse ahora",
       "price": 150,
-      "course_avatar": "/cursos/mujeres_posteo.png"
+      "course_avatar": "/cursos/mujeres_posteo.png",
+      "paypal_link": "https://www.paypal.com/ncp/payment/NT2U6YUCDNJ2E"
     },
     {
       "title": "peers-preescolar",
@@ -206,7 +211,8 @@
       "avatar": "/2024/peers-avatar.png",
       "button": "Inscribirse ahora",
       "price": 580,
-      "course_avatar": "/cursos/posteo_peers.png"
+      "course_avatar": "/cursos/posteo_peers.png",
+      "paypal_link": "https://www.paypal.com/ncp/payment/S7JX3BC8ZAXDS"
     },
     {
       "title": "pecs-nivel1",
@@ -234,7 +240,8 @@
       "avatar": "/2024/pecs-avatar.png",
       "button": "Inscribirse ahora",
       "price": 250,
-      "course_avatar": "/cursos/pecs_posteo.png"
+      "course_avatar": "/cursos/pecs_posteo.png",
+      "paypal_link": "https://www.paypal.com/ncp/payment/3RUQR2NYM5GTC"
     },
     {
       "title": "selectividad-alimentaria",
@@ -262,7 +269,8 @@
       "avatar": "/2024/isabelle-beaudry.jpg",
       "button": "Inscribirse ahora",
       "price": 200,
-      "course_avatar": "/cursos/selectividad_posteo.png"
+      "course_avatar": "/cursos/selectividad_posteo.png",
+      "paypal_link": "https://www.paypal.com/ncp/payment/3WJU3SBDVVXQS"
     },
     {
       "title": "teacch-educacion",
@@ -290,7 +298,8 @@
       "avatar": "/2024/teacch-avatar.png",
       "button": "Inscribirse ahora",
       "price": 750,
-      "course_avatar": "/cursos/posteo_teacch.png"
+      "course_avatar": "/cursos/posteo_teacch.png",
+      "paypal_link": "https://www.paypal.com/ncp/payment/TYP3TJ62ZSBX8"
     },
     {
       "title": "ados-actualizacion",
@@ -318,7 +327,8 @@
       "avatar": "/2024/rhiannon-avatar.jpg",
       "button": "Inscribirse ahora",
       "price": 100,
-      "course_avatar": "/cursos/posteo_ActualizacionAdos.png"
+      "course_avatar": "/cursos/posteo_ActualizacionAdos.png",
+      "paypal_link": "https://www.paypal.com/ncp/payment/DR8QTQRUR5NMY"
     },
     {
       "title": "adir-actualizacion",
@@ -346,7 +356,8 @@
       "avatar": "/2024/rhiannon-avatar.jpg",
       "button": "Inscribirse ahora",
       "price": 100,
-      "course_avatar": "/cursos/posteo_adir_actualizacion.png"
+      "course_avatar": "/cursos/posteo_adir_actualizacion.png",
+      "paypal_link": "https://www.paypal.com/ncp/payment/U5R7J4BAMVHHL"
     },
     {
       "title": "merrill-palmer-oct",
@@ -400,6 +411,35 @@
       "button": "Inscribirse ahora",
       "price": "",
       "course_avatar": "/cursos/posteo_jasper.png"
+    },
+    {
+      "title": "transicion-pecs",
+      "text": "text-blue",
+      "bgcolor": "bg-blue",
+      "value": "Transición de PECS a otros dispositivos de comunicación",
+      "subtitle": "Curso oficial de Pyramid para profesionales de la salud",
+      "date": "FECHA: 29 de Noviembre",
+      "modality": "Modalidad online a través de Zoom (exclusivo para Argentina)",
+      "timemorning": "Horario no especificado",
+      "about": "Este curso está diseñado para profesionales que trabajan con personas con autismo u otras dificultades comunicativas que utilizan PECS y están listos para transicionar a un dispositivo de comunicación.",
+      "objectives": [
+        "Evaluar si un usuario de PECS es candidato para la transición.",
+        "Seleccionar el dispositivo de comunicación adecuado.",
+        "Enseñar el uso funcional del dispositivo sin comprometer el desarrollo de habilidades comunicativas esenciales.",
+        "Aplicar estrategias efectivas para lograr una comunicación funcional y significativa."
+      ],
+      "topics": [
+        "Evaluación de candidatos para la transición de PECS.",
+        "Selección de dispositivos de comunicación alternativos.",
+        "Enseñanza del uso funcional del dispositivo.",
+        "Estrategias efectivas para una comunicación significativa."
+      ],
+      "instructor": "Pyramid Educational Consultants",
+      "avatar": "/2024/pecs-avatar.png",
+      "button": "Inscribirse ahora",
+      "price": 30,
+      "course_avatar": "/cursos/posteo_transicion.png",
+      "paypal_link": "https://www.paypal.com/ncp/payment/9NVVPPHG8TE3Y"
     }
   ]
 }

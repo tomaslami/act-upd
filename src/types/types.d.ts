@@ -15,6 +15,7 @@ export type Cursos = {
   avatar?: string[] | StaticImport
   price: number
   course_avatar: string
+  paypal_link: string
 }
 
 export interface ServerActionResponse {
