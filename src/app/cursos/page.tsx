@@ -124,6 +124,16 @@ const courses: Course[] = [
   },
   {
     id: "11",
+    title: "Modelo Jasper",
+    date: "Inicio: 4 de Octubre",
+    image: "/cursos/POSTEO_JASPER.png",
+    location: "Virtual • Zoom",
+    href: "/cursos/modelo-jasper",
+    category: "evaluacion",
+    month: "octubre",
+  },
+  {
+    id: "12",
     title: "Escala de Desarrollo MP",
     date: "Inicio: 1 y 9 de Octubre",
     image: "/cursos/POSTEO_MERRIL_OCTUBRE.png",
@@ -133,7 +143,7 @@ const courses: Course[] = [
     month: "octubre",
   },
   {
-    id: "12",
+    id: "13",
     title: "PECS - Nivel 1",
     date: "Inicio: 8 y 9 de Noviembre",
     image: "/cursos/pecs_posteo.png",
@@ -143,7 +153,7 @@ const courses: Course[] = [
     month: "noviembre",
   },
   {
-    id: "13",
+    id: "14",
     title: "Transicion",
     date: "Inicio: 29 de Noviembre",
     image: "/cursos/posteo_transicion.png",
@@ -153,7 +163,7 @@ const courses: Course[] = [
     month: "noviembre",
   },
   {
-    id: "14",
+    id: "15",
     title: "Formación TEACCH",
     date: "Inicio: 1 al 5 de Diciembre",
     image: "/cursos/posteo_teacch.png",
