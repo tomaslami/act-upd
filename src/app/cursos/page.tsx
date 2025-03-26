@@ -164,7 +164,7 @@ const courses: Course[] = [
   },
   {
     id: "14",
-    title: "Transicion",
+    title: "Transición de Pecs",
     date: "Inicio: 29 de Noviembre",
     image: "/cursos/posteo_transicion.png",
     location: "Virtual • Zoom",
