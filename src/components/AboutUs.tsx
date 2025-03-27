@@ -8,7 +8,7 @@ export default function AboutSection() {
       <div className="container px-4 md:px-6 mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
           {/* Left column: Text content */}
-          <div className="flex flex-col space-y-6 pt-16 md:pt-0  mb-10">
+          <div className="flex flex-col space-y-6 pt-16 md:pt-0  mt-14">
             <div className="space-y-3">
               <Badge
                 variant="outline"
