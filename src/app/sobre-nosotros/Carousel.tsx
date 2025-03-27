@@ -7,10 +7,12 @@ const Carousel = () => {
             <div className="w-full px-4 sm:px-8 md:px-16 lg:px-32">
               <Swipe
                 images={[
+                  "/carrusel/carrusel-1.png",
                   "/carrusel/carrusel-2.png",
                   "/carrusel/carrusel-3.png",
                   "/carrusel/carrusel-4.png",
                   "/carrusel/carrusel-5.png",
+                  "/carrusel/carrusel-6.png",
                 ].filter((image): image is string => Boolean(image))}
               />
             </div>
