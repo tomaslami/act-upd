@@ -33,7 +33,7 @@ const courses: Course[] = [
   //   month: "marzo",
   // },
   {
-    id: "2",
+    id: "1",
     title: "Comorbilidades",
     date: "Inicio: 22 y 23 de Marzo",
     image: "/cursos/comorbilidades.png",
@@ -43,7 +43,7 @@ const courses: Course[] = [
     month: "marzo",
   },
   {
-    id: "3",
+    id: "2",
     title: "Mujeres y Autismo",
     date: "Inicio: 24 de Mayo",
     image: "/cursos/mujeres_posteo.png",
@@ -53,7 +53,7 @@ const courses: Course[] = [
     month: "mayo",
   },
   {
-    id: "4",
+    id: "3",
     title: "ADOS-2",
     date: "Inicio: 16, 17 y 18 de Mayo",
     image: "/cursos/ados_posteo.png",
