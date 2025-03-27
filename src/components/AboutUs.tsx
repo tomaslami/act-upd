@@ -35,7 +35,7 @@ export default function AboutSection() {
           </div>
 
           {/* Right column: Image */}
-          <div className="relative h-[50vh] md:h-auto flex items-end justify-center md:justify-end">
+          <div className="relative h-auto md:h-auto flex items-end justify-center md:justify-end">
             <div className="relative w-full max-w-md md:max-w-none h-full">
               <Image
                 src="/icons/licenciada.png"
