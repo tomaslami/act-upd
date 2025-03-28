@@ -203,7 +203,7 @@ const ServiceCard: React.FC<ServiceProps> = ({ icon, title, description, color, 
             <DialogTrigger asChild>
               <Button className={cn("rounded-full w-full", colorVariants[color])}>Más info</Button>
             </DialogTrigger>
-            <DialogContent className="sm:max-w-[700px] max-h-[80vh] overflow-y-auto p-4  sm:p-6">
+            <DialogContent className="sm:max-w-[700px] max-h-[95vh] overflow-y-auto p-4  sm:p-6">
               <DialogHeader className="flex items-center justify-between">
                 <DialogTitle className="flex items-center gap-2 text-xl mr-6">
                   <div className={cn("p-2 rounded-full", bgColorVariants[color])}>
