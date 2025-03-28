@@ -27,8 +27,7 @@ export default function AboutSection() {
             <Card className="bg-white/10 border-none backdrop-blur-sm">
               <CardContent className="p-6">
                 <p className="text-white text-base md:text-lg leading-relaxed">
-                En Actualmente, formamos a profesionales de la salud mental con capacitaciones basadas en la evidencia, especializadas en autismo y desarrollo infantil. Desde hace más de 15 años, ofrecemos formaciones oficiales con metodologías reconocidas a nivel internacional, como el Modelo Denver (ESDM), JASPER, TEACCH y PEERS.
-
+                En Actualmente, nos especializamos en la organización de cursos sobre salud mental, con un enfoque especial en AUTISMO y desarrollo infantil para toda Latinoamérica.
                 </p>
               </CardContent>
             </Card>
