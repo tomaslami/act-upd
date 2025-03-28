@@ -350,7 +350,7 @@ export default function ServicesSection() {
     {
       icon: baby,
       title: "Evaluaciones de Desarrollo",
-      description: "Escalas de desarrollo, evaluaciones de conductas, evaluaciones neurolinguisticas.",
+      description: "Escalas de desarrollo, evaluaciones de conductas, evaluaciones neurolingüística.",
       color: "red",
       images: ["/services/merrill.jpg"],
       detailedInfo: {
