@@ -33,7 +33,7 @@ const courses: Course[] = [
   //   month: "marzo",
   // },
   {
-    id: "1",
+    id: "2",
     title: "Comorbilidades",
     date: "Inicio: 22 y 23 de Marzo",
     image: "/cursos/comorbilidades.png",
