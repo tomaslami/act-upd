@@ -39,7 +39,7 @@ export default function ProfessionalBio() {
             </TabsTrigger>
             <TabsTrigger value="experiencia" className="data-[state=active]:bg-violet-100 data-[state=active]:text-violet-900 max-sm:text-xs">
               <Briefcase className="mr-2 h-4 w-4 max-sm:hidden" />
-              Experiencia
+              Nuestro recorrido
             </TabsTrigger>
           </TabsList>
 
