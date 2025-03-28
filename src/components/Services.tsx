@@ -274,16 +274,9 @@ export default function ServicesSection() {
       href: "/docs/agenda_2025.pdf",
     },
     {
-      icon: certification,
-      title: "Certificaciones oficiales",
-      description: "Capacitación a profesionales que trabajan con niños, jóvenes y adultos con diagnóstico de autismo.",
-      color: "green",
-      href: "/#certificaciones",
-    },
-    {
       icon: lupa,
       title: "Evaluaciones ADOS y ADI-R",
-      description: "Evaluaciones diagnosticas ADOS y ADIR: Instrumentos para el diagnóstico de autismo.",
+      description: "Instrumentos para el diagnóstico de autismo.",
       color: "teal",
       images: ["/services/evaluaciones2.jpg", "/services/evaluaciones.jpg"],
       detailedInfo: {
@@ -410,11 +403,10 @@ export default function ServicesSection() {
             icon: <MessageSquare className="h-5 w-5 text-rose-600" />,
             content: (
               <p>
-                <strong>Lic. Silvia Tedesco – Especialista en Merrill-Palmer</strong>
+                <strong>Lic. Silvia Tedesco </strong>
                 <br />
                 Entrenadora certificada en la Escala Merrill-Palmer, con amplia experiencia en evaluación del desarrollo
-                infantil. Colabora desde hace años con Editorial TEA Ediciones de España, titular de los derechos
-                exclusivos para habla hispana.
+                infantil. Colabora desde hace años con Editorial TEA Ediciones de España.
               </p>
             ),
           },
@@ -501,6 +493,13 @@ export default function ServicesSection() {
           },
         ],
       },
+    },
+    {
+      icon: certification,
+      title: "Certificaciones oficiales",
+      description: "Capacitación a profesionales que trabajan con niños, jóvenes y adultos con diagnóstico de autismo.",
+      color: "green",
+      href: "/#certificaciones",
     },
   ]
 
