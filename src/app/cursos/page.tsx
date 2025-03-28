@@ -43,16 +43,6 @@ const courses: Course[] = [
     month: "marzo",
   },
   {
-    id: "2",
-    title: "Mujeres y Autismo",
-    date: "Inicio: 24 de Mayo",
-    image: "/cursos/mujeres_posteo.png",
-    location: "Virtual • Zoom",
-    href: "/cursos/mujeres-autismo",
-    category: "investigacion",
-    month: "mayo",
-  },
-  {
     id: "3",
     title: "ADOS-2",
     date: "Inicio: 16, 17 y 18 de Mayo",
