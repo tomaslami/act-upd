@@ -4,7 +4,7 @@ import { Badge } from "@/components/ui/badge"
 
 export default function AboutSection() {
   return (
-    <section className="relative md:h-screen min-h-screen w-full bg-gradient-to-b from-[#6758c7] to-[#5E56A0] md:py-24 overflow-hidden">
+    <section className=" relative md:h-screen min-h-screen w-full bg-gradient-to-b from-[#6758c7] to-[#5E56A0] md:py-10 overflow-hidden">
       <div className="container px-4 md:px-6 mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
           {/* Left column: Text content */}
