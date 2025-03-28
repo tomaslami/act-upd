@@ -152,7 +152,7 @@ export default function CourseDetails({
                 <span>{curso.modality}</span>
               </Badge>
             </div>
-            {/* <Button
+             <Button
               onClick={handleEnrollment}
               size="lg"
               disabled={isLoading}
@@ -160,7 +160,7 @@ export default function CourseDetails({
             >
               {isLoading ? "Procesando..." : "Inscribirse al curso"}
               <ChevronRight className="ml-2 h-4 w-4" />
-            </Button> */}
+            </Button> 
           </div>
         </div>
       </section>
