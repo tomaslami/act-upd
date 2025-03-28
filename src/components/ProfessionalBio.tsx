@@ -86,7 +86,7 @@ export default function ProfessionalBio() {
             <Card className="border-none shadow-md bg-gradient-to-r from-violet-50 to-white">
               <CardContent className="p-6">
                 <h3 className="text-xl font-bold mb-4 text-violet-900">
-                  Experiencia Profesional
+                  Recorrido Profesional
                 </h3>
                 <ScrollArea className="h-[300px]">
                   <div className="space-y-6">
