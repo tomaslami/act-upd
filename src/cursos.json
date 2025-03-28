@@ -396,20 +396,26 @@
       "subtitle": "Curso introductorio al enfoque JASPER en autismo",
       "date": "FECHA: 4 de Octubre de 2025",
       "modality": "Modalidad online a través de Zoom",
-      "timemorning": "1:00 pm - 5:00 pm (Hora Argentina)",
-      "about": "En este curso, aprenderás sobre JASPER (Joint Attention, Symbolic Play, Engagement, and Regulation), un modelo de intervención diseñado para trabajar con niños con autismo.",
-      "objectives": [],
-      "topics": [
-        "Presentación Introducción a JASPER",
-        "Dominios Core",
-        "Evaluación y objetivos de JASPER",
-        "Juego Corto y Evaluación de la Comunicación (SPACE); Selección de objetivos.",
-        "Mecánica de JASPER. Videos"
+      "timemorning": "13:00 - 17:00 h (Hora Argentina)",
+      "about": "Desde Actualmente, tenemos el honor de invitarte a participar del Curso Introductorio al Modelo JASPER, una propuesta de formación basada en la evidencia, dirigida a profesionales que trabajan con niños con autismo o en desarrollo infantil temprano. JASPER (Joint Attention, Symbolic Play, Engagement and Regulation) es un modelo de intervención temprana centrado en los fundamentos de la comunicación social: atención conjunta, juego e imitación. Se trata de una intervención naturalista y basada en el desarrollo que involucra activamente a padres y docentes para facilitar la generalización de habilidades y su mantenimiento en el tiempo.",
+      "objectives": [
+        "Conocer los fundamentos teóricos y evidencia científica del modelo JASPER.",
+        "Comprender los dominios principales: juego simbólico, atención conjunta y regulación.",
+        "Aprender a realizar una evaluación inicial y seleccionar objetivos personalizados.",
+        "Explorar la mecánica de implementación, uso del lenguaje y modelado.",
+        "Participar en un espacio de intercambio con el ponente para resolver dudas específicas."
       ],
-      "instructor": "A confirmar",
+      "topics": [
+        "Fundamentos teóricos y evidencia científica del modelo JASPER",
+        "Dominios principales: juego simbólico, atención conjunta, regulación",
+        "Evaluación inicial y selección de objetivos personalizados",
+        "Mecánica de implementación, uso del lenguaje y modelado",
+        "Espacio para preguntas y discusión con el ponente"
+      ],
+      "instructor": "Dr. Jonathan Panganiban, Ph.D. (UCLA, Kasari Lab)",
       "avatar": "/2024/jasper-avatar.png",
       "button": "Inscribirse ahora",
-      "price": "",
+      "price": "Consultar",
       "course_avatar": "/cursos/posteo_jasper.png"
     },
     {
