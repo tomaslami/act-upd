@@ -5,6 +5,7 @@ import { useEffect, useState, useRef } from "react"
 import { Swiper, SwiperSlide } from "swiper/react"
 import { Autoplay, Navigation } from "swiper/modules"
 import { ChevronLeft, ChevronRight } from "lucide-react"
+import type { Swiper as SwiperType } from "swiper"
 
 // Import Swiper styles
 import "swiper/css"
@@ -17,6 +18,7 @@ interface SwipeProps {
 
 const Swipe: React.FC<SwipeProps> = ({ images }) => {
   const [slidesPerView, setSlidesPerView] = useState(1)
+  const [swiper, setSwiper] = useState<SwiperType | null>(null)
   const prevRef = useRef<HTMLDivElement>(null)
   const nextRef = useRef<HTMLDivElement>(null)
 
@@ -36,6 +38,27 @@ const Swipe: React.FC<SwipeProps> = ({ images }) => {
     return () => window.removeEventListener("resize", handleResize)
   }, [])
 
+  // Update navigation when swiper initializes
+  useEffect(() => {
+    if (swiper) {
+      swiper.navigation.init()
+      swiper.navigation.update()
+    }
+  }, [swiper])
+
+  // Handle manual navigation
+  const handlePrev = () => {
+    if (swiper) {
+      swiper.slidePrev()
+    }
+  }
+
+  const handleNext = () => {
+    if (swiper) {
+      swiper.slideNext()
+    }
+  }
+
   return (
     <div className="w-full h-max relative px-4 sm:px-8 md:px-12 lg:px-20">
       <Swiper
@@ -51,6 +74,7 @@ const Swipe: React.FC<SwipeProps> = ({ images }) => {
           prevEl: prevRef.current,
           nextEl: nextRef.current,
         }}
+        onSwiper={setSwiper}
         allowTouchMove={true}
         modules={[Autoplay, Navigation]}
         className="mySwiper"
@@ -70,29 +94,33 @@ const Swipe: React.FC<SwipeProps> = ({ images }) => {
         ))}
       </Swiper>
 
-      {/* Custom navigation buttons - Responsive positioning */}
+      {/* Custom navigation buttons with onClick handlers for mobile */}
       <div
         ref={prevRef}
+        onClick={handlePrev}
         className="flex justify-center items-center absolute z-10 cursor-pointer bg-violet-600 hover:bg-violet-600/80 rounded-full shadow-md transition-all duration-200
-                  -left-2 sm:left-2 md:left-4 lg:-left-8 xl:-left-16
+                  -left-2 sm:left-4 md:left-6 lg:-left-8 xl:-left-16
                   top-1/2 -translate-y-1/2
-                  p-1 sm:p-2 md:p-3
-                  w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12"
+                  p-2 sm:p-2 md:p-3
+                  w-10 h-10 sm:w-10 sm:h-10 md:w-12 md:h-12
+                  touch-manipulation"
         aria-label="Previous slide"
       >
-        <ChevronLeft className="h-4 w-4 sm:h-5 sm:w-5 md:h-6 md:w-6 text-white" />
+        <ChevronLeft className="h-5 w-5 sm:h-5 sm:w-5 md:h-6 md:w-6 text-white" />
       </div>
 
       <div
         ref={nextRef}
+        onClick={handleNext}
         className="flex justify-center items-center absolute z-10 cursor-pointer bg-violet-600 hover:bg-violet-600/80 rounded-full shadow-md transition-all duration-200
-                  -right-2 sm:right-2 md:right-4 lg:-right-8 xl:-right-16
+                  -right-2 sm:right-4 md:right-6 lg:-right-8 xl:-right-16
                   top-1/2 -translate-y-1/2
-                  p-1 sm:p-2 md:p-3
-                  w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12"
+                  p-2 sm:p-2 md:p-3
+                  w-10 h-10 sm:w-10 sm:h-10 md:w-12 md:h-12
+                  touch-manipulation"
         aria-label="Next slide"
       >
-        <ChevronRight className="h-4 w-4 sm:h-5 sm:w-5 md:h-6 md:w-6 text-white" />
+        <ChevronRight className="h-5 w-5 sm:h-5 sm:w-5 md:h-6 md:w-6 text-white" />
       </div>
 
       {/* Add custom styles for responsive navigation */}
@@ -100,6 +128,14 @@ const Swipe: React.FC<SwipeProps> = ({ images }) => {
         .swiper-button-disabled {
           opacity: 0.5;
           cursor: not-allowed;
+        }
+        
+        /* Improve touch area for mobile */
+        @media (max-width: 768px) {
+          .swiper-navigation-button {
+            min-width: 44px;
+            min-height: 44px;
+          }
         }
       `}</style>
     </div>
