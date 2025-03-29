@@ -37,7 +37,7 @@ const Swipe: React.FC<SwipeProps> = ({ images }) => {
   }, [])
 
   return (
-    <div className="w-full h-max relative">
+    <div className="w-full h-max relative px-4 sm:px-8 md:px-12 lg:px-20">
       <Swiper
         slidesPerView={slidesPerView}
         spaceBetween={20}
@@ -57,7 +57,7 @@ const Swipe: React.FC<SwipeProps> = ({ images }) => {
       >
         {images.map((image, index) => (
           <SwiperSlide key={index} className="flex items-center justify-center">
-            <div className="aspect-w-16 aspect-h-9 w-full border-2 rounded-xl">
+            <div className="aspect-w-16 aspect-h-9 w-full border-2 rounded-xl p-5 sm:p-0">
               <Image
                 width={500}
                 height={500}
@@ -70,21 +70,29 @@ const Swipe: React.FC<SwipeProps> = ({ images }) => {
         ))}
       </Swiper>
 
-      {/* Custom navigation buttons */}
+      {/* Custom navigation buttons - Responsive positioning */}
       <div
         ref={prevRef}
-        className="flex justify-center items-center absolute -left-16 top-1/2 -translate-y-1/2 z-10 cursor-pointer bg-violet-600 hover:bg-violet-600/80 dark:bg-black/50 dark:hover:bg-black/80 rounded-full p-1 sm:p-2 shadow-md ml-1 sm:ml-2 focus:outline-none transition-all duration-200"
+        className="flex justify-center items-center absolute z-10 cursor-pointer bg-violet-600 hover:bg-violet-600/80 rounded-full shadow-md transition-all duration-200
+                  -left-2 sm:left-2 md:left-4 lg:-left-8 xl:-left-16
+                  top-1/2 -translate-y-1/2
+                  p-1 sm:p-2 md:p-3
+                  w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12"
         aria-label="Previous slide"
       >
-        <ChevronLeft className="h-5 w-5 sm:h-6 sm:w-6 text-white dark:text-gray-200" />
+        <ChevronLeft className="h-4 w-4 sm:h-5 sm:w-5 md:h-6 md:w-6 text-white" />
       </div>
 
       <div
         ref={nextRef}
-        className="absolute -right-16 top-1/2 -translate-y-1/2 z-10 cursor-pointer bg-violet-600 hover:bg-violet-600/80 rounded-full p-1 sm:p-2 shadow-md mr-1 sm:mr-2 focus:outline-none transition-all duration-200"
+        className="flex justify-center items-center absolute z-10 cursor-pointer bg-violet-600 hover:bg-violet-600/80 rounded-full shadow-md transition-all duration-200
+                  -right-2 sm:right-2 md:right-4 lg:-right-8 xl:-right-16
+                  top-1/2 -translate-y-1/2
+                  p-1 sm:p-2 md:p-3
+                  w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12"
         aria-label="Next slide"
       >
-        <ChevronRight className="h-5 w-5 sm:h-6 sm:w-6 text-white dark:text-gray-200" />
+        <ChevronRight className="h-4 w-4 sm:h-5 sm:w-5 md:h-6 md:w-6 text-white" />
       </div>
 
       {/* Add custom styles for responsive navigation */}
