@@ -245,17 +245,30 @@ const CheckoutSummaryContent = () => {
                   </div>
                 )}
 
+               
+              </CardContent>
+            </Card>
+          </div>
+
+          {/* Order Summary */}
+          <div className="md:col-span-1">
+            <Card className="sticky top-6">
+              <CardHeader>
+
+                <CardTitle className="text-xl text-[#1e56a0]">
+                  Resumen del Pedido
+                </CardTitle>
+                {paymentMethod === "paypal" ?  
+                <p className="font-semibold">Al apretar el botón podrá obtener más información del monto y realizar el pago
+                </p>
+                 : ""}
                 {paymentMethod === "bank-transfer" && (
                   <div className="mt-4 p-4 bg-gray-50 rounded-lg">
                     <p className="font-medium mb-2">
                       Pago por transferencia bancaria:
                     </p>
                     <p className="text-sm">
-                      Deberas comunicarte con nosotros para coordinar el pago.
-                    </p>
-
-                    <p className="text-sm">
-                      Entra a este link para coordinar el pago:{" "}
+                      Entre a este link para coordinar el pago:{" "}
                       <Link
                         className="underline text-blue-500 font-semibold"
                         href={`https://wa.me/5491140336320?text=${encodeURIComponent(
@@ -267,19 +280,10 @@ const CheckoutSummaryContent = () => {
                     </p>
                   </div>
                 )}
-              </CardContent>
-            </Card>
-          </div>
-
-          {/* Order Summary */}
-          <div className="md:col-span-1">
-            <Card className="sticky top-6">
-              <CardHeader>
-                <CardTitle className="text-xl text-[#1e56a0]">
-                  Resumen del Pedido
-                </CardTitle>
               </CardHeader>
               <CardContent>
+              
+              {paymentMethod === "credit-card" ?
                 <div className="space-y-4">
                   <div className="flex justify-between">
                     <span>{title}</span>
@@ -295,6 +299,7 @@ const CheckoutSummaryContent = () => {
                     <span>${Number(total) * 1280} ARS</span>
                   </div>
                 </div>
+              : ""}
               </CardContent>
               <CardFooter>
                 {paymentMethod === "credit-card" && (
