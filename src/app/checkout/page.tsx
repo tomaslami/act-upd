@@ -292,7 +292,7 @@ const CheckoutSummaryContent = () => {
                   <Separator />
                   <div className="flex justify-between font-bold">
                     <span>Total</span>
-                    <span>${Number(total) * 1210} ARS</span>
+                    <span>${Number(total) * 1280} ARS</span>
                   </div>
                 </div>
               </CardContent>
