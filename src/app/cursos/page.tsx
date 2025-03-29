@@ -144,7 +144,7 @@ const courses: Course[] = [
   },
   {
     id: "13",
-    title: "Pensamiento Flexible",
+    title: "Regulación Emocional",
     date: "Inicio: 25 de Octubre",
     image: "/cursos/posteo_socialthk.png",
     location: "Virtual • Zoom",
