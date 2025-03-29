@@ -9,10 +9,8 @@ const Carousel = () => {
                 images={[
                   "/carrusel/carrusel-1.png",
                   "/carrusel/carrusel-2.png",
-                  "/carrusel/carrusel-3.png",
                   "/carrusel/carrusel-4.png",
                   "/carrusel/carrusel-5.png",
-                  "/carrusel/carrusel-6.png",
                   "/carrusel/carrusel-7.png",
                   "/carrusel/carrusel-8.png",
                   "/carrusel/carrusel-9.png",
