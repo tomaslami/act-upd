@@ -13,6 +13,22 @@ const Carousel = () => {
                   "/carrusel/carrusel-4.png",
                   "/carrusel/carrusel-5.png",
                   "/carrusel/carrusel-6.png",
+                  "/carrusel/carrusel-7.png",
+                  "/carrusel/carrusel-8.png",
+                  "/carrusel/carrusel-9.png",
+                  "/carrusel/carrusel-10.png",
+                  "/carrusel/carrusel-11.png",
+                  "/carrusel/carrusel-12.png",
+                  "/carrusel/carrusel-13.png",
+                  "/carrusel/carrusel-14.png",
+                  "/carrusel/carrusel-15.png",
+                  "/carrusel/carrusel-16.png",
+                  "/carrusel/carrusel-17.png",
+                  "/carrusel/carrusel-18.png",
+                  "/carrusel/carrusel-19.png",
+                  "/carrusel/carrusel-20.png",
+                  "/carrusel/carrusel-21.png",
+                  "/carrusel/carrusel-22.png",
                 ].filter((image): image is string => Boolean(image))}
               />
             </div>

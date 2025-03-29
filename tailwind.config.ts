@@ -9,6 +9,14 @@ const config: Config = {
 	],
 	theme: {
 		extend: {
+			screens:{
+				'xs': '480px',
+				'sm': '640px',
+				'md': '768px',
+				'lg': '1024px',
+				'xl': '1280px',
+				'2xl': '1390px',
+			},
 			colors: {
 				background: 'var(--background)',
 				foreground: 'var(--foreground)',
@@ -59,6 +67,5 @@ const config: Config = {
 			}
 		}
 	},
-	plugins: [require("tailwindcss-animate")],
 };
 export default config;

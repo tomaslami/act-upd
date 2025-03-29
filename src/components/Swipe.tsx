@@ -3,7 +3,7 @@ import Image from "next/image"
 import type React from "react"
 import { useEffect, useState } from "react"
 import { Swiper, SwiperSlide } from "swiper/react"
-import { Autoplay, Pagination } from "swiper/modules"
+import { Autoplay} from "swiper/modules"
 
 // Import Swiper styles
 import "swiper/css"
@@ -43,11 +43,8 @@ const Swipe: React.FC<SwipeProps> = ({ images }) => {
           delay: 3000,
           disableOnInteraction: false,
         }}
-        pagination={{
-          clickable: true,
-          bulletActiveClass: "swiper-pagination-bullet-active",
-        }}
-        modules={[Autoplay, Pagination]}
+        allowTouchMove={true}
+        modules={[Autoplay]}
         className="mySwiper"
       >
         {images.map((image, index) => (

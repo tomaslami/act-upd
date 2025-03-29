@@ -4,11 +4,11 @@ import { Badge } from "@/components/ui/badge"
 
 export default function AboutSection() {
   return (
-    <section className=" relative md:h-screen min-h-screen w-full bg-gradient-to-b from-[#6758c7] to-[#5E56A0] md:py-10 overflow-hidden">
+    <section className=" relative xl:h-[100vh] 2xl:h-[80vh] w-full bg-gradient-to-b from-[#6758c7] to-[#5E56A0] md:py-10 overflow-hidden">
       <div className="container px-4 md:px-6 mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
           {/* Left column: Text content */}
-          <div className="flex flex-col space-y-6 pt-16 md:pt-0  mt-14">
+          <div className="flex flex-col space-y-6 pt-16 md:pt-0  mt-14 ">
             <div className="space-y-3">
               <Badge
                 variant="outline"
@@ -34,14 +34,14 @@ export default function AboutSection() {
           </div>
 
           {/* Right column: Image */}
-          <div className="relative h-[50vh] md:h-auto flex items-end justify-center md:justify-end">
-            <div className="relative w-full max-w-md md:max-w-none h-full">
+          <div className="relative h-[70vh] md:h-auto flex items-center justify-center md:justify-end ">
+            <div className="relative w-full max-w-md md:max-w-none h-full ">
               <Image
                 src="/icons/licenciada.png"
                 alt="Silvia Tedesco"
                 width={400}
                 height={600}
-                className="object-contain object-bottom h-full w-auto mx-auto md:mx-0"
+                className="relative object-contain object-bottom h-full w-auto mx-auto md:mx-0 "
                 priority
               />
             </div>
