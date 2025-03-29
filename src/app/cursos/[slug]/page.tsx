@@ -157,7 +157,7 @@ export default function CourseDetails({
                 <span>{curso.modality}</span>
               </Badge>
             </div>
-              { curso.title === "merrill-palmer-oct" ? 
+              {/* curso.title === "merrill-palmer-oct" ? 
               <Button
               onClick={() => router.push("/cursos/merrill-palmer-oct#contact")}
               size="lg"
@@ -175,10 +175,9 @@ export default function CourseDetails({
               className="bg-[#1b4da1] hover:bg-[#1b4da1]/90 text-white rounded-full px-8"
             >
               {isLoading ? "Procesando..." : "Inscribirse al curso"}
-              {/*generar mcodigo para que si el curso en el que esta el usuario sea merril-palmer lo envie a /#insripciones*/ }
             
               <ChevronRight className="ml-2 h-4 w-4" />
-            </Button>  }
+            </Button>  */}
           </div>
         </div>
       </section>
@@ -392,7 +391,7 @@ export default function CourseDetails({
                   curso
                 </p>
               </div>
-
+      <div id="paypal-container-PGGW4SZ2GC6N6"></div>
               <div className="flex flex-col sm:flex-row justify-center items-center gap-4 mb-8">
                 <Button
                   variant="outline"

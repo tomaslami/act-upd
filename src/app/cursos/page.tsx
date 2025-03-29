@@ -144,6 +144,16 @@ const courses: Course[] = [
   },
   {
     id: "13",
+    title: "Pensamiento Flexible",
+    date: "Inicio: 25 de Octubre",
+    image: "/cursos/posteo_socialthk.png",
+    location: "Virtual • Zoom",
+    href: "/cursos/",
+    category: "evaluacion",
+    month: "octubre", 
+  },
+  {
+    id: "14",
     title: "PECS - Nivel 1",
     date: "Inicio: 8 y 9 de Noviembre",
     image: "/cursos/pecs_posteo.png",
@@ -153,7 +163,7 @@ const courses: Course[] = [
     month: "noviembre",
   },
   {
-    id: "14",
+    id: "15",
     title: "Transición de Pecs",
     date: "Inicio: 29 de Noviembre",
     image: "/cursos/posteo_transicion.png",
@@ -163,7 +173,7 @@ const courses: Course[] = [
     month: "noviembre",
   },
   {
-    id: "15",
+    id: "16",
     title: "Formación TEACCH",
     date: "Inicio: 1 al 5 de Diciembre",
     image: "/cursos/posteo_teacch.png",

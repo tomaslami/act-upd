@@ -28,7 +28,8 @@
       "avatar": "/2024/rhiannon-avatar.jpg",
       "button": "Inscribirse ahora",
       "price": 225,
-      "course_avatar": "/cursos/ados_posteo.png"
+      "course_avatar": "/cursos/ados_posteo.png",
+      "paypal_link":"https://www.paypal.com/ncp/payment/PGGW4SZ2GC6N6"
     },
     {
       "title": "MP-R",
@@ -394,10 +395,10 @@
       "bgcolor": "bg-blue",
       "value": "Modelo JASPER de Intervención",
       "subtitle": "Curso introductorio al enfoque JASPER en autismo",
-      "date": "FECHA: 4 de Octubre de 2025",
+      "date": "FECHA: Viernes 4 de Octubre de 2025",
       "modality": "Modalidad online a través de Zoom",
       "timemorning": "13:00 - 17:00 h (Hora Argentina)",
-      "about": "Desde Actualmente, tenemos el honor de invitarte a participar del Curso Introductorio al Modelo JASPER, una propuesta de formación basada en la evidencia, dirigida a profesionales que trabajan con niños con autismo o en desarrollo infantil temprano. JASPER (Joint Attention, Symbolic Play, Engagement and Regulation) es un modelo de intervención temprana centrado en los fundamentos de la comunicación social: atención conjunta, juego e imitación. Se trata de una intervención naturalista y basada en el desarrollo que involucra activamente a padres y docentes para facilitar la generalización de habilidades y su mantenimiento en el tiempo.",
+      "about": "Desde Actualmente, tenemos el honor de invitarte a participar del Curso Introductorio al Modelo JASPER, una propuesta de formación basada en la evidencia, dirigida a profesionales que trabajan con niños con autismo o en desarrollo infantil temprano. JASPER (Joint Attention, Symbolic Play, Engagement and Regulation) es un modelo de intervención temprana centrado en los fundamentos de la comunicación social: atención conjunta, juego e imitación. Se trata de una intervención naturalista y basada en el desarrollo que involucra activamente a padres y docentes para facilitar la generalización de habilidades y su mantenimiento en el tiempo. El Dr. Jonathan Panganiban, formador principal del programa en UCLA, será el encargado de introducir los conceptos fundamentales del modelo, explicar su mecánica de aplicación y compartir herramientas prácticas de evaluación y selección de objetivos, acompañadas de vídeos y ejemplos clínicos. Incluye certificado de asistencia. Traducción simultánea inglés–español.",
       "objectives": [
         "Conocer los fundamentos teóricos y evidencia científica del modelo JASPER.",
         "Comprender los dominios principales: juego simbólico, atención conjunta y regulación.",
@@ -415,8 +416,9 @@
       "instructor": "Dr. Jonathan Panganiban, Ph.D. (UCLA, Kasari Lab)",
       "avatar": "/2024/jasper-avatar.png",
       "button": "Inscribirse ahora",
-      "price": "Consultar",
-      "course_avatar": "/cursos/posteo_jasper.png"
+      "price": 30,
+      "course_avatar": "/cursos/posteo_jasper.png",
+      "paypal_link": "https://www.paypal.com/ncp/payment/E82XAXEG67266"
     },
     {
       "title": "transicion-pecs",
