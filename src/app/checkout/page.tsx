@@ -116,8 +116,6 @@ const CheckoutSummaryContent = () => {
   const subtitle = searchParams.get("subtitle")
   const date = searchParams.get("date")
   const modality = searchParams.get("modality")
-  const objectives = searchParams.get("objectives")
-  const topics = searchParams.get("topics")
   const course_avatar = searchParams.get("course_avatar")
   const paypal_link = searchParams.get("paypal_link")
 
@@ -167,30 +165,6 @@ const CheckoutSummaryContent = () => {
                           <Check className="w-4 h-4 mr-1 text-green-500" />
                           <span>{modality}</span>
                         </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div>
-                    <h3 className="font-medium text-lg mb-2">
-                      Datos importantes sobre el curso
-                    </h3>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 bg-gray-50 p-4 rounded-lg">
-                      <div>
-                        <small className="text-base text-black font-medium">
-                          Objetivos
-                        </small>
-                        <p className="text-sm text-gray-600 mt-2 leading-relaxed">
-                          {objectives && objectives.replace(/,\s*/g, ", ")}.
-                        </p>
-                      </div>
-                      <div>
-                        <small className="text-base text-black font-medium">
-                          Temas a tratar
-                        </small>
-                        <p className="text-sm text-gray-600 mt-2 leading-relaxed">
-                          {topics && topics.replace(/,\s*/g, ", ")}.
-                        </p>
                       </div>
                     </div>
                   </div>
@@ -309,11 +283,11 @@ const CheckoutSummaryContent = () => {
                 <div className="space-y-4">
                   <div className="flex justify-between">
                     <span>{title}</span>
-                    <span>${Number(total) * 1210 + 20 * 1210} ARS</span>
+                    <span>${Number(total) * 1280 + 20 * 1280} ARS</span>
                   </div>
                   <div className="flex justify-between text-sm text-gray-500">
                     <span>Descuento</span>
-                    <span>-${20 * 1210} ARS</span>
+                    <span>-${20 * 1280} ARS</span>
                   </div>
                   <Separator />
                   <div className="flex justify-between font-bold">
@@ -354,26 +328,6 @@ const CheckoutSummaryContent = () => {
           </div>
         </div>
       </main>
-
-      {/* Footer */}
-      <footer className="bg-gray-50 border-t mt-12 py-8">
-        <div className="container mx-auto px-4">
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            <div className="mb-4 md:mb-0">
-              <div className="text-[#1e56a0] font-bold text-xl">
-                Actualmente
-              </div>
-              <p className="text-sm text-gray-600 mt-1">
-                Capacitación para Profesionales de la Salud
-              </p>
-            </div>
-            <div className="text-sm text-gray-600">
-              © {new Date().getFullYear()} Actualmente. Todos los derechos
-              reservados.
-            </div>
-          </div>
-        </div>
-      </footer>
     </div>
   )
 }
