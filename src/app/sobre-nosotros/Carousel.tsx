@@ -3,7 +3,7 @@ import Swipe from "@/components/Swipe"
 const Carousel = () => {
   return (
     <article className="w-full pb-10 ">
-      <div className="w-full px-4 sm:px-8 md:px-16 ">
+      <div className="w-full px-4 sm:px-8 md:px-16 max-w-7xl mx-auto">
         <Swipe
           images={[
             "/carrusel/carrusel-1.png",

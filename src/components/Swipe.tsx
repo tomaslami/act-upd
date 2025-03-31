@@ -99,7 +99,7 @@ const Swipe: React.FC<SwipeProps> = ({ images }) => {
         ref={prevRef}
         onClick={handlePrev}
         className="flex justify-center items-center absolute z-10 cursor-pointer bg-violet-600 hover:bg-violet-600/80 rounded-full shadow-md transition-all duration-200
-                  -left-2 sm:left-4 md:left-6 lg:-left-8 xl:-left-16
+                  -left-2 sm:left-4 md:left-6 lg:-left-4 xl:-left-16
                   top-1/2 -translate-y-1/2
                   p-2 sm:p-2 md:p-3
                   w-10 h-10 sm:w-10 sm:h-10 md:w-12 md:h-12
@@ -113,7 +113,7 @@ const Swipe: React.FC<SwipeProps> = ({ images }) => {
         ref={nextRef}
         onClick={handleNext}
         className="flex justify-center items-center absolute z-10 cursor-pointer bg-violet-600 hover:bg-violet-600/80 rounded-full shadow-md transition-all duration-200
-                  -right-2 sm:right-4 md:right-6 lg:-right-8 xl:-right-16
+                  -right-2 sm:right-4 md:right-6 lg:-right-4 xl:-right-16
                   top-1/2 -translate-y-1/2
                   p-2 sm:p-2 md:p-3
                   w-10 h-10 sm:w-10 sm:h-10 md:w-12 md:h-12
