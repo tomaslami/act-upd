@@ -443,7 +443,6 @@ export default function CourseDetails({
 
               <div className="text-center">
                 <Button
-                  onClick={handleEnrollment}
                   disabled={isLoading}
                   className="bg-[#1b4da1] hover:bg-[#1b4da1]/90 text-white rounded-full px-8"
                 >
@@ -451,7 +450,6 @@ export default function CourseDetails({
                     href={`https://wa.me/5491140336320`}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-2"
                   >
                   {isLoading ? "Procesando..." : "Inscribirse al curso"}
                   </Link>
