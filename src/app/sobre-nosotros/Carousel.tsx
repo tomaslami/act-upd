@@ -29,6 +29,7 @@ const Carousel = () => {
             "/carrusel/carrusel-24.png",
             "/carrusel/carrusel-25.png",
             "/carrusel/carrusel-26.jpg",
+            "/carrusel/carrusel-27.jpg",
           ].filter((image): image is string => Boolean(image))}
         />
       </div>
