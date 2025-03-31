@@ -159,7 +159,7 @@ export default function CourseDetails({
             </div>
               {curso.title === "merrill-palmer-oct" ? 
               <Button
-              onClick={() => router.push("/cursos/merrill-palmer-oct#contact")}
+              onClick={() => router.push("https://api.whatsapp.com/send/?phone=5491140336320&text&type=phone_number&app_absent=0")}
               size="lg"
               disabled={isLoading}
               className="bg-[#1b4da1] hover:bg-[#1b4da1]/90 text-white rounded-full px-8"
@@ -444,11 +444,17 @@ export default function CourseDetails({
               <div className="text-center">
                 <Button
                   onClick={handleEnrollment}
-                  size="lg"
                   disabled={isLoading}
                   className="bg-[#1b4da1] hover:bg-[#1b4da1]/90 text-white rounded-full px-8"
                 >
+                  <Link
+                    href={`https://wa.me/5491140336320`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2"
+                  >
                   {isLoading ? "Procesando..." : "Inscribirse al curso"}
+                  </Link>
                   <ChevronRight className="ml-2 h-4 w-4" />
                 </Button>
               </div>

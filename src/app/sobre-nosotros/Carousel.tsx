@@ -2,8 +2,8 @@ import Swipe from "@/components/Swipe"
 
 const Carousel = () => {
   return (
-    <article className="w-full pb-10 max-w-6xl mx-auto">
-      <div className="w-full px-4 sm:px-8 md:px-16 lg:px-32">
+    <article className="w-full pb-10 ">
+      <div className="w-full px-4 sm:px-8 md:px-16 ">
         <Swipe
           images={[
             "/carrusel/carrusel-1.png",
@@ -16,9 +16,8 @@ const Carousel = () => {
             "/carrusel/carrusel-10.png",
             "/carrusel/carrusel-11.png",
             "/carrusel/carrusel-12.png",
-            "/carrusel/carrusel-13.png",
+            "/carrusel/carrusel-13.jpg",
             "/carrusel/carrusel-14.png",
-            "/carrusel/carrusel-15.png",
             "/carrusel/carrusel-16.png",
             "/carrusel/carrusel-17.png",
             "/carrusel/carrusel-18.png",
@@ -26,6 +25,10 @@ const Carousel = () => {
             "/carrusel/carrusel-20.png",
             "/carrusel/carrusel-21.png",
             "/carrusel/carrusel-22.png",
+            "/carrusel/carrusel-23.png",
+            "/carrusel/carrusel-24.png",
+            "/carrusel/carrusel-25.png",
+            "/carrusel/carrusel-26.jpg",
           ].filter((image): image is string => Boolean(image))}
         />
       </div>
