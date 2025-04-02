@@ -148,7 +148,7 @@ const courses: Course[] = [
     date: "Inicio: 25 de Octubre",
     image: "/cursos/posteo_socialthk.png",
     location: "Virtual • Zoom",
-    href: "/cursos/",
+    href: "/cursos/regulacion-emocional",
     category: "evaluacion",
     month: "octubre", 
   },
@@ -227,10 +227,17 @@ const CourseCard = ({ course }: { course: Course }) => {
             variant="default"
             className="w-full bg-[#1b4da1] hover:bg-[#1b4da1]/90 rounded-full transition-all"
           >
-            <Link href={course.href}>
+            {course.href === "/cursos/regulacion-emocional" ? 
+              (<Link href="https://wa.me/5491140336320">
               <span>Más información</span>
               <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-all" />
-            </Link>
+            </Link>)
+             : 
+            (<Link href={course.href}>
+              <span>Más información</span>
+              <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-all" />
+            </Link>)}
+            
           </Button>
         </CardFooter>
       </Card>

@@ -440,22 +440,6 @@ export default function CourseDetails({
                   </button>
                 </Button>
               </div>
-
-              <div className="text-center">
-                <Button
-                  disabled={isLoading}
-                  className="bg-[#1b4da1] hover:bg-[#1b4da1]/90 text-white rounded-full px-8"
-                >
-                  <Link
-                    href={`https://wa.me/5491140336320`}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                  {isLoading ? "Procesando..." : "Inscribirse al curso"}
-                  </Link>
-                  <ChevronRight className="ml-2 h-4 w-4" />
-                </Button>
-              </div>
             </CardContent>
           </Card>
         </section>
