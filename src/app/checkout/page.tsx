@@ -310,7 +310,7 @@ const CheckoutSummaryContent = () => {
                     onClick={() => router.push(init_point)}
                     className="w-full bg-[#1e56a0] hover:bg-[#164584] group"
                   >
-                    Confirmar y Pagar{" "}
+                    Confirmar y Reservar{" "}
                     <MercadoPago className="ml-2 group-hover:translate-x-1 transition-transform duration-150" />
                   </Button>
                 )}
@@ -320,7 +320,7 @@ const CheckoutSummaryContent = () => {
                     onClick={() => router.push(paypal_link!)}
                     className="w-full bg-[#ffd431] text-[#002991] hover:bg-[#f5c400] group"
                   >
-                    Pagar con Paypal{" "}
+                    Reservar con Paypal{" "}
                     <PaypalIcon className="ml-2 group-hover:translate-x-1 transition-transform duration-150" />
                   </Button>
                 )}
