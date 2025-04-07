@@ -69,18 +69,17 @@ export default function CourseDetails({
     e.preventDefault()
     setIsLoading(true)
 
-    if(curso && curso.title === "merril-palmer-oct"){
+    if (curso && curso.title === "merril-palmer-oct") {
       router.push("/#inscripciones")
     }
     try {
       // Get preferenceId before continuing
       const newPreferenceId = await handlePayment()
-      
+
       if (!newPreferenceId?.id || !newPreferenceId?.init_point) {
         toast.error("Ha ocurrido un error, intente nuevamente")
         setIsLoading(false)
       }
-
 
       if (newPreferenceId) {
         router.push(
@@ -157,27 +156,32 @@ export default function CourseDetails({
                 <span>{curso.modality}</span>
               </Badge>
             </div>
-              {curso.title === "merrill-palmer-oct" ? 
+            {curso.title === "merrill-palmer-oct" ? (
               <Button
-              onClick={() => router.push("https://api.whatsapp.com/send/?phone=5491140336320&text&type=phone_number&app_absent=0")}
-              size="lg"
-              disabled={isLoading}
-              className="bg-[#1b4da1] hover:bg-[#1b4da1]/90 text-white rounded-full px-8"
-            >
-              {isLoading ? "Procesando..." : "Inscribirse al curso"}
-              <ChevronRight className="ml-2 h-4 w-4" />
-            </Button>  
-              :  
-            <Button
-              onClick={handleEnrollment}
-              size="lg"
-              disabled={isLoading}
-              className="bg-[#1b4da1] hover:bg-[#1b4da1]/90 text-white rounded-full px-8"
-            >
-              {isLoading ? "Procesando..." : "Inscribirse al curso"}
-            
-              <ChevronRight className="ml-2 h-4 w-4" />
-            </Button> }
+                onClick={() =>
+                  router.push(
+                    "https://api.whatsapp.com/send/?phone=5491140336320&text&type=phone_number&app_absent=0"
+                  )
+                }
+                size="lg"
+                disabled={isLoading}
+                className="bg-[#1b4da1] hover:bg-[#1b4da1]/90 text-white rounded-full px-8"
+              >
+                {isLoading ? "Procesando..." : "Reservar curso"}
+                <ChevronRight className="ml-2 h-4 w-4" />
+              </Button>
+            ) : (
+              <Button
+                onClick={handleEnrollment}
+                size="lg"
+                disabled={isLoading}
+                className="bg-[#1b4da1] hover:bg-[#1b4da1]/90 text-white rounded-full px-8"
+              >
+                {isLoading ? "Procesando..." : "Reservar curso"}
+
+                <ChevronRight className="ml-2 h-4 w-4" />
+              </Button>
+            )}
           </div>
         </div>
       </section>
@@ -204,13 +208,16 @@ export default function CourseDetails({
             >
               Disertantes
             </TabsTrigger>
-            {params.slug === "ados" ? 
-            <TabsTrigger
-              value="details"
-              className="flex-1 data-[state=active]:bg-blue-50 data-[state=active]:text-[#1b4da1]"
-            >
-              Detalles
-            </TabsTrigger> : ""}
+            {params.slug === "ados" ? (
+              <TabsTrigger
+                value="details"
+                className="flex-1 data-[state=active]:bg-blue-50 data-[state=active]:text-[#1b4da1]"
+              >
+                Detalles
+              </TabsTrigger>
+            ) : (
+              ""
+            )}
           </TabsList>
 
           <div className="max-w-5xl mx-auto">
@@ -391,7 +398,7 @@ export default function CourseDetails({
                   curso
                 </p>
               </div>
-      <div id="paypal-container-PGGW4SZ2GC6N6"></div>
+              <div id="paypal-container-PGGW4SZ2GC6N6"></div>
               <div className="flex flex-col sm:flex-row justify-center items-center gap-4 mb-8">
                 <Button
                   variant="outline"

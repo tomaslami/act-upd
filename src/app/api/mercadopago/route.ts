@@ -39,7 +39,7 @@ export async function POST(req: NextRequest) {
           id: body.id,
           title: body.title,
           quantity: 1,
-          unit_price: Number(body.price) * 1210,
+          unit_price: Number(body.price),
           currency_id: "ARS",
         },
       ],
