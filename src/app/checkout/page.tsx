@@ -287,11 +287,7 @@ const CheckoutSummaryContent = () => {
                   <div className="space-y-4">
                     <div className="flex justify-between">
                       <span>{title}</span>
-                      <span>${Number(total) + Number(total) * 0.2} ARS</span>
-                    </div>
-                    <div className="flex justify-between text-sm text-gray-500">
-                      <span>Descuento</span>
-                      <span>-${Number(total) * 0.2} ARS</span>
+                      <span>${Number(total)} ARS</span>
                     </div>
                     <Separator />
                     <div className="flex justify-between font-bold">
