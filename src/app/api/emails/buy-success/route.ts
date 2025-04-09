@@ -25,7 +25,7 @@ export async function POST(req: Request) {
     const { title, price, paymentId } = body
 
     const { data, error } = await resend.emails.send({
-      from: "compras@actualmente.com.ar",
+      from: "reservas@actualmente.com.ar",
       to: ["info@actualmente.com.ar"],
       subject: "Se ha realizado una reserva! - Actualmente",
       html: `
