@@ -1,7 +1,7 @@
 "use client"
 
 import { useRouter } from "next/navigation"
-import { useEffect, useState, useRef } from "react"
+import { useEffect, useState, useRef, useCallback } from "react"
 import { v4 as UUIDv4 } from "uuid"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card"
@@ -12,6 +12,7 @@ import {
   Download,
   ArrowRight,
   Camera,
+  Loader2,
 } from "lucide-react"
 import Image from "next/image"
 import html2canvas from "html2canvas"
@@ -19,6 +20,7 @@ import jsPDF from "jspdf"
 import { toast, Toaster } from "sonner"
 import { useSearchParams } from "next/navigation"
 import Link from "next/link"
+import axios from "axios"
 
 export default function PaymentSuccess() {
   const router = useRouter()
@@ -26,6 +28,8 @@ export default function PaymentSuccess() {
   const [isGenerating, setIsGenerating] = useState(false)
 
   const searchParms = useSearchParams()
+
+  const [isLoading, setLoading] = useState(false)
 
   const title = searchParms.get("title")
   const subtitle = searchParms.get("subtitle")
@@ -51,6 +55,34 @@ export default function PaymentSuccess() {
       })
     )
   }, [])
+
+  const handleSendEmail = useCallback(async () => {
+    setLoading(true)
+    try {
+      const response = await axios.post("/api/emails/buy-success", {
+        title,
+        price,
+        paymentId,
+      })
+
+      if (response.status !== 200) {
+        return
+      }
+
+      return
+    } catch (error) {
+      console.error("Error en el envío de emails:", error)
+      toast.error("Error al enviar los emails")
+    } finally {
+      setLoading(false)
+    }
+  }, [paymentId])
+
+  useEffect(() => {
+    if (title && subtitle && date && modality && price) {
+      handleSendEmail()
+    }
+  }, [title, subtitle, price])
 
   if (!title || !subtitle || !date || !modality || !price) {
     return (
@@ -129,148 +161,162 @@ export default function PaymentSuccess() {
   }
 
   return (
-    <div className="min-h-screen bg-gray-50 flex flex-col">
-      <Toaster position="top-center" richColors />
+    <>
+      {isLoading ? (
+        <main className="min-h-screen w-full bg-gray-50 flex items-center justify-center">
+          <Loader2 className="animate-spin h-10 w-10 text-black" />
+        </main>
+      ) : (
+        <div className="min-h-screen bg-gray-50 flex flex-col">
+          <Toaster position="top-center" richColors />
 
-      <main className="flex-1 container mx-auto px-4 py-12 flex items-center justify-center mt-12">
-        <Card className="w-full max-w-2xl shadow-lg" ref={cardRef}>
-          <CardHeader className="bg-[#1e56a0] text-white p-6 flex flex-col items-center rounded-t-lg">
-            <CheckCircle2 className="w-16 h-16 mb-4 text-white" />
-            <h1 className="text-2xl md:text-3xl font-bold text-center">
-              ¡Pago Exitoso!
-            </h1>
-            <p className="text-center mt-2 text-blue-100">
-              Tu inscripción al curso ha sido confirmada
-            </p>
-          </CardHeader>
+          <main className="flex-1 container mx-auto px-4 py-12 flex items-center justify-center mt-12">
+            <Card className="w-full max-w-2xl shadow-lg" ref={cardRef}>
+              <CardHeader className="bg-[#1e56a0] text-white p-6 flex flex-col items-center rounded-t-lg">
+                <CheckCircle2 className="w-16 h-16 mb-4 text-white" />
+                <h1 className="text-2xl md:text-3xl font-bold text-center">
+                  ¡Pago Exitoso!
+                </h1>
+                <p className="text-center mt-2 text-blue-100">
+                  Tu inscripción al curso ha sido confirmada
+                </p>
+              </CardHeader>
 
-          <CardContent className="p-6">
-            <div className="space-y-6">
-              <div>
-                <h3 className="font-medium text-lg text-[#1e56a0] mb-3">
-                  Detalles del Curso
-                </h3>
-                <div className="bg-gray-50 p-4 rounded-lg">
-                  <div className="flex flex-col md:flex-row gap-4">
-                    <div className="relative w-full md:w-44 h-44 bg-gray-200 rounded-md overflow-hidden">
-                      <Image
-                        src={course_avatar || "/images/placeholder.png"}
-                        alt="Curso"
-                        fill
-                        className="object-cover"
-                      />
+              <CardContent className="p-6">
+                <div className="space-y-6">
+                  <div>
+                    <h3 className="font-medium text-lg text-[#1e56a0] mb-3">
+                      Detalles del Curso
+                    </h3>
+                    <div className="bg-gray-50 p-4 rounded-lg">
+                      <div className="flex flex-col md:flex-row gap-4">
+                        <div className="relative w-full md:w-44 h-44 bg-gray-200 rounded-md overflow-hidden">
+                          <Image
+                            src={course_avatar || "/images/placeholder.png"}
+                            alt="Curso"
+                            fill
+                            className="object-cover"
+                          />
+                        </div>
+                        <div className="flex-1">
+                          <h3 className="font-bold text-lg">{title}</h3>
+                          <p className="text-orange-500">{subtitle}</p>
+                          <div className="flex items-center mt-2 text-sm text-gray-600">
+                            <Calendar className="w-4 h-4 mr-1" />
+                            <span>{date}</span>
+                          </div>
+                          <div className="flex items-center mt-1 text-sm text-gray-600">
+                            <Camera className="w-4 h-4 mr-1" />
+                            <span>{modality}</span>
+                          </div>
+                        </div>
+                      </div>
                     </div>
-                    <div className="flex-1">
-                      <h3 className="font-bold text-lg">{title}</h3>
-                      <p className="text-orange-500">{subtitle}</p>
-                      <div className="flex items-center mt-2 text-sm text-gray-600">
-                        <Calendar className="w-4 h-4 mr-1" />
-                        <span>{date}</span>
+                  </div>
+
+                  <div>
+                    <h3 className="font-medium text-lg text-[#1e56a0] mb-3">
+                      Información del Pago
+                    </h3>
+                    <div className="bg-gray-50 p-4 rounded-lg">
+                      <div className="grid grid-cols-2 gap-4">
+                        <div>
+                          <p className="text-sm text-gray-500">
+                            ID de Transacción
+                          </p>
+                          <p className="font-mono">{transactionId}</p>
+                        </div>
+                        <div>
+                          <p className="text-sm text-gray-500">Fecha</p>
+                          <p>{paymentDate}</p>
+                        </div>
+                        <div>
+                          <p className="text-sm text-gray-500">
+                            Método de Pago
+                          </p>
+                          <p>Mercado Pago</p>
+                        </div>
+                        <div>
+                          <p className="text-sm text-gray-500">Estado</p>
+                          <p className="text-green-600 font-medium">
+                            {"Exitoso"}
+                          </p>
+                        </div>
                       </div>
-                      <div className="flex items-center mt-1 text-sm text-gray-600">
-                        <Camera className="w-4 h-4 mr-1" />
-                        <span>{modality}</span>
+
+                      <Separator className="my-4" />
+
+                      <div className="flex justify-between items-center">
+                        <span className="font-medium">Total Pagado</span>
+                        <span className="font-bold text-lg">{price}</span>
                       </div>
+                    </div>
+                  </div>
+                  <div>
+                    <h3 className="font-medium text-lg text-[#1e56a0] mb-3">
+                      Próximos Pasos
+                    </h3>
+                    <div className="bg-gray-50 p-4 rounded-lg">
+                      <p>
+                        Debes enviar este recibo a este numero de{" "}
+                        <Link
+                          className="text-[#1e56a0] font-bold underline"
+                          href={`https://wa.me/5491140336320?text=${encodeURIComponent(
+                            `Vengo del curso: ${title}, adjunto mi comprobante de pago para confirmar mi asistencia.`
+                          )}`}
+                        >
+                          Whatsapp
+                        </Link>{" "}
+                        para confirmar tu asistencia.
+                      </p>
                     </div>
                   </div>
                 </div>
-              </div>
+              </CardContent>
 
-              <div>
-                <h3 className="font-medium text-lg text-[#1e56a0] mb-3">
-                  Información del Pago
-                </h3>
-                <div className="bg-gray-50 p-4 rounded-lg">
-                  <div className="grid grid-cols-2 gap-4">
-                    <div>
-                      <p className="text-sm text-gray-500">ID de Transacción</p>
-                      <p className="font-mono">{transactionId}</p>
-                    </div>
-                    <div>
-                      <p className="text-sm text-gray-500">Fecha</p>
-                      <p>{paymentDate}</p>
-                    </div>
-                    <div>
-                      <p className="text-sm text-gray-500">Método de Pago</p>
-                      <p>Mercado Pago</p>
-                    </div>
-                    <div>
-                      <p className="text-sm text-gray-500">Estado</p>
-                      <p className="text-green-600 font-medium">{"Exitoso"}</p>
-                    </div>
+              <CardFooter className="p-6 flex flex-col sm:flex-row gap-3 border-t">
+                <Button
+                  className="w-full sm:w-auto bg-[#1e56a0] hover:bg-[#164584]"
+                  onClick={generateReceipt}
+                  disabled={isGenerating}
+                >
+                  <Download className="mr-2 h-4 w-4" />
+                  {isGenerating ? "Generando..." : "Descargar Comprobante"}
+                </Button>
+
+                <Button
+                  onClick={() => router.push("/cursos")}
+                  variant="outline"
+                  className="w-full sm:w-auto border-[#1e56a0] text-[#1e56a0] hover:bg-blue-50"
+                >
+                  Ver más cursos
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </Button>
+              </CardFooter>
+            </Card>
+          </main>
+
+          {/* Footer */}
+          <footer className="bg-white border-t py-6">
+            <div className="container mx-auto px-4">
+              <div className="flex flex-col md:flex-row justify-between items-center">
+                <div className="mb-4 md:mb-0">
+                  <div className="text-[#1e56a0] font-bold text-xl">
+                    Actualmente
                   </div>
-
-                  <Separator className="my-4" />
-
-                  <div className="flex justify-between items-center">
-                    <span className="font-medium">Total Pagado</span>
-                    <span className="font-bold text-lg">{price}</span>
-                  </div>
-                </div>
-              </div>
-              <div>
-                <h3 className="font-medium text-lg text-[#1e56a0] mb-3">
-                  Próximos Pasos
-                </h3>
-                <div className="bg-gray-50 p-4 rounded-lg">
-                  <p>
-                    Debes enviar este recibo a este numero de{" "}
-                    <Link
-                      className="text-[#1e56a0] font-bold underline"
-                      href={`https://wa.me/5491140336320?text=${encodeURIComponent(
-                        `Vengo del curso: ${title}, adjunto mi comprobante de pago para confirmar mi asistencia.`
-                      )}`}
-                    >
-                      Whatsapp
-                    </Link>{" "}
-                    para confirmar tu asistencia.
+                  <p className="text-sm text-gray-600 mt-1">
+                    Capacitación para Profesionales de la Salud
                   </p>
                 </div>
+                <div className="text-sm text-gray-600">
+                  © {new Date().getFullYear()} Actualmente. Todos los derechos
+                  reservados.
+                </div>
               </div>
             </div>
-          </CardContent>
-
-          <CardFooter className="p-6 flex flex-col sm:flex-row gap-3 border-t">
-            <Button
-              className="w-full sm:w-auto bg-[#1e56a0] hover:bg-[#164584]"
-              onClick={generateReceipt}
-              disabled={isGenerating}
-            >
-              <Download className="mr-2 h-4 w-4" />
-              {isGenerating ? "Generando..." : "Descargar Comprobante"}
-            </Button>
-
-            <Button
-              onClick={() => router.push("/cursos")}
-              variant="outline"
-              className="w-full sm:w-auto border-[#1e56a0] text-[#1e56a0] hover:bg-blue-50"
-            >
-              Ver más cursos
-              <ArrowRight className="ml-2 h-4 w-4" />
-            </Button>
-          </CardFooter>
-        </Card>
-      </main>
-
-      {/* Footer */}
-      <footer className="bg-white border-t py-6">
-        <div className="container mx-auto px-4">
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            <div className="mb-4 md:mb-0">
-              <div className="text-[#1e56a0] font-bold text-xl">
-                Actualmente
-              </div>
-              <p className="text-sm text-gray-600 mt-1">
-                Capacitación para Profesionales de la Salud
-              </p>
-            </div>
-            <div className="text-sm text-gray-600">
-              © {new Date().getFullYear()} Actualmente. Todos los derechos
-              reservados.
-            </div>
-          </div>
+          </footer>
         </div>
-      </footer>
-    </div>
+      )}
+    </>
   )
 }
