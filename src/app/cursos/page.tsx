@@ -181,6 +181,16 @@ const courses: Course[] = [
     href: "/cursos/teacch-educacion",
     category: "intervencion",
     month: "diciembre",
+  },
+  {
+    id: "17",
+    title: "Formación PEERS®",
+    date: "Inicio: 4 al 6 de Diciembre",
+    image: "/cursos/posteo_peers.png",
+    location: "Virtual • Zoom",
+    href: "/cursos/prueba",
+    category: "evaluacion",
+    month: "diciembre",
   }
 ]
 

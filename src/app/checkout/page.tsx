@@ -1,6 +1,6 @@
 "use client"
 
-import { Suspense, useEffect, useState } from "react"
+import { Suspense, useState } from "react"
 import Image from "next/image"
 import { Check, Calendar } from "lucide-react"
 
@@ -118,10 +118,6 @@ const CheckoutSummaryContent = () => {
   const modality = searchParams.get("modality")
   const course_avatar = searchParams.get("course_avatar")
   const paypal_link = searchParams.get("paypal_link")
-
-  useEffect(() => {
-    console.log(course_avatar)
-  }, [])
 
   if (!init_point || !paypal_link) return
 

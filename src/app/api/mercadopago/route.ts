@@ -44,7 +44,7 @@ export async function POST(req: NextRequest) {
         },
       ],
       back_urls: {
-        success: `http://localhost:3000/ordenes/exito?price=${body.price}&quantity=${body.quantity}&title=${body.title}&course_avatar=${body.course_avatar}&subtitle=${body.subtitle}&date=${body.date}&modality=${body.modality}`,
+        success: `https://actualmente.com.ar/ordenes/exito?price=${body.price}&quantity=${body.quantity}&title=${body.title}&course_avatar=${body.course_avatar}&subtitle=${body.subtitle}&date=${body.date}&modality=${body.modality}`,
         failure: `https://actualmente.com.ar/ordenes/error?price=${body.price}`,
         pending: "https://actualmente.com.ar/orders/pending",
       },
