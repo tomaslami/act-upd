@@ -448,35 +448,7 @@
       "price": 38400,
       "course_avatar": "/cursos/posteo_transicion.png",
       "paypal_link": "https://www.paypal.com/ncp/payment/9NVVPPHG8TE3Y"
-    },
-    {
-      "title": "prueba",
-      "text": "text-blue",
-      "bgcolor": "bg-blue",
-      "value": "Transición de PECS a otros dispositivos de comunicación",
-      "subtitle": "Curso oficial de Pyramid para profesionales de la salud",
-      "date": "FECHA: 29 de Noviembre",
-      "modality": "Modalidad online a través de Zoom (exclusivo para Argentina)",
-      "timemorning": "Horario no especificado",
-      "about": "Este curso está diseñado para profesionales que trabajan con personas con autismo u otras dificultades comunicativas que utilizan PECS y están listos para transicionar a un dispositivo de comunicación.",
-      "objectives": [
-        "Evaluar si un usuario de PECS es candidato para la transición.",
-        "Seleccionar el dispositivo de comunicación adecuado.",
-        "Enseñar el uso funcional del dispositivo sin comprometer el desarrollo de habilidades comunicativas esenciales.",
-        "Aplicar estrategias efectivas para lograr una comunicación funcional y significativa."
-      ],
-      "topics": [
-        "Evaluación de candidatos para la transición de PECS.",
-        "Selección de dispositivos de comunicación alternativos.",
-        "Enseñanza del uso funcional del dispositivo.",
-        "Estrategias efectivas para una comunicación significativa."
-      ],
-      "instructor": "Pyramid Educational Consultants",
-      "avatar": "/2024/pecs-avatar.png",
-      "button": "Inscribirse ahora",
-      "price": 2,
-      "course_avatar": "/cursos/posteo_transicion.png",
-      "paypal_link": "https://www.paypal.com/ncp/payment/9NVVPPHG8TE3Y"
     }
+   
   ]
 }
