@@ -59,7 +59,6 @@
       "instructor": ["Lic. Silvia Tedesco", "Lic. Sol Stomati"],
       "avatar": ["/2024/silvia-avatar.png", "/2024/sol-avatar.png"],
       "button": "Inscribirse ahora",
-      "price": 288000,
       "course_avatar": "/cursos/POSTEO_MERRIL_OCTUBRE.png",
       "paypal_link": "https://www.paypal.com/ncp/payment/PGGW4SZ2GC6N6"
     },
@@ -91,6 +90,7 @@
       "avatar": "/2024/adolfo-avatar.jpg",
       "button": "Inscribirse ahora",
       "price": 64000,
+      "price_description": "Reserva del 30% del valor total",
       "course_avatar": "/cursos/comorbilidades.png",
       "paypal_link": "https://www.paypal.com/ncp/payment/HDBU3LW745GYY"
     },
@@ -121,6 +121,7 @@
       "instructor": "Lic. Moira Pileggi",
       "avatar": "/2024/moira-pileggi.png",
       "price": 57600,
+      "price_description": "Reserva del 30% del valor total",
       "course_avatar": "/cursos/comu_posteo.png",
       "paypal_link": "https://www.paypal.com/ncp/payment/RTZMRWRWE3ZR8"
     },
@@ -151,6 +152,7 @@
       "avatar": "/2024/marmol-jorge.png",
       "button": "Inscribirse ahora",
       "price": 57600,
+      "price_description": "Reserva del 30% del valor total",
       "course_avatar": "/cursos/conducta_posteo.png",
       "paypal_link": "https://www.paypal.com/ncp/payment/XL7DVPSBDNMPS"
     },
@@ -183,6 +185,7 @@
       "avatar": "/2024/maria-merino.png",
       "button": "Inscribirse ahora",
       "price": 57600,
+      "price_description": "Reserva del 30% del valor total",
       "course_avatar": "/cursos/mujeres_posteo.png",
       "paypal_link": "https://www.paypal.com/ncp/payment/NT2U6YUCDNJ2E"
     },
@@ -241,6 +244,7 @@
       "avatar": "/2024/pecs-avatar.png",
       "button": "Inscribirse ahora",
       "price": 96000,
+      "price_description": "Reserva del 30% del valor total",
       "course_avatar": "/cursos/pecs_posteo.png",
       "paypal_link": "https://www.paypal.com/ncp/payment/3RUQR2NYM5GTC"
     },
@@ -270,6 +274,7 @@
       "avatar": "/2024/isabelle-beaudry.jpg",
       "button": "Inscribirse ahora",
       "price": 76800,
+      "price_description": "Reserva del 30% del valor total",
       "course_avatar": "/cursos/selectividad_posteo.png",
       "paypal_link": "https://www.paypal.com/ncp/payment/3WJU3SBDVVXQS"
     },
@@ -328,6 +333,7 @@
       "avatar": "/2024/rhiannon-avatar.jpg",
       "button": "Inscribirse ahora",
       "price": 38400,
+      "price_description": "Reserva del 30% del valor total",
       "course_avatar": "/cursos/posteo_ActualizacionAdos.png",
       "paypal_link": "https://www.paypal.com/ncp/payment/DR8QTQRUR5NMY"
     },
@@ -357,6 +363,7 @@
       "avatar": "/2024/rhiannon-avatar.jpg",
       "button": "Inscribirse ahora",
       "price": 38400,
+      "price_description": "Reserva del 30% del valor total",
       "course_avatar": "/cursos/posteo_adir_actualizacion.png",
       "paypal_link": "https://www.paypal.com/ncp/payment/U5R7J4BAMVHHL"
     },
@@ -417,6 +424,7 @@
       "avatar": "/2024/jasper-avatar.png",
       "button": "Inscribirse ahora",
       "price": 38400,
+      "price_description": "Reserva del 30% del valor total",
       "course_avatar": "/cursos/posteo_jasper.png",
       "paypal_link": "https://www.paypal.com/ncp/payment/E82XAXEG67266"
     },
@@ -446,9 +454,9 @@
       "avatar": "/2024/pecs-avatar.png",
       "button": "Inscribirse ahora",
       "price": 38400,
+      "price_description": "Reserva del 30% del valor total",
       "course_avatar": "/cursos/posteo_transicion.png",
       "paypal_link": "https://www.paypal.com/ncp/payment/9NVVPPHG8TE3Y"
     }
-    
   ]
 }
