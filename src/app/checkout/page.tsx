@@ -326,36 +326,7 @@ const CheckoutSummaryContent = () => {
                 )}
               </CardHeader>
               <CardContent>
-                {isSpecialCourse(title) &&
-                (title?.toUpperCase().includes("ADOS") ||
-                  title?.toUpperCase().includes("PEERS") ||
-                  title?.toUpperCase().includes("TEACCH")) ? (
-                  <div className="space-y-4">
-                    <span className="font-bold pt-1">Valor total del curso:</span>
-                    {getCoursePrices().options?.map((option, index) => (
-                      <div
-                        key={index}
-                        className="flex flex-col space-y-2 bg-blue-50 rounded-lg"
-                      >
-                        <div className="flex justify-start gap-2 text-sm text-gray-600">
-                          <span className="font-bold w-[70%]">{option.label}</span>
-                          <span className="font-bold">${option.price} ARS</span>
-                        </div>
-                      </div>
-                    ))}
-                    <div className="text-sm text-blue-600 mt-2">
-                      <p>
-                        * IMPORTANTE: El monto a abonar corresponde únicamente al pago de la
-                        reserva del curso, no al valor total del mismo.
-                      </p>
-                    </div>
-
-                    <div className="flex justify-between font-bold mt-4">
-                      <span className="font-bold pt-1">Total a pagar ahora</span>
-                      <span className="font-bold pt-1"> ${getCoursePrices().reservationPrice} ARS</span>
-                    </div>
-                  </div>
-                ) : (
+                {paymentMethod === "credit-card" ? (
                   <div className="space-y-4">
                     <div className="flex flex-col space-y-2 bg-blue-50 p-4 rounded-lg mb-4">
                       <div className="flex justify-between text-sm text-gray-600">
@@ -367,10 +338,7 @@ const CheckoutSummaryContent = () => {
                         <span>${reservationPrice} ARS</span>
                       </div>
                       <div className="text-sm text-blue-600 mt-2">
-                        <p>
-                          * IMPORTANTE: El monto a abonar corresponde únicamente al pago de la
-                          reserva del curso, no al valor total del mismo.
-                        </p>
+                        <p>* IMPORTANTE: El monto a abonar corresponde únicamente al pago de la reserva del curso, no al valor total del mismo.</p>
                       </div>
                     </div>
                     <Separator />
@@ -379,6 +347,8 @@ const CheckoutSummaryContent = () => {
                       <span>${reservationPrice} ARS</span>
                     </div>
                   </div>
+                ) : (
+                  ""
                 )}
               </CardContent>
               <CardFooter>
