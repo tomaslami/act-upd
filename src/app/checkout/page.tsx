@@ -18,6 +18,8 @@ import { Label } from "@/components/ui/label"
 import { useRouter, useSearchParams } from "next/navigation"
 import CustomLoader from "@/components/loader/custom-loader"
 import Link from "next/link"
+import { createPayment } from "@/actions/contact-actions"
+import { toast } from "sonner"
 
 const PaypalIcon = (props: React.SVGProps<SVGSVGElement>) => (
   <svg
@@ -110,7 +112,6 @@ const CheckoutSummaryContent = () => {
 
   const searchParams = useSearchParams()
 
-  const init_point = searchParams.get("init_point")
   const total = searchParams.get("total")
   const title = searchParams.get("title")
   const subtitle = searchParams.get("subtitle")
@@ -124,6 +125,27 @@ const CheckoutSummaryContent = () => {
     if (!courseTitle) return false
     const specialCourses = ["ADOS", "TEACCH", "PEERS"]
     return specialCourses.some(course => courseTitle.toUpperCase().includes(course))
+  }
+
+  const handleCreatePayment = async () => {
+    try {
+      const result = await createPayment({
+        title: title as string,
+        quantity: 1,
+        price: Number(total),
+      })
+
+      if (!("init_point" in result)) {
+        return toast.error(result.userMessage)
+      }
+
+      if ("init_point" in result) {
+        router.push(result.init_point)
+      }
+    } catch (error) {
+      console.log(error)
+      return toast.error("Hubo un error al crear el pago")
+    }
   }
 
   // Get course prices based on course type
@@ -154,7 +176,7 @@ const CheckoutSummaryContent = () => {
     return Math.round((reservaPrice * 100) / 30)
   }
 
-  if (!init_point || !paypal_link) return
+  if (!paypal_link) return
 
   const {  reservationPrice } = getCoursePrices()
 
@@ -362,8 +384,8 @@ const CheckoutSummaryContent = () => {
               <CardFooter>
                 {paymentMethod === "credit-card" && (
                   <Button
+                    onClick={handleCreatePayment}
                     disabled={paymentMethod !== "credit-card"}
-                    onClick={() => router.push(init_point)}
                     className="w-full bg-[#1e56a0] hover:bg-[#164584] group"
                   >
                     Confirmar y Reservar{" "}

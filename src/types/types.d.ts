@@ -22,3 +22,19 @@ export interface ServerActionResponse {
   status: 200 | 500
   message: string | string[]
 }
+
+export interface CreatePreferenceValues {
+  price: number
+  title: string
+  quantity: number
+}
+
+export type CreatePreferenceResponse = {
+  init_point: string
+}
+
+export type ErrorResponse = {
+  status: number
+  message: string
+  userMessage: string
+}

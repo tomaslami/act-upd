@@ -14,9 +14,6 @@ import {
   Share2,
   ChevronRight,
 } from "lucide-react"
-import { initMercadoPago } from "@mercadopago/sdk-react"
-import axios from "axios"
-import { v4 as UUIDv4 } from "uuid"
 import { toast, Toaster } from "sonner"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
@@ -25,9 +22,6 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import Link from "next/link"
 
-initMercadoPago("APP_USR-abeb9c5b-478e-4b5a-8304-9a513c20fae4")
-
-type Response = { id: string; init_point?: string }
 
 export default function CourseDetails({
   params,
@@ -38,32 +32,6 @@ export default function CourseDetails({
   const [isLoading, setIsLoading] = useState(false)
   const router = useRouter()
 
-  //Get preference_id and init_point for payment
-  const handlePayment = async (): Promise<Response | null> => {
-    try {
-      const response = await axios.post("/api/mercadopago", {
-        id: UUIDv4(),
-        title: curso?.value,
-        quantity: 1,
-        price: curso?.price,
-        course_avatar: curso?.course_avatar,
-        subtitle: curso?.subtitle,
-        date: curso?.date,
-        modality: curso?.modality,
-      })
-
-      if (!response.data.id) {
-        toast.error("Error al procesar el pago")
-        return null
-      }
-
-      return response.data
-    } catch (error) {
-      console.error(error)
-      toast.error("Error al procesar el pago")
-      return null
-    }
-  }
 
   const handleEnrollment = async (e: FormEvent) => {
     e.preventDefault()
@@ -72,25 +40,10 @@ export default function CourseDetails({
     if (curso && curso.title === "merril-palmer-oct") {
       router.push("/#inscripciones")
     }
-    try {
-      // Get preferenceId before continuing
-      const newPreferenceId = await handlePayment()
-
-      if (!newPreferenceId?.id || !newPreferenceId?.init_point) {
-        toast.error("Ha ocurrido un error, intente nuevamente")
-        setIsLoading(false)
-      }
-
-      if (newPreferenceId) {
-        router.push(
-          `/checkout?total=${curso?.price}&init_point=${newPreferenceId.init_point}&title=${curso?.value}&subtitle=${curso?.subtitle}&date=${curso?.date}&modality=${curso?.modality}&objectives=${curso?.objectives}&topics=${curso?.topics}&course_avatar=${curso?.course_avatar}&paypal_link=${curso?.paypal_link}`
-        )
-      }
-    } catch (error) {
-      console.error(error)
-      toast.error("Ha ocurrido un error, intente nuevamente")
-      setIsLoading(false)
-    }
+      
+    router.push(
+      `/checkout?total=${curso?.price}&title=${curso?.value}&subtitle=${curso?.subtitle}&date=${curso?.date}&modality=${curso?.modality}&objectives=${curso?.objectives}&topics=${curso?.topics}&course_avatar=${curso?.course_avatar}&paypal_link=${curso?.paypal_link}`)
+    
   }
 
   const verifyData = useCallback(() => {
