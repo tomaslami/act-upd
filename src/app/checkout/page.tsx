@@ -18,7 +18,7 @@ import { Label } from "@/components/ui/label"
 import { useRouter, useSearchParams } from "next/navigation"
 import CustomLoader from "@/components/loader/custom-loader"
 import Link from "next/link"
-import { createPayment } from "@/actions/contact-actions"
+import { createPayment } from "@/actions/payment-actions"
 import { toast } from "sonner"
 
 const PaypalIcon = (props: React.SVGProps<SVGSVGElement>) => (
