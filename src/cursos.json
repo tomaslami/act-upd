@@ -190,42 +190,13 @@
       "paypal_link": "https://www.paypal.com/ncp/payment/NT2U6YUCDNJ2E"
     },
     {
-      "title": "peers-preescolar",
-      "text": "text-blue",
-      "bgcolor": "bg-blue",
-      "value": "Formación Oficial en PEERS® para Niños en Edad Preescolar",
-      "subtitle": "Capacitación en intervención social basada en evidencia",
-      "date": "FECHA: 13 al 15 de Agosto de 2025",
-      "modality": "Modalidad online a través de Zoom",
-      "timemorning": "11:00 am - 7:00 pm (Hora Argentina)",
-      "about": "PEERS® es un programa basado en evidencia para el desarrollo de habilidades sociales en niños con TEA, TDAH y otras dificultades socioemocionales.",
-      "objectives": [
-        "Implementar el programa PEERS® en niños en edad preescolar.",
-        "Aplicar estrategias basadas en evidencia para mejorar la interacción social.",
-        "Desarrollar habilidades para la terapia individual y grupal.",
-        "Evaluar habilidades sociales y diseñar estrategias de intervención."
-      ],
-      "topics": [
-        "Fundamentos y estructura del programa PEERS®.",
-        "Estrategias de intervención social para niños preescolares.",
-        "Técnicas terapéuticas individuales y grupales.",
-        "Evaluación y diseño de estrategias de intervención."
-      ],
-      "instructor": "Dra. Elizabeth Laugeson",
-      "avatar": "/2024/peers-avatar.png",
-      "button": "Inscribirse ahora",
-      "price": 100000,
-      "course_avatar": "/cursos/posteo_peers.png",
-      "paypal_link": "https://www.paypal.com/ncp/payment/S7JX3BC8ZAXDS"
-    },
-    {
       "title": "pecs-nivel1",
       "text": "text-blue",
       "bgcolor": "bg-blue",
       "value": "Introducción al Sistema PECS - Nivel 1",
       "subtitle": "Curso de comunicación aumentativa y alternativa",
-      "date": "FECHA: 8 y 9 de Noviembre de 2025",
-      "modality": "Modalidad online a través de Zoom con traducción simultánea",
+      "date": "FECHA: 6 y 7 de diciembre de 2025",
+      "modality": "Modalidad presencial y online a través de Zoom con traducción simultánea",
       "timemorning": "9:00 am - 4:00 pm (Hora Argentina)",
       "about": "PECS es un sistema de comunicación basado en intercambio de imágenes, diseñado para ayudar a personas con TEA y otras dificultades comunicativas a desarrollar habilidades de lenguaje funcional.",
       "objectives": [
